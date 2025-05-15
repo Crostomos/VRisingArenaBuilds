@@ -1,4 +1,5 @@
-﻿using VampireCommandFramework;
+﻿using ArenaBuildsMod.Helpers;
+using VampireCommandFramework;
 
 namespace ArenaBuildsMod.Commands;
 
@@ -12,19 +13,34 @@ internal class BuildCommands
             BuildManager.LoadData();
         }
 
+        //BuildManager.LogInfoJson();
+
         if (BuildManager.Builds!.TryGetValue(targetBuild, out var build))
         {
-            Helper.ClearInventory(ctx.Event.SenderCharacterEntity);
-            Helper.EquipBuild(ctx.Event.SenderCharacterEntity, ctx.User, build);
-            Helper.GiveBloodPotion(ctx.Event.SenderCharacterEntity, build.Blood.PrimaryType, secondaryBloodType:build.Blood.SecondaryType, primaryQuality: build.Blood.PrimaryQuality, secondaryQuality: build.Blood.SecondaryQuality);
-            ctx.Reply($"Equipped build {targetBuild}.");
+            InventoryHelper.ClearInventory(ctx.Event.SenderCharacterEntity);
+
+            ArmorHelper.EquipArmors(ctx.Event.SenderCharacterEntity, build.Armors);
+            WeaponHelper.GiveWeapons(ctx.User, ctx.Event.SenderCharacterEntity, build.Weapons);
+            InventoryHelper.GiveBloodPotion(
+                ctx.Event.SenderCharacterEntity,
+                build.Blood.PrimaryType,
+                secondaryBloodType: build.Blood.SecondaryType,
+                primaryQuality: build.Blood.PrimaryQuality,
+                secondaryQuality: build.Blood.SecondaryQuality
+            );
+            InventoryHelper.GiveItems(ctx.Event.SenderCharacterEntity, build.Items);
+
+            AbilityHelper.EquipAbilities(ctx.Event.SenderCharacterEntity, build.Abilities);
+            //Helper.EquipePassives(ctx.Event.SenderCharacterEntity, build.Passives); // TODO
+
+            ctx.Reply($"Equipped build <color=white>{targetBuild}</color>.");
         }
         else
         {
-            ctx.Reply($"Unknown build: {targetBuild}.");
+            ctx.Reply($"Unknown build <color=white>{targetBuild}</color>.");
         }
     }
-    
+
     [Command("list", description: "List available builds", adminOnly: false)]
     public static void ListBuildCommand(ChatCommandContext ctx)
     {
@@ -32,7 +48,7 @@ internal class BuildCommands
         {
             BuildManager.LoadData();
         }
-        
+
         var buildList = BuildManager.GetBuildList();
         ctx.Reply($"Available builds :\n- {buildList}");
     }

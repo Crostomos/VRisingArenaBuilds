@@ -1,6 +1,6 @@
 ﻿namespace ArenaBuildsMod.Models;
 
-public class Items
+public class BuildItemData
 {
     public string Name { get; set; }
     

@@ -10,7 +10,7 @@ namespace ArenaBuildsMod
         private static readonly string FileDirectory = Path.Combine("BepInEx", "config", MyPluginInfo.PLUGIN_NAME);
         private const string BuildFile = "builds.json";
         private static readonly string BuildPath = Path.Combine(FileDirectory, BuildFile);
-        public static Dictionary<string, BuildData> Builds;
+        public static Dictionary<string, BuildModel> Builds;
 
 
         internal static void LoadData()
@@ -22,7 +22,7 @@ namespace ArenaBuildsMod
             else
             {
                 var jsonString = File.ReadAllText(BuildPath);
-                Builds = JsonSerializer.Deserialize<Dictionary<string, BuildData>>(jsonString)!;
+                Builds = JsonSerializer.Deserialize<Dictionary<string, BuildModel>>(jsonString)!;
                 Plugin.Logger.LogInfo($"Loaded {Builds.Count} builds from Builds.json");
             }
         }
@@ -35,6 +35,19 @@ namespace ArenaBuildsMod
             }
 
             return string.Join("\n- ", Builds.Keys);
+        }
+
+        public static void LogInfoJson()
+        {
+            foreach (var kvp in Builds)
+            {
+                Plugin.Logger.LogInfo($"Clé : {kvp.Key}");
+                var json = JsonSerializer.Serialize(kvp.Value, new JsonSerializerOptions
+                {
+                    WriteIndented = true
+                });
+                Plugin.Logger.LogInfo(json);
+            }
         }
     }
 }

@@ -2,7 +2,11 @@
 
 public class Abilities
 {
-    public string Name { get; set; }
+    public string Travel { get; set; }
     
-    public AbilitySlot Slot { get; set; }
+    public string Ability1 { get; set; }
+    
+    public string Ability2 { get; set; }
+    
+    public string Ultimate { get; set; }
 }
