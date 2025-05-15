@@ -13,8 +13,6 @@ internal class BuildCommands
             BuildManager.LoadData();
         }
 
-        //BuildManager.LogInfoJson();
-
         if (BuildManager.Builds!.TryGetValue(targetBuild, out var build))
         {
             InventoryHelper.ClearInventory(ctx.Event.SenderCharacterEntity);
@@ -31,7 +29,7 @@ internal class BuildCommands
             InventoryHelper.GiveItems(ctx.Event.SenderCharacterEntity, build.Items);
 
             AbilityHelper.EquipAbilities(ctx.Event.SenderCharacterEntity, build.Abilities);
-            //Helper.EquipePassives(ctx.Event.SenderCharacterEntity, build.Passives); // TODO
+            AbilityHelper.EquipPassiveSpells(ctx.Event.SenderCharacterEntity, build.PassiveSpells);
 
             ctx.Reply($"Equipped build <color=white>{targetBuild}</color>.");
         }
@@ -41,7 +39,7 @@ internal class BuildCommands
         }
     }
 
-    [Command("list", description: "List available builds", adminOnly: false)]
+    [Command("list_build", description: "List available builds", adminOnly: false)]
     public static void ListBuildCommand(ChatCommandContext ctx)
     {
         if (BuildManager.Builds == null)
@@ -51,5 +49,12 @@ internal class BuildCommands
 
         var buildList = BuildManager.GetBuildList();
         ctx.Reply($"Available builds :\n- {buildList}");
+    }
+    
+    [Command("clear_build", description: "Clear current build", adminOnly: false)]
+    public static void ClearBuildCommand(ChatCommandContext ctx)
+    {
+        InventoryHelper.ClearInventory(ctx.Event.SenderCharacterEntity);
+        AbilityHelper.ClearPassiveSpell(ctx.Event.SenderCharacterEntity);      
     }
 }

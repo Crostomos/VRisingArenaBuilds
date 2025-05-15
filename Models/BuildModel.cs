@@ -10,6 +10,8 @@ public class BuildModel
     
     public Abilities Abilities { get; set; }
     
+    public PassiveSpells PassiveSpells { get; set; }
+    
     public Armors Armors { get; set; }
     
     public List<WeaponData> Weapons { get; set; }

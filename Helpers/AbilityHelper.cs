@@ -1,53 +1,75 @@
 ﻿using ArenaBuildsMod.Models;
+using ProjectM;
 using Stunlock.Core;
 using Unity.Entities;
 
 namespace ArenaBuildsMod.Helpers;
 
-internal static class  AbilityHelper
+internal static class AbilityHelper
 {
-
     public static void EquipAbilities(Entity character, Abilities abilities)
     {
-        if (UtilsHelper.TryGetPrefabGuid(abilities.Travel, out var travelGuid))
+        var abilityMappings = new (string ability, AbilitySlot slot)[]
         {
-            EquipAbility(character, travelGuid, AbilitySlot.Travel);
-        }
-        
-        if (UtilsHelper.TryGetPrefabGuid(abilities.Ability1, out var ability1Guid))
+            (abilities.Travel, AbilitySlot.Travel),
+            (abilities.Ability1, AbilitySlot.Ability1),
+            (abilities.Ability2, AbilitySlot.Ability2),
+            (abilities.Ultimate, AbilitySlot.Ultimate)
+        };
+
+        foreach (var (ability, slot) in abilityMappings)
         {
-            EquipAbility(character, ability1Guid, AbilitySlot.Ability1);
-        }
-        
-        if (UtilsHelper.TryGetPrefabGuid(abilities.Ability2, out var ability2Guid))
-        {
-            EquipAbility(character, ability2Guid, AbilitySlot.Ability2);
-        }
-        
-        if (UtilsHelper.TryGetPrefabGuid(abilities.Ultimate, out var ultimateGuid))
-        {
-            EquipAbility(character, ultimateGuid, AbilitySlot.Ultimate);
+            if (UtilsHelper.TryGetPrefabGuid(ability, out var guid))
+            {
+                EquipAbility(character, guid, slot);
+            }
         }
     }
-    
-    
+
+
+    public static void EquipPassiveSpells(Entity character, PassiveSpells passiveSpells)
+    {
+        var spells = new[] 
+        {
+            passiveSpells.PassiveSpell1,
+            passiveSpells.PassiveSpell2,
+            passiveSpells.PassiveSpell3,
+            passiveSpells.PassiveSpell4,
+            passiveSpells.PassiveSpell5
+        };
+
+        for (var i = 0; i < spells.Length; i++)
+        {
+            if (UtilsHelper.TryGetPrefabGuid(spells[i], out var spellGuid))
+            {
+                EquipSpellPassive(character, spellGuid, i);
+            }
+        }
+    }
+
+
     private static void EquipAbility(Entity character, PrefabGUID guid, AbilitySlot slot)
     {
         var buffEntity = Entity.Null;
-        Core.ServerGameManager.ModifyAbilityGroupOnSlot(buffEntity, character, (int)slot, guid); // TODO fix didn't change spell when press J
+        Core.ServerGameManager.ModifyAbilityGroupOnSlot(buffEntity, character, (int)slot,
+            guid); // TODO fix didn't change spell when press J
     }
-    
-    private static void EquipSpellPassive(Entity character, int slot)
+
+    private static void EquipSpellPassive(Entity character, PrefabGUID guid, int slot)
     {
-        // TODO
-        // var entity = Core.EntityManager.CreateEntity(ComponentType.ReadWrite<FromCharacter>(),
-        //     ComponentType.ReadWrite<UnlockSpellSchoolPassive>());
-        // var userEntity = GetUserEntity(character);
-        // Core.EntityManager.SetComponentData<FromCharacter>(entity,
-        //     new() { User = userEntity, Character = character });
-        // Core.EntityManager.SetComponentData<SpellModPrefabGuidSettings>(entity, new()
-        // {
-        //
-        // });
+        var buffer = Core.EntityManager.GetBuffer<ActivePassivesBuffer>(character);
+        buffer[slot] = new ActivePassivesBuffer
+        {
+            PrefabGuid = guid
+        };
+    }
+
+    public static void ClearPassiveSpell(Entity character)
+    {
+        var buffer = Core.EntityManager.GetBuffer<ActivePassivesBuffer>(character);
+        for (var i = 0; i < buffer.Length; ++i)
+        {
+            buffer[i] = new ActivePassivesBuffer();
+        }
     }
 }

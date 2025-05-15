@@ -42,6 +42,13 @@
       "Ability1": "AB_Illusion_PhantomAegis_AbilityGroup",
       "Ability2": "AB_Illusion_MistTrance_AbilityGroup",
       "Ultimate": "AB_Illusion_WispDance_AbilityGroup"
+    },
+    "PassiveSpells": {
+      "PassiveSpell1": "SpellPassive_Illusion_T02_FlowingSorcery",
+      "PassiveSpell2": "SpellPassive_Chaos_T04_RavenousStrikes",
+      "PassiveSpell3": "SpellPassive_Frost_T04_DarkEnchantment",
+      "PassiveSpell4": "SpellPassive_Frost_T03_Bastion",
+      "PassiveSpell5": "SpellPassive_Storm_T04_TurbulentVelocity"
     }
   }
 }
