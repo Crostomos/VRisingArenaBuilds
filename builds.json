@@ -1,0 +1,314 @@
+﻿{
+  "defensive": {
+    "Blood": {
+      "PrimaryType": "BloodType_Scholar",
+      "SecondaryType": "BloodType_Creature",
+      "PrimaryQuality": 100,
+      "SecondaryQuality": 100
+    },
+    "Items": [
+      {
+        "Name": "Item_Weapon_Axe_Unique_T08_Variation01",
+        "Amount": 1
+      },
+      {
+        "Name": "Item_Boots_T09_Dracula_Scholar",
+        "Amount": 1
+      },
+      {
+        "Name": "Item_Chest_T09_Dracula_Scholar",
+        "Amount": 1
+      },
+      {
+        "Name": "Item_Gloves_T09_Dracula_Scholar",
+        "Amount": 1
+      },
+      {
+        "Name": "Item_Legs_T09_Dracula_Scholar",
+        "Amount": 1
+      },
+      {
+        "Name": "Item_MagicSource_General_T08_Blood",
+        "Amount": 1
+      }
+    ],
+    "Abilities": [
+      {
+        "Name": "AB_Vampire_VeilOfChaos_Group",
+        "Slot": 2
+      },
+      {
+        "Name": "AB_Illusion_PhantomAegis_AbilityGroup",
+        "Slot": 5
+      },
+      {
+        "Name": "AB_Illusion_MistTrance_AbilityGroup",
+        "Slot": 6
+      },
+      {
+        "Name": "AB_Illusion_WispDance_AbilityGroup",
+        "Slot": 7
+      }
+    ]
+  },
+  "minions": {
+    "Blood": {
+      "PrimaryType": "BloodType_Scholar",
+      "SecondaryType": "BloodType_Warrior",
+      "PrimaryQuality": 100,
+      "SecondaryQuality": 100
+    },
+    "Items": [
+      {
+        "Name": "Item_Weapon_Axe_Unique_T08_Variation01",
+        "Amount": 1
+      },
+      {
+        "Name": "Item_Boots_T09_Dracula_Rogue",
+        "Amount": 1
+      },
+      {
+        "Name": "Item_Chest_T09_Dracula_Rogue",
+        "Amount": 1
+      },
+      {
+        "Name": "Item_Gloves_T09_Dracula_Rogue",
+        "Amount": 1
+      },
+      {
+        "Name": "Item_Legs_T09_Dracula_Rogue",
+        "Amount": 1
+      },
+      {
+        "Name": "Item_MagicSource_General_T08_Blood",
+        "Amount": 1
+      }
+    ],
+    "Abilities": [
+      {
+        "Name": "AB_Vampire_VeilOfIllusion_AbilityGroup",
+        "Slot": 2
+      },
+      {
+        "Name": "AB_Unholy_CorruptedSkull_AbilityGroup",
+        "Slot": 5
+      },
+      {
+        "Name": "AB_Unholy_DeathKnight_AbilityGroup",
+        "Slot": 6
+      },
+      {
+        "Name": "AB_Unholy_ArmyOfTheDead_AbilityGroup",
+        "Slot": 7
+      }
+    ]
+  },
+  "movement": {
+    "Blood": {
+      "PrimaryType": "BloodType_Rogue",
+      "SecondaryType": "BloodType_Brute",
+      "PrimaryQuality": 100,
+      "SecondaryQuality": 100
+    },
+    "Items": [
+      {
+        "Name": "Item_Weapon_Axe_Unique_T08_Variation01",
+        "Amount": 1
+      },
+      {
+        "Name": "Item_Boots_T09_Dracula_Rogue",
+        "Amount": 1
+      },
+      {
+        "Name": "Item_Chest_T09_Dracula_Rogue",
+        "Amount": 1
+      },
+      {
+        "Name": "Item_Gloves_T09_Dracula_Rogue",
+        "Amount": 1
+      },
+      {
+        "Name": "Item_Legs_T09_Dracula_Rogue",
+        "Amount": 1
+      },
+      {
+        "Name": "Item_MagicSource_General_T08_Blood",
+        "Amount": 1
+      }
+    ],
+    "Abilities": [
+      {
+        "Name": "AB_Vampire_VeilOfChaos_Group",
+        "Slot": 2
+      },
+      {
+        "Name": "AB_Illusion_PhantomAegis_AbilityGroup",
+        "Slot": 5
+      },
+      {
+        "Name": "AB_Illusion_MistTrance_AbilityGroup",
+        "Slot": 6
+      },
+      {
+        "Name": "AB_Illusion_WispDance_AbilityGroup",
+        "Slot": 7
+      }
+    ]
+  },
+  "offensive": {
+    "Blood": {
+      "PrimaryType": "BloodType_Draculin",
+      "SecondaryType": "BloodType_Scholar",
+      "PrimaryQuality": 100,
+      "SecondaryQuality": 100
+    },
+    "Items": [
+      {
+        "Name": "Item_Weapon_Axe_Unique_T08_Variation01",
+        "Amount": 1
+      },
+      {
+        "Name": "Item_Boots_T09_Dracula_Scholar",
+        "Amount": 1
+      },
+      {
+        "Name": "Item_Chest_T09_Dracula_Scholar",
+        "Amount": 1
+      },
+      {
+        "Name": "Item_Gloves_T09_Dracula_Scholar",
+        "Amount": 1
+      },
+      {
+        "Name": "Item_Legs_T09_Dracula_Scholar",
+        "Amount": 1
+      },
+      {
+        "Name": "Item_MagicSource_General_T08_Blood",
+        "Amount": 1
+      }
+    ],
+    "Abilities": [
+      {
+        "Name": "AB_Vampire_VeilOfChaos_Group",
+        "Slot": 2
+      },
+      {
+        "Name": "AB_Frost_CrystalLance_AbilityGroup",
+        "Slot": 5
+      },
+      {
+        "Name": "AB_Frost_ColdSnap_AbilityGroup",
+        "Slot": 6
+      },
+      {
+        "Name": "AB_Chaos_MercilessCharge_AbilityGroup",
+        "Slot": 7
+      }
+    ]
+  },
+  "tank": {
+    "Blood": {
+      "PrimaryType": "BloodType_Brute",
+      "SecondaryType": "BloodType_Warrior",
+      "PrimaryQuality": 100,
+      "SecondaryQuality": 100
+    },
+    "Items": [
+      {
+        "Name": "Item_Weapon_Axe_Unique_T08_Variation01",
+        "Amount": 1
+      },
+      {
+        "Name": "Item_Boots_T09_Dracula_Brute",
+        "Amount": 1
+      },
+      {
+        "Name": "Item_Chest_T09_Dracula_Brute",
+        "Amount": 1
+      },
+      {
+        "Name": "Item_Gloves_T09_Dracula_Brute",
+        "Amount": 1
+      },
+      {
+        "Name": "Item_Legs_T09_Dracula_Brute",
+        "Amount": 1
+      },
+      {
+        "Name": "Item_MagicSource_General_T08_Blood",
+        "Amount": 1
+      }
+    ],
+    "Abilities": [
+      {
+        "Name": "AB_Vampire_VeilOfBlood_Group",
+        "Slot": 2
+      },
+      {
+        "Name": "AB_Blood_BloodRage_AbilityGroup",
+        "Slot": 5
+      },
+      {
+        "Name": "AB_Blood_BloodRite_AbilityGroup",
+        "Slot": 6
+      },
+      {
+        "Name": "AB_Storm_LightningTyphoon_AbilityGroup",
+        "Slot": 7
+      }
+    ]
+  },
+  "weapon": {
+    "Blood": {
+      "PrimaryType": "BloodType_Warrior",
+      "SecondaryType": "BloodType_Rogue",
+      "PrimaryQuality": 100,
+      "SecondaryQuality": 100
+    },
+    "Items": [
+      {
+        "Name": "Item_Weapon_Axe_Unique_T08_Variation01",
+        "Amount": 1
+      },
+      {
+        "Name": "Item_Boots_T09_Dracula_Warrior",
+        "Amount": 1
+      },
+      {
+        "Name": "Item_Chest_T09_Dracula_Warrior",
+        "Amount": 1
+      },
+      {
+        "Name": "Item_Gloves_T09_Dracula_Warrior",
+        "Amount": 1
+      },
+      {
+        "Name": "Item_Legs_T09_Dracula_Warrior",
+        "Amount": 1
+      },
+      {
+        "Name": "Item_MagicSource_General_T08_Blood",
+        "Amount": 1
+      }
+    ],
+    "Abilities": [
+      {
+        "Name": "AB_Vampire_VeilOfChaos_Group",
+        "Slot": 2
+      },
+      {
+        "Name": "AB_Frost_ColdSnap_AbilityGroup",
+        "Slot": 5
+      },
+      {
+        "Name": "AB_Storm_Discharge_AbilityGroup",
+        "Slot": 6
+      },
+      {
+        "Name": "AB_Frost_ArcticLeap_AbilityGroup",
+        "Slot": 7
+      }
+    ]
+  }
+}
