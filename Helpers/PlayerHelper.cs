@@ -14,9 +14,8 @@ internal static class PlayerHelper
             Character = character
         };
 
-        var debugEventsSystem = Core.Server.GetExistingSystemManaged<DebugEventsSystem>();
-        debugEventsSystem.UnlockAllResearch(fromCharacter);
-        debugEventsSystem.UnlockAllVBloods(fromCharacter);
-        debugEventsSystem.CompleteAllAchievements(fromCharacter);
+        Core.DebugEventsSystem.UnlockAllResearch(fromCharacter);
+        Core.DebugEventsSystem.UnlockAllVBloods(fromCharacter);
+        Core.DebugEventsSystem.CompleteAllAchievements(fromCharacter);
     }
 }

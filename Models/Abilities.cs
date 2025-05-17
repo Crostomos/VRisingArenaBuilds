@@ -2,11 +2,11 @@
 
 public class Abilities
 {
-    public string Travel { get; set; }
+    public AbilityData Travel { get; set; }
     
-    public string Ability1 { get; set; }
+    public AbilityData Ability1 { get; set; }
     
-    public string Ability2 { get; set; }
+    public AbilityData Ability2 { get; set; }
     
-    public string Ultimate { get; set; }
+    public UltimateAbilityData Ultimate { get; set; }
 }

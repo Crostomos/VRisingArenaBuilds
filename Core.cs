@@ -18,6 +18,8 @@ internal class Core
 
     public static ServerGameManager ServerGameManager =>
         Server.GetExistingSystemManaged<ServerScriptMapper>()._ServerGameManager;
+    
+    public static DebugEventsSystem DebugEventsSystem => Server.GetExistingSystemManaged<DebugEventsSystem>();
 
     public static EntityManager EntityManager => Server.EntityManager;
 

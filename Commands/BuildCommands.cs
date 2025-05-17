@@ -28,9 +28,7 @@ internal class BuildCommands
             );
             InventoryHelper.GiveItems(ctx.Event.SenderCharacterEntity, build.Items);
 
-            AbilityHelper.EquipAbilities(ctx.Event.SenderCharacterEntity, build.Abilities);
-            // TODO EquipJewels
-            
+            AbilityHelper.EquipAbilities(ctx.Event.SenderCharacterEntity, ctx.User, build.Abilities);
             AbilityHelper.EquipPassiveSpells(ctx.Event.SenderCharacterEntity, build.PassiveSpells);
 
             ctx.Reply($"Equipped build <color=white>{targetBuild}</color>.");

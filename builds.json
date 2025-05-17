@@ -35,13 +35,51 @@
       {
         "Name": "Item_Consumable_HealingPotion_T02",
         "Amount": 10
-      } 
+      }
     ],
     "Abilities": {
-      "Travel": "AB_Vampire_VeilOfChaos_Group",
-      "Ability1": "AB_Illusion_PhantomAegis_AbilityGroup",
-      "Ability2": "AB_Illusion_MistTrance_AbilityGroup",
-      "Ultimate": "AB_Illusion_WispDance_AbilityGroup"
+      "Travel": {
+        "Name": "AB_Vampire_VeilOfChaos_Group",
+        "Jewel": {
+          "SpellMod1": "SpellMod_VeilOfChaos_BonusIllusion",
+          "SpellMod1Power": 1.0,
+          "SpellMod2": "SpellMod_VeilOfChaos_BonusDamageOnExplode",
+          "SpellMod2Power": 1.0,
+          "SpellMod3": "SpellMod_VeilOfChaos_ApplySnareOnExplode",
+          "SpellMod3Power": 1.0,
+          "SpellMod4": "",
+          "SpellMod4Power": 1.0
+        }
+      },
+      "Ability1": {
+        "Name": "AB_Illusion_PhantomAegis_AbilityGroup",
+        "Jewel": {
+          "SpellMod1": "SpellMod_PhantomAegis_ConsumeShieldAndPullAlly",
+          "SpellMod1Power": 1.0,
+          "SpellMod2": "SpellMod_PhantomAegis_ExplodeOnDestroy",
+          "SpellMod2Power": 1.0,
+          "SpellMod3": "SpellMod_PhantomAegis_IncreaseLifetime",
+          "SpellMod3Power": 1.0,
+          "SpellMod4": "SpellMod_PhantomAegis_IncreaseSpellPower",
+          "SpellMod4Power": 0.5
+        }
+      },
+      "Ability2": {
+        "Name": "AB_Illusion_MistTrance_AbilityGroup",
+        "Jewel": {
+          "SpellMod1": "",
+          "SpellMod1Power": 1.0,
+          "SpellMod2": "",
+          "SpellMod2Power": 1.0,
+          "SpellMod3": "",
+          "SpellMod3Power": 1.0,
+          "SpellMod4": "",
+          "SpellMod4Power": 1.0
+        }
+      },
+      "Ultimate": {
+        "Name": "AB_Illusion_WispDance_AbilityGroup"
+      }
     },
     "PassiveSpells": {
       "PassiveSpell1": "SpellPassive_Illusion_T02_FlowingSorcery",

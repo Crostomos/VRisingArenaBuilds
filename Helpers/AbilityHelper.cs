@@ -1,5 +1,7 @@
 ﻿using ArenaBuildsMod.Models;
+using ArenaBuildsMod.Models.Interfaces;
 using ProjectM;
+using ProjectM.Network;
 using Stunlock.Core;
 using Unity.Entities;
 
@@ -7,9 +9,9 @@ namespace ArenaBuildsMod.Helpers;
 
 internal static class AbilityHelper
 {
-    public static void EquipAbilities(Entity character, Abilities abilities)
+    public static void EquipAbilities(Entity character, User user, Abilities abilities)
     {
-        var abilityMappings = new (string ability, AbilityTypeEnum slot)[]
+        var abilityMappings = new (IAbilityData ability, AbilityTypeEnum slot)[]
         {
             (abilities.Travel, AbilityTypeEnum.Travel),
             (abilities.Ability1, AbilityTypeEnum.SpellSlot1),
@@ -19,9 +21,13 @@ internal static class AbilityHelper
 
         foreach (var (ability, slot) in abilityMappings)
         {
-            if (UtilsHelper.TryGetPrefabGuid(ability, out var guid))
+            if (UtilsHelper.TryGetPrefabGuid(ability.Name, out var guid))
             {
                 EquipAbility(character, guid, slot);
+                if (ability is AbilityData normalAbility)
+                {
+                    JewelHelper.CreateAndEquip(user, guid, normalAbility.Jewel);
+                }
             }
         }
     }
