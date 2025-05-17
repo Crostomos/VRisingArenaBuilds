@@ -42,10 +42,8 @@ It’s designed to streamline arena practice and fast-paced duels without the ne
 
 1. **Install BepInEx**  
    Follow the guide here: [BepInEx Installation Guide](https://wiki.vrisingmods.com/user/bepinex_install.html)  
-   ⚠️ *Until BepInEx is updated for v1.1, avoid using the Thunderstore version.* Use the correct testing version listed [here](https://wiki.vrisingmods.com/user/game_update.html).
 
 2. **Install VampireCommandFramework (VCF)**  
-   ⚠️ *Also avoid the Thunderstore version until VCF is updated for v1.1.* Download the proper version [here](https://wiki.vrisingmods.com/user/game_update.html).
 
 3. **Download ArenaBuildsMod**  
    Grab the `BuildArena.dll` and `builds.json` files from the [Releases](#) section.
