@@ -2,6 +2,7 @@
 using ArenaBuildsMod.Models;
 using ProjectM;
 using ProjectM.Network;
+using ProjectM.WeaponCoating;
 using Unity.Entities;
 
 namespace ArenaBuildsMod.Helpers;

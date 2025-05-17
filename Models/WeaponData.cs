@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace ArenaBuildsMod.Models;
+﻿namespace ArenaBuildsMod.Models;
 
 public class WeaponData
 {
