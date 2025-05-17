@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using ArenaBuildsMod.Models;
 using Data;
 using ProjectM;
+using ProjectM.Network;
 using Stunlock.Core;
 using Unity.Entities;
 using UnityEngine;
@@ -71,6 +72,31 @@ internal static class InventoryHelper
         }
 
         return new Entity();
+    }
+
+    public static void EquipEquipment(Entity character, int slot)
+    {
+        var entity = Core.EntityManager.CreateEntity(
+            ComponentType.ReadWrite<FromCharacter>(),
+            ComponentType.ReadWrite<EquipItemEvent>()
+        );
+        var userEntity = UtilsHelper.GetUserEntity(character);
+        Core.EntityManager.SetComponentData(entity, new FromCharacter { User = userEntity, Character = character });
+        Core.EntityManager.SetComponentData(entity, new EquipItemEvent { SlotIndex = slot });
+    }
+
+    public static void UnEquipEquipment(Entity character, EquipmentType equipmentType)
+    {
+        var entity = Core.EntityManager.CreateEntity(
+            ComponentType.ReadWrite<FromCharacter>(),
+            ComponentType.ReadWrite<UnequipItemEvent>()
+        );
+        var userEntity = UtilsHelper.GetUserEntity(character);
+        Core.EntityManager.SetComponentData(entity, new FromCharacter { User = userEntity, Character = character });
+        Core.EntityManager.SetComponentData(entity, new UnequipItemEvent
+        {
+            EquipmentType = equipmentType
+        });
     }
 
     public static void ClearInventory(Entity character)

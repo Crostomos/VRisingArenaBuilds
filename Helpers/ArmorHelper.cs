@@ -1,5 +1,4 @@
-﻿using System;
-using ArenaBuildsMod.Models;
+﻿using ArenaBuildsMod.Models;
 using ProjectM;
 using Stunlock.Core;
 using Unity.Entities;
@@ -34,17 +33,6 @@ internal static class ArmorHelper
     {
         var itemEntity = InventoryHelper.AddItemToInventory(character, guid, 1);
         var slot = InventoryUtilities.GetItemSlot(Core.EntityManager, character, guid, itemEntity);
-        EquipEquipment(character, slot);
-    }
-
-    private static void EquipEquipment(Entity character, int slot)
-    {
-        var entity = Core.EntityManager.CreateEntity(
-            ComponentType.ReadWrite<FromCharacter>(),
-            ComponentType.ReadWrite<EquipItemEvent>()
-        );
-        var userEntity = UtilsHelper.GetUserEntity(character);
-        Core.EntityManager.SetComponentData(entity, new FromCharacter { User = userEntity, Character = character });
-        Core.EntityManager.SetComponentData(entity, new EquipItemEvent { SlotIndex = slot });
+        InventoryHelper.EquipEquipment(character, slot);
     }
 }
