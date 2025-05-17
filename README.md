@@ -1,70 +1,90 @@
 ﻿# ArenaBuildsMod
 
-**ArenaBuildsMod** is a lightweight mod for *V Rising* that provides ready-to-use PvP builds via simple in-game commands.
-It’s designed to streamline Arena practice and fast-paced duels without the need to manually gear up.
+**ArenaBuildsMod** is a lightweight, server-side mod for *V Rising* that allows players to instantly equip ready-to-use PvP builds via simple in-game commands.  
+It’s designed to streamline arena practice and fast-paced duels without the need to manually gear up.
 
 ---
 
-## ⚔️ Features
+## 🔧 Features
 
-- Instantly equip full builds via commands
-- Modify spells and gear sets with a single line
-- Great for Arena training, build testing, or tournaments
-
----
-
-## 🛠️ Requirements
-
-- [BepInEx 5](https://github.com/BepInEx/BepInEx)
-- [VampireCommandFramework (VCF)](https://github.com/decaprime/VampireCommandFramework)
-
-Make sure these are properly installed before using the mod.
+- Instantly equip a complete build with a single command, including:
+  - Blood type
+  - Fully attributed weapons
+  - Armor sets
+  - Abilities
+  - Jewels
+  - Passive spells
+- Default builds are based on PVP_Preset
+- Builds are fully customizable via the `builds.json` file
+  - A list of valid `prefabName` values is available here: [VRising DB](https://vrising.gaming.tools)
+  - For a comprehensive list of prefabName values, particularly those related to StatMod and SpellMod, refer to: [VRising Mods Wiki](https://wiki.vrisingmods.com/prefabs/Spell)
 
 ---
 
 ## 💬 Commands
 
-| Command          | Description |
-|------------------|-------------|
-| `.build <class>` | Gives you a full gear set and spells for the specified build type |
-
-### Example:
-`.build tank`
-
-
-Supported classes (more coming soon):
-- `warrior`
-- `rogue`
-- `mage`
+| Command            | Description                                                  |
+|--------------------|--------------------------------------------------------------|
+| `.build <class>`   | Equips the specified build with gear, spells, and passives   |
+| `.list_build`      | Displays the list of available builds                        |
+| `.clear_build`     | Clears your inventory, spells, and passives                  |
 
 ---
 
-## 📦 Installation
+## 📦 Requirements
 
-1. Download the latest `.dll` file from the [Releases](#) section.
-2. Place it into your `BepInEx/plugins` folder.
-3. Launch the game — the mod should load automatically.
-
----
-
-## 🔧 Planned Features
-
-- Custom build presets
-- Combat performance stats (DPS, time, spell usage)
-- Test dummy spawning
-- Auto-respawn for dueling
-- Build rotation system
+- [BepInEx](https://github.com/BepInEx/BepInEx)
+- [VampireCommandFramework (VCF)](https://github.com/decaprime/VampireCommandFramework)
 
 ---
 
-## 🧑‍💻 Author
+## 📥 Installation
 
-Developed by **Crostomos**  
-Feel free to contribute, fork, or suggest ideas!
+1. **Install BepInEx**  
+   Follow the guide here: [BepInEx Installation Guide](https://wiki.vrisingmods.com/user/bepinex_install.html)  
+   ⚠️ *Until BepInEx is updated for v1.1, avoid using the Thunderstore version.* Use the correct testing version listed [here](https://wiki.vrisingmods.com/user/game_update.html).
+
+2. **Install VampireCommandFramework (VCF)**  
+   ⚠️ *Also avoid the Thunderstore version until VCF is updated for v1.1.* Download the proper version [here](https://wiki.vrisingmods.com/user/game_update.html).
+
+3. **Download ArenaBuildsMod**  
+   Grab the `BuildArena.dll` and `builds.json` files from the [Releases](#) section.
+
+4. **Place the files**  
+   - Move `VampireCommandFramework.dll` and `BuildArena.dll` to:  
+     `BepInEx/Plugins/`
+   - Move `builds.json` to:  
+     `BepInEx/config/ArenaBuildsMod/`
+
+---
+
+## 🐞 Known Issues
+
+- Weapon spell modifiers are not currently applied.
+- The `.clear_build` command doesn't properly remove equipped items or jewels.
+
+---
+
+## 🚧 Planned Features
+
+- Save and restore your character’s original state before and after using a build.
+- Restrict `.build` usage to specific arena zones (can be toggled via config).
+
+---
+
+## 🙌 Credits
+
+- Big thanks to the [V Rising Modding Community](https://vrisingmods.com/) for documentation and open-source tools.
+- Special thanks to [Odjit](https://github.com/Odjit) for the **KindredExtract** mod, which was a helpful reference.
+
+---
+
+## 👤 Author
+
+Developed by **Crostomos**
 
 ---
 
 ## 📄 License
 
-This project is licensed under the **MIT License**.  
-See the [LICENSE](LICENSE) file for details.
+This project is licensed under the **AGPL-3.0** license.
