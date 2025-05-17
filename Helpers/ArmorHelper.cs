@@ -1,7 +1,6 @@
 ﻿using System;
 using ArenaBuildsMod.Models;
 using ProjectM;
-using ProjectM.Network;
 using Stunlock.Core;
 using Unity.Entities;
 
@@ -11,20 +10,20 @@ internal static class ArmorHelper
 {
     public static void EquipArmors(Entity character, Armors armors)
     {
-        var armorParts = new (string item, Func<Armors, string> getPart)[]
+        var armorList = new[]
         {
-            ("Boots", a => a.Boots),
-            ("Chest", a => a.Chest),
-            ("Cloak", a => a.Cloak),
-            ("Gloves", a => a.Gloves),
-            ("Head", a => a.Head),
-            ("Legs", a => a.Legs),
-            ("MagicSource", a => a.MagicSource)
+            armors.Boots,
+            armors.Chest,
+            armors.Gloves,
+            armors.Legs,
+            armors.MagicSource,
+            armors.Head,
+            armors.Cloak
         };
 
-        foreach (var (_, getPart) in armorParts)
+        for (var i = 0; i < armorList.Length; i++)
         {
-            if (UtilsHelper.TryGetPrefabGuid(getPart(armors), out var guid))
+            if (UtilsHelper.TryGetPrefabGuid(armorList[i], out var guid))
             {
                 GiveAndEquip(character, guid);
             }
