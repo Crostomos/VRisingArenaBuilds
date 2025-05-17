@@ -17,7 +17,6 @@ internal class BuildCommands
         {
             InventoryHelper.ClearInventory(ctx.Event.SenderCharacterEntity);
 
-            ArmorHelper.EquipArmors(ctx.Event.SenderCharacterEntity, build.Armors);
             WeaponHelper.GiveWeapons(ctx.User, ctx.Event.SenderCharacterEntity, build.Weapons);
             InventoryHelper.GiveBloodPotion(
                 ctx.Event.SenderCharacterEntity,
@@ -27,6 +26,8 @@ internal class BuildCommands
                 secondaryQuality: build.Blood.SecondaryQuality
             );
             InventoryHelper.GiveItems(ctx.Event.SenderCharacterEntity, build.Items);
+            
+            ArmorHelper.EquipArmors(ctx.Event.SenderCharacterEntity, build.Armors); 
 
             AbilityHelper.EquipAbilities(ctx.Event.SenderCharacterEntity, ctx.User, build.Abilities);
             AbilityHelper.EquipPassiveSpells(ctx.Event.SenderCharacterEntity, build.PassiveSpells);

@@ -11,15 +11,15 @@ internal static class WeaponHelper
 {
     public static void GiveWeapons(User user, Entity character, List<WeaponData> weapons)
     {
-        foreach (var weapon in weapons)
+        foreach (var weaponData in weapons)
         {
-            if (IsLegendary(weapon.Name))
+            if (IsLegendary(weaponData.Name))
             {
-                CreateAndGiveLegendaryWeapon(user.Index, weapon);
+                CreateAndGiveLegendaryWeapon(user.Index, weaponData);
             }
             else
             {
-                CreateAndGiveBasicWeapon(character, weapon);
+                CreateAndGiveBasicWeapon(character, weaponData);
             }
         }
     }
