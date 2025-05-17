@@ -11,15 +11,15 @@ internal static class UtilsHelper
 {
     public static bool TryGetPrefabGuid(string name, out PrefabGUID guid)
     {
+        var temp = GetPrefabGuid(name);
+        if (temp is not null)
+        {
+            guid = temp.Value;
+            return true;
+        }
+
         guid = default;
-
-        var type = typeof(Prefabs);
-        var field = type.GetField(name, BindingFlags.Public | BindingFlags.Static);
-
-        if (field == null || field.FieldType != typeof(PrefabGUID)) return false;
-        guid = (PrefabGUID)field.GetValue(null)!;
-        return true;
-
+        return false;
     }
 
     public static PrefabGUID? GetPrefabGuid(string name)

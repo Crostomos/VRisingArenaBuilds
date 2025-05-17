@@ -37,24 +37,4 @@ public class Plugin : BasePlugin
         _harmony?.UnpatchSelf();
         return true;
     }
-
-
-    /// <summary> 
-    /// Example VCF command that demonstrated default values and primitive types
-    /// Visit https://github.com/decaprime/VampireCommandFramework for more info 
-    /// </summary>
-    /// <remarks>
-    /// How you could call this command from chat:
-    ///
-    /// .arenabuildsmod-example "some quoted string" 1 1.5
-    /// .arenabuildsmod-example boop 21232
-    /// .arenabuildsmod-example boop-boop
-    ///</remarks>
-    [Command("arenabuildsmod-example", description: "Example command from arenabuildsmod", adminOnly: true)]
-    public void ExampleCommand(ICommandContext ctx, string someString, int num = 5, float num2 = 1.5f)
-    { 
-        ctx.Reply($"You passed in {someString} and {num} and {num2}");
-    }
-    
-    
 }

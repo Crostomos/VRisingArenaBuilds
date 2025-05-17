@@ -27,5 +27,3 @@ internal class Core
         return null;
     }
 }
-
-

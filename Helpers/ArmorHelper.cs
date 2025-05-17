@@ -1,4 +1,5 @@
-﻿using ArenaBuildsMod.Models;
+﻿using System;
+using ArenaBuildsMod.Models;
 using ProjectM;
 using ProjectM.Network;
 using Stunlock.Core;
@@ -10,39 +11,23 @@ internal static class ArmorHelper
 {
     public static void EquipArmors(Entity character, Armors armors)
     {
-        if (UtilsHelper.TryGetPrefabGuid(armors.Boots, out var bootsGuid))
+        var armorParts = new (string item, Func<Armors, string> getPart)[]
         {
-            GiveAndEquip(character, bootsGuid);
-        }
-        
-        if (UtilsHelper.TryGetPrefabGuid(armors.Chest, out var chestGuid))
+            ("Boots", a => a.Boots),
+            ("Chest", a => a.Chest),
+            ("Cloak", a => a.Cloak),
+            ("Gloves", a => a.Gloves),
+            ("Head", a => a.Head),
+            ("Legs", a => a.Legs),
+            ("MagicSource", a => a.MagicSource)
+        };
+
+        foreach (var (_, getPart) in armorParts)
         {
-            GiveAndEquip(character, chestGuid);
-        }
-        
-        if (UtilsHelper.TryGetPrefabGuid(armors.Cloak, out var cloakGuid))
-        {
-            GiveAndEquip(character, cloakGuid);
-        }
-        
-        if (UtilsHelper.TryGetPrefabGuid(armors.Gloves, out var glovesGuid))
-        {
-            GiveAndEquip(character, glovesGuid);
-        }
-        
-        if (UtilsHelper.TryGetPrefabGuid(armors.Head, out var headGuid))
-        {
-            GiveAndEquip(character, headGuid);
-        }
-        
-        if (UtilsHelper.TryGetPrefabGuid(armors.Legs, out var legsGuid))
-        {
-            GiveAndEquip(character, legsGuid);
-        }
-        
-        if (UtilsHelper.TryGetPrefabGuid(armors.MagicSource, out var magicSourceGuid))
-        {
-            GiveAndEquip(character, magicSourceGuid);
+            if (UtilsHelper.TryGetPrefabGuid(getPart(armors), out var guid))
+            {
+                GiveAndEquip(character, guid);
+            }
         }
     }
 
@@ -58,7 +43,7 @@ internal static class ArmorHelper
         var entity = Core.EntityManager.CreateEntity(
             ComponentType.ReadWrite<FromCharacter>(),
             ComponentType.ReadWrite<EquipItemEvent>()
-            );
+        );
         var userEntity = UtilsHelper.GetUserEntity(character);
         Core.EntityManager.SetComponentData(entity, new FromCharacter { User = userEntity, Character = character });
         Core.EntityManager.SetComponentData(entity, new EquipItemEvent { SlotIndex = slot });

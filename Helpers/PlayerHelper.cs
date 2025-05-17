@@ -4,11 +4,11 @@ using Unity.Entities;
 
 namespace ArenaBuildsMod.Helpers;
 
-public class PlayerHelper
+internal static class PlayerHelper
 {
     public static void UnlockAll(Entity user, Entity character)
     {
-        var fromCharacter = new FromCharacter()
+        var fromCharacter = new FromCharacter
         {
             User = user,
             Character = character
