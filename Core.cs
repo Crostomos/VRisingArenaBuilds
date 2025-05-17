@@ -1,4 +1,6 @@
 ﻿using System;
+using ProjectM;
+using ProjectM.Gameplay.Systems;
 using ProjectM.Scripting;
 using Unity.Entities;
 
@@ -6,11 +8,16 @@ namespace ArenaBuildsMod;
 
 internal class Core
 {
-    public static World Server { get; } = GetWorld("Server") ??
-                                           throw new Exception(
-                                               "There is no Server world (yet). Did you install a server mod on the client?");
+    public static World Server { get; } = GetWorld("Server") ?? throw new Exception("There is no Server world.");
+
+    public static PrefabCollectionSystem PrefabCollectionSystem { get; } =
+        Server.GetExistingSystemManaged<PrefabCollectionSystem>();
     
-    public static ServerGameManager ServerGameManager => Server.GetExistingSystemManaged<ServerScriptMapper>()._ServerGameManager;
+    public static ActivateVBloodAbilitySystem ActivateVBloodAbilitySystem { get; } =
+        Server.GetExistingSystemManaged<ActivateVBloodAbilitySystem>();
+
+    public static ServerGameManager ServerGameManager =>
+        Server.GetExistingSystemManaged<ServerScriptMapper>()._ServerGameManager;
 
     public static EntityManager EntityManager => Server.EntityManager;
 

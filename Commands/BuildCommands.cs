@@ -29,6 +29,8 @@ internal class BuildCommands
             InventoryHelper.GiveItems(ctx.Event.SenderCharacterEntity, build.Items);
 
             AbilityHelper.EquipAbilities(ctx.Event.SenderCharacterEntity, build.Abilities);
+            // TODO EquipJewels
+            
             AbilityHelper.EquipPassiveSpells(ctx.Event.SenderCharacterEntity, build.PassiveSpells);
 
             ctx.Reply($"Equipped build <color=white>{targetBuild}</color>.");
@@ -55,6 +57,13 @@ internal class BuildCommands
     public static void ClearBuildCommand(ChatCommandContext ctx)
     {
         InventoryHelper.ClearInventory(ctx.Event.SenderCharacterEntity);
-        AbilityHelper.ClearPassiveSpell(ctx.Event.SenderCharacterEntity);      
+        AbilityHelper.ClearPassiveSpells(ctx.Event.SenderCharacterEntity);      
+        AbilityHelper.ClearAbilities(ctx.Event.SenderCharacterEntity);      
+    }
+    
+    [Command("unlock_all", description: "Unlock All", adminOnly: false)]
+    public static void UnlockAllCommand(ChatCommandContext ctx)
+    {
+        PlayerHelper.UnlockAll(ctx.Event.SenderUserEntity, ctx.Event.SenderCharacterEntity);
     }
 }

@@ -9,12 +9,12 @@ internal static class AbilityHelper
 {
     public static void EquipAbilities(Entity character, Abilities abilities)
     {
-        var abilityMappings = new (string ability, AbilitySlot slot)[]
+        var abilityMappings = new (string ability, AbilityTypeEnum slot)[]
         {
-            (abilities.Travel, AbilitySlot.Travel),
-            (abilities.Ability1, AbilitySlot.Ability1),
-            (abilities.Ability2, AbilitySlot.Ability2),
-            (abilities.Ultimate, AbilitySlot.Ultimate)
+            (abilities.Travel, AbilityTypeEnum.Travel),
+            (abilities.Ability1, AbilityTypeEnum.SpellSlot1),
+            (abilities.Ability2, AbilityTypeEnum.SpellSlot2),
+            (abilities.Ultimate, AbilityTypeEnum.Ultimate)
         };
 
         foreach (var (ability, slot) in abilityMappings)
@@ -26,10 +26,9 @@ internal static class AbilityHelper
         }
     }
 
-
     public static void EquipPassiveSpells(Entity character, PassiveSpells passiveSpells)
     {
-        var spells = new[] 
+        var spells = new[]
         {
             passiveSpells.PassiveSpell1,
             passiveSpells.PassiveSpell2,
@@ -47,29 +46,50 @@ internal static class AbilityHelper
         }
     }
 
-
-    private static void EquipAbility(Entity character, PrefabGUID guid, AbilitySlot slot)
+    public static void ClearAbilities(Entity character)
     {
-        var buffEntity = Entity.Null;
-        Core.ServerGameManager.ModifyAbilityGroupOnSlot(buffEntity, character, (int)slot,
-            guid); // TODO fix didn't change spell when press J
+        if (Core.ServerGameManager.TryGetBuffer<VBloodAbilityBuffEntry>(character, out var buffer))
+        {
+            foreach (var abilityEntry in buffer)
+            {
+                VBloodAbilityUtilities.TryRemoveVBloodAbility(
+                    Core.EntityManager,
+                    character,
+                    abilityEntry.ActiveAbility);
+            }
+        }
+    }
+
+    public static void ClearPassiveSpells(Entity character)
+    {
+        if (Core.ServerGameManager.TryGetBuffer<ActivePassivesBuffer>(character, out var buffer))
+        {
+            for (var i = 0; i < buffer.Length; ++i)
+            {
+                buffer[i] = new ActivePassivesBuffer();
+            }
+        }
+    }
+
+    private static void EquipAbility(Entity character, PrefabGUID guid, AbilityTypeEnum slot)
+    {
+        VBloodAbilityUtilities.TryApplyVBloodAbility(
+            Core.EntityManager,
+            Core.ActivateVBloodAbilitySystem._BuffSpawnerSystemData,
+            Core.PrefabCollectionSystem._PrefabLookupMap,
+            character,
+            guid,
+            applyType: VBloodAbilityApplyType.RemovePreviousOnSlot,
+            primarySlot: slot == AbilityTypeEnum.SpellSlot1);
     }
 
     private static void EquipSpellPassive(Entity character, PrefabGUID guid, int slot)
     {
-        var buffer = Core.EntityManager.GetBuffer<ActivePassivesBuffer>(character);
-        buffer[slot] = new ActivePassivesBuffer
-        {
-            PrefabGuid = guid
-        };
-    }
-
-    public static void ClearPassiveSpell(Entity character)
-    {
-        var buffer = Core.EntityManager.GetBuffer<ActivePassivesBuffer>(character);
-        for (var i = 0; i < buffer.Length; ++i)
-        {
-            buffer[i] = new ActivePassivesBuffer();
-        }
+        if (Core.ServerGameManager.TryGetBuffer<ActivePassivesBuffer>(character, out var buffer))
+            buffer[slot] = new ActivePassivesBuffer
+            {
+                Entity = new Entity(),
+                PrefabGuid = guid
+            };
     }
 }
