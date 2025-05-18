@@ -1,6 +1,7 @@
 ﻿using ArenaBuildsMod.Models;
 using ProjectM.Network;
 using Stunlock.Core;
+using UnityEngine;
 
 namespace ArenaBuildsMod.Helpers;
 
@@ -13,13 +14,13 @@ internal static class JewelHelper
             AbilityPrefabGuid = abilityGuid,
             Equip = true,
             SpellMod1 = UtilsHelper.GetPrefabGuid(jewelData.SpellMod1) ?? default,
-            SpellMod1Power = jewelData.SpellMod1Power,
+            SpellMod1Power = Mathf.Clamp(jewelData.SpellMod1Power, 0, 1),
             SpellMod2 = UtilsHelper.GetPrefabGuid(jewelData.SpellMod2) ?? default,
-            SpellMod2Power = jewelData.SpellMod2Power,
+            SpellMod2Power = Mathf.Clamp(jewelData.SpellMod2Power, 0, 1),
             SpellMod3 = UtilsHelper.GetPrefabGuid(jewelData.SpellMod3) ?? default,
-            SpellMod3Power = jewelData.SpellMod3Power,
+            SpellMod3Power = Mathf.Clamp(jewelData.SpellMod3Power, 0, 1),
             SpellMod4 = UtilsHelper.GetPrefabGuid(jewelData.SpellMod4) ?? default,
-            SpellMod4Power = jewelData.SpellMod4Power,
+            SpellMod4Power = Mathf.Clamp(jewelData.SpellMod4Power, 0, 1),
             Tier = 3
         };
 

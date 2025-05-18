@@ -2,8 +2,8 @@
 using ArenaBuildsMod.Models;
 using ProjectM;
 using ProjectM.Network;
-using ProjectM.WeaponCoating;
 using Unity.Entities;
+using UnityEngine;
 
 namespace ArenaBuildsMod.Helpers;
 
@@ -46,16 +46,16 @@ internal static class WeaponHelper
             {
                 WeaponPrefabGuid = weaponGuid,
                 Tier = 4,
-                InfuseSpellMod = UtilsHelper.GetPrefabGuid(weaponData.InfuseSpellMod) ?? default, 
+                InfuseSpellMod = UtilsHelper.GetPrefabGuid(weaponData.InfuseSpellMod) ?? default,
                 // TODO SpellMod1 & SpellMod2
                 StatMod1 = UtilsHelper.GetPrefabGuid(weaponData.StatMod1) ?? default,
-                StatMod1Power = weaponData.StatMod1Power,
+                StatMod1Power = Mathf.Clamp(weaponData.StatMod1Power, 0, 1),
                 StatMod2 = UtilsHelper.GetPrefabGuid(weaponData.StatMod2) ?? default,
-                StatMod2Power = weaponData.StatMod2Power,
+                StatMod2Power = Mathf.Clamp(weaponData.StatMod2Power, 0, 1),
                 StatMod3 = UtilsHelper.GetPrefabGuid(weaponData.StatMod3) ?? default,
-                StatMod3Power = weaponData.StatMod3Power,
+                StatMod3Power = Mathf.Clamp(weaponData.StatMod3Power, 0, 1),
                 StatMod4 = UtilsHelper.GetPrefabGuid(weaponData.StatMod4) ?? default,
-                StatMod4Power = weaponData.StatMod4Power,
+                StatMod4Power = Mathf.Clamp(weaponData.StatMod4Power, 0, 1),
             };
 
             debugEventsSystem.CreateLegendaryWeaponEvent(userIndex, ref legendaryWeaponEvent);
