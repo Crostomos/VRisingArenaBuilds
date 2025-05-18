@@ -3,6 +3,7 @@
 namespace Data;
 public static class Prefabs
 {
+	public static readonly PrefabGUID _VM_VBlood_TEMPLATE = new PrefabGUID(2075390218);
 	public static readonly PrefabGUID _10x6RectangularTablesModularBuildMenuGroup = new PrefabGUID(-375280343);
 	public static readonly PrefabGUID _3x3RoundTablesModularBuildMenuGroup = new PrefabGUID(-1226637162);
 	public static readonly PrefabGUID _3x6RectangularTablesBuildMenuGroup = new PrefabGUID(-1058166909);
@@ -652,6 +653,14 @@ public static class Prefabs
 	public static readonly PrefabGUID AB_Blackfang_Alchemist_Throw_ContinousArea = new PrefabGUID(-765325334);
 	public static readonly PrefabGUID AB_Blackfang_Alchemist_Throw_ContinousArea_Small = new PrefabGUID(1794991801);
 	public static readonly PrefabGUID AB_Blackfang_Alchemist_Throw_HitBuff = new PrefabGUID(-106509608);
+	public static readonly PrefabGUID AB_Blackfang_Alchemist_Throw_Servant_AbilityGroup = new PrefabGUID(1846642290);
+	public static readonly PrefabGUID AB_Blackfang_Alchemist_Throw_Servant_Cast01 = new PrefabGUID(1490549701);
+	public static readonly PrefabGUID AB_Blackfang_Alchemist_Throw_Servant_Cast02 = new PrefabGUID(-1569516887);
+	public static readonly PrefabGUID AB_Blackfang_Alchemist_Throw_Servant_ContinousArea = new PrefabGUID(505009520);
+	public static readonly PrefabGUID AB_Blackfang_Alchemist_Throw_Servant_ContinousArea_Small = new PrefabGUID(-1750611789);
+	public static readonly PrefabGUID AB_Blackfang_Alchemist_Throw_Servant_HitBuff = new PrefabGUID(1608390640);
+	public static readonly PrefabGUID AB_Blackfang_Alchemist_Throw_Servant_Throw = new PrefabGUID(1821701175);
+	public static readonly PrefabGUID AB_Blackfang_Alchemist_Throw_Servant_Throw2 = new PrefabGUID(2007670017);
 	public static readonly PrefabGUID AB_Blackfang_Alchemist_Throw_Throw = new PrefabGUID(-1470568471);
 	public static readonly PrefabGUID AB_Blackfang_Alchemist_Throw_Throw2 = new PrefabGUID(853770047);
 	public static readonly PrefabGUID AB_Blackfang_Ambush_Buff = new PrefabGUID(1692138750);
@@ -1312,6 +1321,7 @@ public static class Prefabs
 	public static readonly PrefabGUID AB_Blackfang_Viper_JavelinRain_Cast = new PrefabGUID(25905050);
 	public static readonly PrefabGUID AB_Blackfang_Viper_JavelinRain_SpawnerProjectile01 = new PrefabGUID(-1320276284);
 	public static readonly PrefabGUID AB_Blackfang_Viper_JavelinRain_Throw = new PrefabGUID(2097520555);
+	public static readonly PrefabGUID AB_Blackfang_Viper_JavelinRain_Throw_Servant = new PrefabGUID(-322430982);
 	public static readonly PrefabGUID AB_Blackfang_Viper_JavelinThrow_AbilityGroup = new PrefabGUID(-317345251);
 	public static readonly PrefabGUID AB_Blackfang_Viper_JavelinThrow_Cast = new PrefabGUID(1990270092);
 	public static readonly PrefabGUID AB_Blackfang_Viper_JavelinThrow_Projectile = new PrefabGUID(2107952727);
@@ -1495,6 +1505,7 @@ public static class Prefabs
 	public static readonly PrefabGUID AB_BloodBuff_Worker_Tier4 = new PrefabGUID(1791009885);
 	public static readonly PrefabGUID AB_BloodBuff_Worker_Tier4_Secondary = new PrefabGUID(-1136889813);
 	public static readonly PrefabGUID AB_BloodQualityUnitBuff_Brute = new PrefabGUID(-1795235430);
+	public static readonly PrefabGUID AB_BloodQualityUnitBuff_Corrupted = new PrefabGUID(345978035);
 	public static readonly PrefabGUID AB_BloodQualityUnitBuff_Creature = new PrefabGUID(-114712733);
 	public static readonly PrefabGUID AB_BloodQualityUnitBuff_Draculin = new PrefabGUID(1782455329);
 	public static readonly PrefabGUID AB_BloodQualityUnitBuff_Mutant = new PrefabGUID(1617091915);
@@ -1803,10 +1814,10 @@ public static class Prefabs
 	public static readonly PrefabGUID AB_ChurchOfLight_Overseer_LanceCharge_Swing_Hit = new PrefabGUID(1846291150);
 	public static readonly PrefabGUID AB_ChurchOfLight_Overseer_PiercingCharge_AbilityGroup = new PrefabGUID(-1973550282);
 	public static readonly PrefabGUID AB_ChurchOfLight_Overseer_PiercingCharge_Cast = new PrefabGUID(-310802745);
-	public static readonly PrefabGUID AB_ChurchOfLight_Overseer_PiercingCharge_EndImpact = new PrefabGUID(-1305978383);
 	public static readonly PrefabGUID AB_ChurchOfLight_Overseer_PiercingCharge_FakeTarget = new PrefabGUID(-2059791223);
 	public static readonly PrefabGUID AB_ChurchOfLight_Overseer_PiercingCharge_GrabbedBuff = new PrefabGUID(1045272422);
 	public static readonly PrefabGUID AB_ChurchOfLight_Overseer_PiercingCharge_GrabbingBuff = new PrefabGUID(1049863088);
+	public static readonly PrefabGUID AB_ChurchOfLight_Overseer_PiercingCharge_HitBuff = new PrefabGUID(-219988808);
 	public static readonly PrefabGUID AB_ChurchOfLight_Overseer_PiercingCharge_Phase = new PrefabGUID(-343967306);
 	public static readonly PrefabGUID AB_ChurchOfLight_Overseer_PiercingCharge_StopPause = new PrefabGUID(577992298);
 	public static readonly PrefabGUID AB_ChurchOfLight_Overseer_PiercingCharge_Throw_AbilityGroup = new PrefabGUID(493409764);
@@ -3610,6 +3621,7 @@ public static class Prefabs
 	public static readonly PrefabGUID AB_Interact_MonsterGenerator_Cast = new PrefabGUID(1723562682);
 	public static readonly PrefabGUID AB_Interact_MonsterGenerator_Transition = new PrefabGUID(1318259684);
 	public static readonly PrefabGUID AB_Interact_Mount_AbilityGroup = new PrefabGUID(1734264526);
+	public static readonly PrefabGUID AB_Interact_Mount_BlockInteract_Buff = new PrefabGUID(-202566556);
 	public static readonly PrefabGUID AB_Interact_Mount_Cast = new PrefabGUID(-372722894);
 	public static readonly PrefabGUID AB_Interact_Mount_Owner_Buff = new PrefabGUID(2112789321);
 	public static readonly PrefabGUID AB_Interact_Mount_Owner_Buff_Horse = new PrefabGUID(854656674);
@@ -3626,6 +3638,9 @@ public static class Prefabs
 	public static readonly PrefabGUID AB_Interact_Mount_Travel = new PrefabGUID(1848617499);
 	public static readonly PrefabGUID AB_Interact_OpenContainer = new PrefabGUID(1405487786);
 	public static readonly PrefabGUID AB_Interact_OpenContainer_AbilityGroup = new PrefabGUID(-1662046920);
+	public static readonly PrefabGUID AB_Interact_OpenContainer_AllowShapeshift = new PrefabGUID(-1414790635);
+	public static readonly PrefabGUID AB_Interact_OpenContainer_AllowShapeshift_AbilityGroup = new PrefabGUID(-1912437283);
+	public static readonly PrefabGUID AB_Interact_OpenContainer_AllowShapeshift_Cast = new PrefabGUID(150821508);
 	public static readonly PrefabGUID AB_Interact_OpenContainer_Blood_NoEssence_AbilityGroup = new PrefabGUID(-576906626);
 	public static readonly PrefabGUID AB_Interact_OpenContainer_Cast = new PrefabGUID(-305054665);
 	public static readonly PrefabGUID AB_Interact_OpenContainer_DisabledDummy_AbilityGroup = new PrefabGUID(1039955663);
@@ -5554,6 +5569,8 @@ public static class Prefabs
 	public static readonly PrefabGUID AB_Purifier_RotationBoost_Cast = new PrefabGUID(-1381686893);
 	public static readonly PrefabGUID AB_Purifier_ScatterLob_AbilityGroup = new PrefabGUID(718360189);
 	public static readonly PrefabGUID AB_Purifier_ScatterLob_Cast = new PrefabGUID(-21577654);
+	public static readonly PrefabGUID AB_Purifier_ScatterLob_Gateboss_Projectile = new PrefabGUID(1838114950);
+	public static readonly PrefabGUID AB_Purifier_ScatterLob_Gateboss_Trigger = new PrefabGUID(-1033556590);
 	public static readonly PrefabGUID AB_Purifier_ScatterLob_Projectile = new PrefabGUID(666034998);
 	public static readonly PrefabGUID AB_Purifier_ScatterLob_Throw = new PrefabGUID(471073242);
 	public static readonly PrefabGUID AB_Purifier_ScatterLob_Trigger = new PrefabGUID(1190288358);
@@ -5665,8 +5682,6 @@ public static class Prefabs
 	public static readonly PrefabGUID AB_Shapeshift_Bat_Group = new PrefabGUID(-104327922);
 	public static readonly PrefabGUID AB_Shapeshift_Bat_Land_AbilityGroup = new PrefabGUID(1558475957);
 	public static readonly PrefabGUID AB_Shapeshift_Bat_Land_PreCast = new PrefabGUID(1835868090);
-	public static readonly PrefabGUID AB_Shapeshift_Bat_Landing_AbilityGroup = new PrefabGUID(1679087496);
-	public static readonly PrefabGUID AB_Shapeshift_Bat_Landing_Cast = new PrefabGUID(-1608204145);
 	public static readonly PrefabGUID AB_Shapeshift_Bat_Landing_Travel = new PrefabGUID(-371745443);
 	public static readonly PrefabGUID AB_Shapeshift_Bat_Landing_Travel_End = new PrefabGUID(-2001733587);
 	public static readonly PrefabGUID AB_Shapeshift_Bat_PreCast = new PrefabGUID(618866625);
@@ -6566,6 +6581,7 @@ public static class Prefabs
 	public static readonly PrefabGUID AB_Undead_Infiltrator_AfterImage_MinionSpawnTrigger = new PrefabGUID(1176947186);
 	public static readonly PrefabGUID AB_Undead_Infiltrator_ArmyOfShadows_AbilityGroup = new PrefabGUID(1986068244);
 	public static readonly PrefabGUID AB_Undead_Infiltrator_ArmyOfShadows_BlindBuff = new PrefabGUID(978837924);
+	public static readonly PrefabGUID AB_Undead_Infiltrator_ArmyOfShadows_BlockFeedBuff = new PrefabGUID(-1701933245);
 	public static readonly PrefabGUID AB_Undead_Infiltrator_ArmyOfShadows_Cast = new PrefabGUID(1760437256);
 	public static readonly PrefabGUID AB_Undead_Infiltrator_ArmyOfShadows_HideBuff = new PrefabGUID(975893192);
 	public static readonly PrefabGUID AB_Undead_Infiltrator_ArmyOfShadows_HideTrigger = new PrefabGUID(-743759578);
@@ -6844,6 +6860,7 @@ public static class Prefabs
 	public static readonly PrefabGUID AB_Unholy_FallenAngel_UnholyBarrage_Projectile = new PrefabGUID(1610096131);
 	public static readonly PrefabGUID AB_Unholy_Shared_DeathKnightSpawner = new PrefabGUID(-364717473);
 	public static readonly PrefabGUID AB_Unholy_Shared_SkeletonSpawner = new PrefabGUID(-552454696);
+	public static readonly PrefabGUID AB_Unholy_Shared_SkeletonSpawner_Agony = new PrefabGUID(-1453711334);
 	public static readonly PrefabGUID AB_Unholy_Shared_SkeletonSpawner_Death_Buff = new PrefabGUID(-1195183882);
 	public static readonly PrefabGUID AB_Unholy_Shared_SkeletonSpawner_Mage = new PrefabGUID(1319537394);
 	public static readonly PrefabGUID AB_Unholy_Shared_SkeletonSpawner_Mage_DeathKnightJewel = new PrefabGUID(1654690407);
@@ -6975,24 +6992,42 @@ public static class Prefabs
 	public static readonly PrefabGUID AB_Vampire_Claws_Primary_MeleeAttack_Hit01 = new PrefabGUID(658608536);
 	public static readonly PrefabGUID AB_Vampire_Claws_Primary_MeleeAttack_Hit02 = new PrefabGUID(1985792911);
 	public static readonly PrefabGUID AB_Vampire_Claws_Primary_MeleeAttack_Hit03 = new PrefabGUID(1707080361);
+	public static readonly PrefabGUID AB_Vampire_Claws_Primary_MeleeAttack_Unholy_AbilityGroup = new PrefabGUID(2094399595);
+	public static readonly PrefabGUID AB_Vampire_Claws_Primary_MeleeAttack_Unholy_Cast01 = new PrefabGUID(1937113430);
+	public static readonly PrefabGUID AB_Vampire_Claws_Primary_MeleeAttack_Unholy_Cast02 = new PrefabGUID(-1633625544);
+	public static readonly PrefabGUID AB_Vampire_Claws_Primary_MeleeAttack_Unholy_Cast03 = new PrefabGUID(554782151);
+	public static readonly PrefabGUID AB_Vampire_Claws_Primary_MeleeAttack_Unholy_Hit01 = new PrefabGUID(1461380343);
+	public static readonly PrefabGUID AB_Vampire_Claws_Primary_MeleeAttack_Unholy_Hit02 = new PrefabGUID(-2119173475);
+	public static readonly PrefabGUID AB_Vampire_Claws_Primary_MeleeAttack_Unholy_Hit03 = new PrefabGUID(214089400);
 	public static readonly PrefabGUID AB_Vampire_Claws_Primary_Mounted_AbilityGroup = new PrefabGUID(-2092012453);
 	public static readonly PrefabGUID AB_Vampire_Claws_Primary_Mounted_Cast = new PrefabGUID(1355391975);
 	public static readonly PrefabGUID AB_Vampire_Claws_Primary_Mounted_Hit = new PrefabGUID(1199194441);
 	public static readonly PrefabGUID AB_Vampire_Claws_Puncture_Area = new PrefabGUID(-1955235420);
 	public static readonly PrefabGUID AB_Vampire_Claws_Puncture_Buff = new PrefabGUID(588248053);
+	public static readonly PrefabGUID AB_Vampire_Claws_Puncture_Unholy_Area = new PrefabGUID(1466658483);
+	public static readonly PrefabGUID AB_Vampire_Claws_Puncture_Unholy_Buff = new PrefabGUID(1749790694);
 	public static readonly PrefabGUID AB_Vampire_Claws_SkeweringLeap_AbilityGroup = new PrefabGUID(-621324159);
 	public static readonly PrefabGUID AB_Vampire_Claws_SkeweringLeap_AimIndicatorProxyObject = new PrefabGUID(556774969);
 	public static readonly PrefabGUID AB_Vampire_Claws_SkeweringLeap_Cast = new PrefabGUID(1336763530);
 	public static readonly PrefabGUID AB_Vampire_Claws_SkeweringLeap_HitBox_Buff = new PrefabGUID(-1170057875);
 	public static readonly PrefabGUID AB_Vampire_Claws_SkeweringLeap_Phase01 = new PrefabGUID(868920885);
+	public static readonly PrefabGUID AB_Vampire_Claws_SkeweringLeap_Phase01_NEW = new PrefabGUID(836213309);
 	public static readonly PrefabGUID AB_Vampire_Claws_SkeweringLeap_Phase02 = new PrefabGUID(1815234050);
 	public static readonly PrefabGUID AB_Vampire_Claws_SkeweringLeap_PostTravelBuff01 = new PrefabGUID(-1993803337);
 	public static readonly PrefabGUID AB_Vampire_Claws_SkeweringLeap_PostTravelBuff02 = new PrefabGUID(1167489575);
 	public static readonly PrefabGUID AB_Vampire_Claws_SkeweringLeap_PostTravelBuff03 = new PrefabGUID(2127770250);
+	public static readonly PrefabGUID AB_Vampire_Claws_SkeweringLeap_Unholy_AbilityGroup = new PrefabGUID(1957381608);
+	public static readonly PrefabGUID AB_Vampire_Claws_SkeweringLeap_Unholy_Cast = new PrefabGUID(868019555);
+	public static readonly PrefabGUID AB_Vampire_Claws_SkeweringLeap_Unholy_HitBox_Buff = new PrefabGUID(1181666675);
+	public static readonly PrefabGUID AB_Vampire_Claws_SkeweringLeap_Unholy_Phase01 = new PrefabGUID(715237185);
+	public static readonly PrefabGUID AB_Vampire_Claws_SkeweringLeap_Unholy_Phase01_NEW = new PrefabGUID(1556591627);
 	public static readonly PrefabGUID AB_Vampire_Claws_VaultSlash_AbilityGroup = new PrefabGUID(-496335760);
 	public static readonly PrefabGUID AB_Vampire_Claws_VaultSlash_Cast = new PrefabGUID(401022955);
 	public static readonly PrefabGUID AB_Vampire_Claws_VaultSlash_Hit = new PrefabGUID(-207925621);
 	public static readonly PrefabGUID AB_Vampire_Claws_VaultSlash_RotationSnapBuff = new PrefabGUID(-172040706);
+	public static readonly PrefabGUID AB_Vampire_Claws_VaultSlash_Unholy_AbilityGroup = new PrefabGUID(-1217790595);
+	public static readonly PrefabGUID AB_Vampire_Claws_VaultSlash_Unholy_Cast = new PrefabGUID(1398963271);
+	public static readonly PrefabGUID AB_Vampire_Claws_VaultSlash_Unholy_Hit = new PrefabGUID(-1891034315);
 	public static readonly PrefabGUID AB_Vampire_Coating_Blood_Area = new PrefabGUID(736377251);
 	public static readonly PrefabGUID AB_Vampire_Coating_Blood_Buff = new PrefabGUID(632067678);
 	public static readonly PrefabGUID AB_Vampire_Coating_Chaos_Area = new PrefabGUID(-336999259);
@@ -7756,6 +7791,7 @@ public static class Prefabs
 	public static readonly PrefabGUID AB_VHunter_Jade_BlastVault_Cast = new PrefabGUID(1226383020);
 	public static readonly PrefabGUID AB_VHunter_Jade_BlastVault_Group = new PrefabGUID(76767983);
 	public static readonly PrefabGUID AB_VHunter_Jade_BlastVault_Phase = new PrefabGUID(-1323982261);
+	public static readonly PrefabGUID AB_VHunter_Jade_BlastVault_Phase_ShadowVBlood = new PrefabGUID(1572742725);
 	public static readonly PrefabGUID AB_VHunter_Jade_BlastVault_PostTravel = new PrefabGUID(884889284);
 	public static readonly PrefabGUID AB_VHunter_Jade_BlastVault_PreTravel = new PrefabGUID(1378150073);
 	public static readonly PrefabGUID AB_VHunter_Jade_Caltrops_Cast = new PrefabGUID(-1292054981);
@@ -7816,6 +7852,7 @@ public static class Prefabs
 	public static readonly PrefabGUID AB_VHunter_Leader_LeapThrust_Cast = new PrefabGUID(1477496524);
 	public static readonly PrefabGUID AB_VHunter_Leader_LeapThrust_Group = new PrefabGUID(1501188283);
 	public static readonly PrefabGUID AB_VHunter_Leader_LeapThrust_Travel = new PrefabGUID(-306152951);
+	public static readonly PrefabGUID AB_VHunter_Leader_LeapThrust_Travel_ShadowVBlood = new PrefabGUID(1250184212);
 	public static readonly PrefabGUID AB_VHunter_Leader_LeapThrust_TravelEnd = new PrefabGUID(549083834);
 	public static readonly PrefabGUID AB_VHunter_Leader_MeleeHorizontal_Cast = new PrefabGUID(-1641038434);
 	public static readonly PrefabGUID AB_VHunter_Leader_MeleeHorizontal_Group = new PrefabGUID(1552780633);
@@ -8422,6 +8459,7 @@ public static class Prefabs
 	public static readonly PrefabGUID Arena_CountdownFlashCurve = new PrefabGUID(215421682);
 	public static readonly PrefabGUID Arena01WallpaperBuildMenuGroup = new PrefabGUID(357750462);
 	public static readonly PrefabGUID ArenaFlagBuildMenuGroup = new PrefabGUID(1595912695);
+	public static readonly PrefabGUID ArenaZoneSyncInstance = new PrefabGUID(-999777164);
 	public static readonly PrefabGUID AscendancyPassive_Blood_T01_BloodMend = new PrefabGUID(254413498);
 	public static readonly PrefabGUID AscendancyPassive_Blood_T02_BloodDrain = new PrefabGUID(762152014);
 	public static readonly PrefabGUID AscendancyPassive_Blood_T03_LeechMastery = new PrefabGUID(980613835);
@@ -9442,6 +9480,7 @@ public static class Prefabs
 	public static readonly PrefabGUID Buff_LittleGuy_Tinkering = new PrefabGUID(1163726516);
 	public static readonly PrefabGUID Buff_Manticore_ImmaterialHomePos = new PrefabGUID(-61473528);
 	public static readonly PrefabGUID Buff_Manticore_VBlood_Downed = new PrefabGUID(-195747592);
+	public static readonly PrefabGUID Buff_Mantrap_Return = new PrefabGUID(-1508002208);
 	public static readonly PrefabGUID Buff_Militia_BishopOfDunley_VBlood_Downed = new PrefabGUID(-1684198551);
 	public static readonly PrefabGUID Buff_Militia_Fabian_CastImpair = new PrefabGUID(1671499645);
 	public static readonly PrefabGUID Buff_Militia_Fabian_Downed = new PrefabGUID(1614390358);
@@ -11662,7 +11701,7 @@ public static class Prefabs
 	public static readonly PrefabGUID CHAR_Vampire_Cultist_Whittling_Female = new PrefabGUID(-1925881340);
 	public static readonly PrefabGUID CHAR_Vampire_Dracula_VBlood = new PrefabGUID(-327335305);
 	public static readonly PrefabGUID CHAR_Vampire_Dracula_VeilOfBatsIllusion = new PrefabGUID(1809382006);
-	public static readonly PrefabGUID CHAR_Vampire_Ghost = new PrefabGUID();
+	public static readonly PrefabGUID CHAR_Vampire_Ghost = new PrefabGUID(-1893878700);
 	public static readonly PrefabGUID CHAR_Vampire_HighLord_VBlood = new PrefabGUID(-496360395);
 	public static readonly PrefabGUID CHAR_Vampire_IceRanger_VBlood = new PrefabGUID(795262842);
 	public static readonly PrefabGUID CHAR_Vampire_Withered = new PrefabGUID(-1117581429);
@@ -12849,6 +12888,7 @@ public static class Prefabs
 	public static readonly PrefabGUID DT_Resource_Vein_Mech_Rare = new PrefabGUID(-345957318);
 	public static readonly PrefabGUID DT_Resource_Vein_Quartz_General = new PrefabGUID(643205912);
 	public static readonly PrefabGUID DT_Resource_Vein_Rock_Big = new PrefabGUID(-1228204057);
+	public static readonly PrefabGUID DT_Resource_Vein_Rock_Clay = new PrefabGUID(-1677475093);
 	public static readonly PrefabGUID DT_Resource_Vein_Rock_General = new PrefabGUID(2009635259);
 	public static readonly PrefabGUID DT_Resource_Vein_Rock_Medium = new PrefabGUID(5330421);
 	public static readonly PrefabGUID DT_Resource_Vein_Rock_Rare = new PrefabGUID(-452263965);
@@ -13940,6 +13980,7 @@ public static class Prefabs
 	public static readonly PrefabGUID EquipBuff_Weapon_Axe_Ability03 = new PrefabGUID(1164259129);
 	public static readonly PrefabGUID EquipBuff_Weapon_Axe_Base = new PrefabGUID(-229134934);
 	public static readonly PrefabGUID EquipBuff_Weapon_Claws_Ability03 = new PrefabGUID(-1231984717);
+	public static readonly PrefabGUID EquipBuff_Weapon_Claws_Ability03_Unique01 = new PrefabGUID(1163237204);
 	public static readonly PrefabGUID EquipBuff_Weapon_Claws_Base = new PrefabGUID(1646709833);
 	public static readonly PrefabGUID EquipBuff_Weapon_Crossbow_Ability01 = new PrefabGUID(841833252);
 	public static readonly PrefabGUID EquipBuff_Weapon_Crossbow_Ability02 = new PrefabGUID(-622297013);
@@ -16002,6 +16043,7 @@ public static class Prefabs
 	public static readonly PrefabGUID OncePatrolDespawnBuff = new PrefabGUID(758863294);
 	public static readonly PrefabGUID One = new PrefabGUID(-1274342143);
 	public static readonly PrefabGUID Oscillating_Medium_Curve = new PrefabGUID(-1659374781);
+	public static readonly PrefabGUID OutdoorFloorBuildMenuGroup = new PrefabGUID(-148954266);
 	public static readonly PrefabGUID OutdoorStandingLightsBuildMenuGroup01 = new PrefabGUID(467492703);
 	public static readonly PrefabGUID PaintingHorizontalBuildingMenuGroup = new PrefabGUID(-2139932892);
 	public static readonly PrefabGUID PaintingOvalBuildingMenuGroup = new PrefabGUID(-1999286106);
@@ -16274,6 +16316,7 @@ public static class Prefabs
 	public static readonly PrefabGUID Recipe_Consumable_EMP_T01 = new PrefabGUID(164757222);
 	public static readonly PrefabGUID Recipe_Consumable_EmptyBottle_T02_Crafting = new PrefabGUID(-97893307);
 	public static readonly PrefabGUID Recipe_Consumable_EmptyBottle_T02_Refinement = new PrefabGUID(461575192);
+	public static readonly PrefabGUID Recipe_Consumable_EmptyBottle_T02_Refinement_Hidden = new PrefabGUID(394757670);
 	public static readonly PrefabGUID Recipe_Consumable_Explosives_Major_T02 = new PrefabGUID(-1848951671);
 	public static readonly PrefabGUID Recipe_Consumable_Explosives_Major_T03_Trader = new PrefabGUID(-752799345);
 	public static readonly PrefabGUID Recipe_Consumable_Explosives_Minor_T01 = new PrefabGUID(-854411210);
@@ -18585,6 +18628,7 @@ public static class Prefabs
 	public static readonly PrefabGUID TM_Castle_Floor_Foundation_Stone04 = new PrefabGUID(2092503115);
 	public static readonly PrefabGUID TM_Castle_Floor_FoundationBase = new PrefabGUID(1326064797);
 	public static readonly PrefabGUID TM_Castle_Floor_Garden_Grass01 = new PrefabGUID(2142175856);
+	public static readonly PrefabGUID TM_Castle_Floor_InvisibleFloor = new PrefabGUID(1289169078);
 	public static readonly PrefabGUID TM_Castle_Floor_InvisibleRoofBlocker = new PrefabGUID(350417170);
 	public static readonly PrefabGUID TM_Castle_Floor_Jewelcrafting01 = new PrefabGUID(-1984599765);
 	public static readonly PrefabGUID TM_Castle_Floor_Jewelcrafting02 = new PrefabGUID(-1838091713);
@@ -19751,6 +19795,7 @@ public static class Prefabs
 	public static readonly PrefabGUID TM_Debug_UserTestChest_T02 = new PrefabGUID(245436617);
 	public static readonly PrefabGUID TM_Debug_UserTestChest_T04 = new PrefabGUID(582927466);
 	public static readonly PrefabGUID TM_Debug_UserTestChest_T06 = new PrefabGUID(130141627);
+	public static readonly PrefabGUID TM_DenseDynamicClouds_Denser_Zone_Area01 = new PrefabGUID(-934123768);
 	public static readonly PrefabGUID TM_DenseDynamicClouds_Zone_Area01 = new PrefabGUID(-1811178896);
 	public static readonly PrefabGUID TM_Destructible_DraculasCastle_Pillar01 = new PrefabGUID(1934867279);
 	public static readonly PrefabGUID TM_Door_IronFenceGate_01 = new PrefabGUID(214850088);
@@ -22740,6 +22785,7 @@ public static class Prefabs
 	public static readonly PrefabGUID Undead_Priest_VBlood_Emote_OnAggro_Buff = new PrefabGUID(1613946623);
 	public static readonly PrefabGUID Unholy_Parry_MoveSpeedCurve = new PrefabGUID(-936177266);
 	public static readonly PrefabGUID Unholy_Shared_Minion_DeathKnight_Buff = new PrefabGUID(1352304839);
+	public static readonly PrefabGUID Unholy_Shared_Minion_Skeleton_ExplodeSpawner = new PrefabGUID(-1601653195);
 	public static readonly PrefabGUID Unholy_Shared_Minion_Skeleton_LifetimeBuff = new PrefabGUID(-1142502435);
 	public static readonly PrefabGUID Unholy_Shared_Minion_Skeleton_ShieldBuff = new PrefabGUID(1033104052);
 	public static readonly PrefabGUID Unholy_Shared_Minion_Skeleton_SpawnBuff = new PrefabGUID(-1243983303);
@@ -22813,6 +22859,7 @@ public static class Prefabs
 	public static readonly PrefabGUID VampireDoor01_DefaultSet01_light = new PrefabGUID(-2004402091);
 	public static readonly PrefabGUID VampireDoor01_DefaultSet01_Phased = new PrefabGUID(1557418686);
 	public static readonly PrefabGUID VampireDoor01_Gloomrot01 = new PrefabGUID(-1325694430);
+	public static readonly PrefabGUID VampireDoor01_Gloomrot02 = new PrefabGUID(-1852249377);
 	public static readonly PrefabGUID VampireDoor01_Prison01 = new PrefabGUID(-1399132287);
 	public static readonly PrefabGUID VampireDoor01_ProjectK01 = new PrefabGUID(-624991747);
 	public static readonly PrefabGUID VampireDoor01_ProjectMK01 = new PrefabGUID(1422393122);
@@ -23207,6 +23254,7 @@ public static class Prefabs
 	public static readonly PrefabGUID VM_Plant_Mantrap_Corrupted_Big = new PrefabGUID(-1440887788);
 	public static readonly PrefabGUID VM_Plant_Mantrap_Corrupted_Small = new PrefabGUID(1780067803);
 	public static readonly PrefabGUID VM_Plant_Treant = new PrefabGUID(237578135);
+	public static readonly PrefabGUID VM_Plant_Treant_Corrupted = new PrefabGUID(1758954358);
 	public static readonly PrefabGUID VM_Plant_Treant_Nether_Demon = new PrefabGUID(-259738326);
 	public static readonly PrefabGUID VM_Player_New_Female_VoiceMapping = new PrefabGUID(1515837925);
 	public static readonly PrefabGUID VM_Player_New_Male_VoiceMapping = new PrefabGUID(1145294473);
@@ -23489,10 +23537,6 @@ public static class Prefabs
 	public static readonly PrefabGUID XPDefaultCurve = new PrefabGUID(2091460851);
 	public static readonly PrefabGUID XPResourceCurve = new PrefabGUID(2052061906);
 	public static readonly PrefabGUID Zero = new PrefabGUID(866816844);
-
-	// Special
-	public static readonly PrefabGUID BoostedBuff1 = Buff_General_Build_Spawn_Buff_WeakStructure_Wall;
-	public static readonly PrefabGUID BoostedBuff2 = Buff_General_Build_Spawn_Buff_WeakStructure;
 }
 
 #pragma warning restore IDE0090 // Use 'new(...)'
