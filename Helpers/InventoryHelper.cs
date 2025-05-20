@@ -101,17 +101,18 @@ internal static class InventoryHelper
 
     public static void ClearInventory(Entity character)
     {
-        InventoryUtilitiesServer.ClearInventory(Core.EntityManager, character);
-
         var equipment = Core.EntityManager.GetComponentData<Equipment>(character);
-        UtilsHelper.DestroyTargetEntity(equipment.ArmorHeadgearSlot.SlotEntity._Entity);
-        UtilsHelper.DestroyTargetEntity(equipment.ArmorChestSlot.SlotEntity._Entity);
-        UtilsHelper.DestroyTargetEntity(equipment.ArmorChestSlot.SlotEntity._Entity);
-        UtilsHelper.DestroyTargetEntity(equipment.ArmorLegsSlot.SlotEntity._Entity);
-        UtilsHelper.DestroyTargetEntity(equipment.ArmorFootgearSlot.SlotEntity._Entity);
-        UtilsHelper.DestroyTargetEntity(equipment.CloakSlot.SlotEntity._Entity);
-        UtilsHelper.DestroyTargetEntity(equipment.WeaponSlot.SlotEntity._Entity);
-        UtilsHelper.DestroyTargetEntity(equipment.GrimoireSlot.SlotEntity._Entity);
-        UtilsHelper.DestroyTargetEntity(equipment.BagSlot.SlotEntity._Entity);
+
+        UtilsHelper.DestroyTargetEntity(equipment.GetEquipmentEntity(EquipmentType.Headgear).GetEntityOnServer());
+        UtilsHelper.DestroyTargetEntity(equipment.GetEquipmentEntity(EquipmentType.Chest).GetEntityOnServer());
+        UtilsHelper.DestroyTargetEntity(equipment.GetEquipmentEntity(EquipmentType.Legs).GetEntityOnServer());
+        UtilsHelper.DestroyTargetEntity(equipment.GetEquipmentEntity(EquipmentType.Footgear).GetEntityOnServer());
+        UtilsHelper.DestroyTargetEntity(equipment.GetEquipmentEntity(EquipmentType.Gloves).GetEntityOnServer());
+        UtilsHelper.DestroyTargetEntity(equipment.GetEquipmentEntity(EquipmentType.Cloak).GetEntityOnServer());
+        UtilsHelper.DestroyTargetEntity(equipment.GetEquipmentEntity(EquipmentType.MagicSource).GetEntityOnServer());
+        UtilsHelper.DestroyTargetEntity(equipment.GetEquipmentEntity(EquipmentType.Bag).GetEntityOnServer());
+
+        InventoryUtilitiesServer.ClearInventory(Core.EntityManager, character);
+        // TODO Clear Jewels
     }
 }
