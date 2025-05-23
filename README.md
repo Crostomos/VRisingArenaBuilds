@@ -43,7 +43,7 @@ It’s designed to streamline arena practice and fast-paced duels without the ne
 1. **Install BepInEx**  
    Follow the guide here: [BepInEx Installation Guide](https://wiki.vrisingmods.com/user/bepinex_install.html)  
 
-2. **Install VampireCommandFramework (VCF)**  
+2. **Download VampireCommandFramework (VCF)**  
 
 3. **Download ArenaBuildsMod**  
    Grab the `BuildArena.dll` and `builds.json` files from the [Releases](#) section.
@@ -53,13 +53,14 @@ It’s designed to streamline arena practice and fast-paced duels without the ne
      `BepInEx/Plugins/`
    - Move `builds.json` to:  
      `BepInEx/config/ArenaBuildsMod/`
+     > Note: The config folder may not exist until you've run the server at least once with BepInEx installed.
 
 ---
 
 ## 🐞 Known Issues
 
-- Weapon spell modifiers are not currently applied.
-- The `.clear_build` command doesn't properly remove equipped items or jewels.
+- Weapon spell modifiers are not currently applied (only for Artifact).
+- The `.clear_build` command doesn't remove jewels.
 
 ---
 
@@ -67,6 +68,7 @@ It’s designed to streamline arena practice and fast-paced duels without the ne
 
 - Save and restore your character’s original state before and after using a build.
 - Restrict `.build` usage to specific arena zones (can be toggled via config).
+- Load several builds.json.
 
 ---
 
