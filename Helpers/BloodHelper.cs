@@ -17,14 +17,7 @@ internal static class BloodHelper
         {
             if (UtilsHelper.TryGetPrefabGuid(secondaryBloodType, out var secondaryBloodTypeGuid))
             {
-                var entity = Core.EntityManager.CreateEntity(
-                    ComponentType.ReadWrite<FromCharacter>(),
-                    ComponentType.ReadWrite<ConsumeBloodAdminEvent>()
-                );
-                var userEntity = UtilsHelper.GetUserEntity(character);
-                Core.EntityManager.SetComponentData(entity,
-                    new FromCharacter { User = userEntity, Character = character });
-                Core.EntityManager.SetComponentData(entity, new ConsumeBloodAdminEvent
+                var bloodEvent = new ConsumeBloodAdminEvent
                 {
                     Amount = amount,
                     PrimaryQuality = primaryQuality,
@@ -33,7 +26,9 @@ internal static class BloodHelper
                     SecondaryType = secondaryBloodTypeGuid,
                     SecondaryBuffIndex = 1,
                     ApplyTier4SecondaryBuff = true
-                });
+                };
+
+                UtilsHelper.CreateEventFromCharacter(character, bloodEvent);
             }
             else
             {

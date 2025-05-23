@@ -1,6 +1,7 @@
 ﻿using System.Reflection;
 using Data;
 using ProjectM;
+using ProjectM.Network;
 using ProjectM.Shared;
 using Stunlock.Core;
 using Unity.Entities;
@@ -28,6 +29,18 @@ internal static class UtilsHelper
         var field = type.GetField(name, BindingFlags.Public | BindingFlags.Static);
 
         return field != null && field.FieldType == typeof(PrefabGUID) ? (PrefabGUID?)field.GetValue(null) : null;
+    }
+
+    public static void CreateEventFromCharacter<T>(Entity character, T eventData)
+    {
+        var entity = Core.EntityManager.CreateEntity(
+            ComponentType.ReadWrite<FromCharacter>(),
+            ComponentType.ReadWrite<T>()
+        );
+        var userEntity = GetUserEntity(character);
+        Core.EntityManager.SetComponentData(entity,
+            new FromCharacter { User = userEntity, Character = character });
+        Core.EntityManager.SetComponentData(entity, eventData);
     }
 
     public static void DestroyTargetEntity(Entity entity)

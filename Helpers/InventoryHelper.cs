@@ -76,24 +76,13 @@ internal static class InventoryHelper
 
     public static void EquipEquipment(Entity character, int slot)
     {
-        var entity = Core.EntityManager.CreateEntity(
-            ComponentType.ReadWrite<FromCharacter>(),
-            ComponentType.ReadWrite<EquipItemEvent>()
-        );
-        var userEntity = UtilsHelper.GetUserEntity(character);
-        Core.EntityManager.SetComponentData(entity, new FromCharacter { User = userEntity, Character = character });
-        Core.EntityManager.SetComponentData(entity, new EquipItemEvent { SlotIndex = slot });
+        UtilsHelper.CreateEventFromCharacter(character, new EquipItemEvent { SlotIndex = slot });
     }
 
     public static void UnEquipEquipment(Entity character, EquipmentType equipmentType)
     {
-        var entity = Core.EntityManager.CreateEntity(
-            ComponentType.ReadWrite<FromCharacter>(),
-            ComponentType.ReadWrite<UnequipItemEvent>()
-        );
-        var userEntity = UtilsHelper.GetUserEntity(character);
-        Core.EntityManager.SetComponentData(entity, new FromCharacter { User = userEntity, Character = character });
-        Core.EntityManager.SetComponentData(entity, new UnequipItemEvent
+       
+        UtilsHelper.CreateEventFromCharacter(character, new UnequipItemEvent
         {
             EquipmentType = equipmentType
         });
