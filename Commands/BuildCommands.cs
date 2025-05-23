@@ -8,12 +8,12 @@ internal class BuildCommands
     [Command("build", description: "Give a full build for arena", adminOnly: false)]
     public static void BuildCommand(ChatCommandContext ctx, string targetBuild)
     {
-        if (BuildManager.Builds == null)
+        if (BuildManager.Builds.Count == 0)
         {
             BuildManager.LoadData();
         }
 
-        if (BuildManager.Builds!.TryGetValue(targetBuild, out var build))
+        if (BuildManager.Builds.TryGetValue(targetBuild, out var build))
         {
             InventoryHelper.ClearInventory(ctx.Event.SenderCharacterEntity);
 

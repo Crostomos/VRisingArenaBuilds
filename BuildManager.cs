@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Text.Json;
 using ArenaBuildsMod.Models;
@@ -10,21 +11,32 @@ namespace ArenaBuildsMod
         private static readonly string FileDirectory = Path.Combine("BepInEx", "config", MyPluginInfo.PLUGIN_NAME);
         private const string BuildFile = "builds.json";
         private static readonly string BuildPath = Path.Combine(FileDirectory, BuildFile);
-        public static Dictionary<string, BuildModel> Builds;
+        public static Dictionary<string, BuildModel> Builds { get; private set; } = new(StringComparer.OrdinalIgnoreCase);
 
 
         internal static void LoadData()
         {
             if (!File.Exists(BuildPath))
             {
-                Plugin.Logger.LogWarning($"Builds.json not found in {BuildPath}"); // TODO create default builds.json
+                Plugin.Logger.LogInfo($"Builds.json not found in {BuildPath}");
+                CreateEmptyBuildsFile();
             }
-            else
+
+            var jsonString = File.ReadAllText(BuildPath);
+            var tempDict = JsonSerializer.Deserialize<Dictionary<string, BuildModel>>(jsonString);
+            Builds = new Dictionary<string, BuildModel>(tempDict, StringComparer.OrdinalIgnoreCase);
+            Plugin.Logger.LogInfo($"Loaded {Builds.Count} builds from Builds.json");
+        }
+
+        public static void CreateEmptyBuildsFile()
+        {
+            if (!Directory.Exists(FileDirectory))
             {
-                var jsonString = File.ReadAllText(BuildPath);
-                Builds = JsonSerializer.Deserialize<Dictionary<string, BuildModel>>(jsonString)!;
-                Plugin.Logger.LogInfo($"Loaded {Builds.Count} builds from Builds.json");
+                Directory.CreateDirectory(FileDirectory);
             }
+
+            File.WriteAllText(BuildPath, "{}");
+            Plugin.Logger.LogInfo($"Created empty Builds.json at {BuildPath}");
         }
 
         public static string GetBuildList()
