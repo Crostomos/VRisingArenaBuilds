@@ -22,8 +22,16 @@ internal static class WeaponHelper
             else if (IsArtifact(weaponData.Name))
             {
                 CreateAndGiveLegendaryWeapon(user.Index, weaponData);
-                var weaponEntity = GetCreatedWeapon(character, weaponData);
-                SetAbilityMod(weaponEntity, weaponData);
+                if (HasValidSpellMods(weaponData))
+                {
+                    var weaponEntity = GetCreatedWeapon(character, weaponData);
+                    SetAbilityMod(weaponEntity, weaponData);
+                }
+                else
+                {
+                    Plugin.Logger.LogWarning($"Wrong SpellMod for {weaponData.Name}");
+                }
+                
             }
             else
             {
@@ -40,6 +48,17 @@ internal static class WeaponHelper
     private static bool IsArtifact(string prefabName)
     {
         return prefabName.Contains("Unique_T08");
+    }
+
+    private static string GetWeaponNameType(WeaponData weaponData)
+    {
+        return weaponData.Name.Split('_')[2];
+    }
+
+    private static bool HasValidSpellMods(WeaponData weaponData)
+    {
+        var weaponType = GetWeaponNameType(weaponData);
+        return weaponData.SpellMod1.Contains(weaponType) && weaponData.SpellMod2.Contains(weaponType);
     }
 
     private static void CreateAndGiveWeapon(Entity character, WeaponData weaponData)
