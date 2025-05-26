@@ -2,7 +2,6 @@
 using Data;
 using ProjectM;
 using ProjectM.Network;
-using ProjectM.Shared;
 using Stunlock.Core;
 using Unity.Entities;
 
@@ -43,27 +42,9 @@ internal static class UtilsHelper
         Core.EntityManager.SetComponentData(entity, eventData);
     }
 
-    public static void DestroyTargetEntity(Entity entity)
-    {
-        if (entity != Entity.Null)
-        {
-            DestroyUtility.Destroy(Core.EntityManager, entity);
-        }
-    }
-
-    public static Entity GetUserEntity(Entity character)
+    private static Entity GetUserEntity(Entity character)
     {
         var playerCharacter = Core.EntityManager.GetComponentData<PlayerCharacter>(character);
         return playerCharacter.UserEntity;
-    }
-
-    public static void ShowComponentsFromEntity(Entity entity)
-    {
-        var components = Core.EntityManager.GetComponentTypes(entity);
-
-        foreach (var comp in components)
-        {
-            Plugin.Logger.LogInfo($"Composant: {comp.GetManagedType().Name}");
-        }
     }
 }

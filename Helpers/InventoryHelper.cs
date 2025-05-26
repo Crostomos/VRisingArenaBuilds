@@ -1,5 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using System.Linq;
 using ArenaBuilds.Models;
 using Data;
 using ProjectM;
@@ -7,6 +7,7 @@ using ProjectM.Network;
 using Stunlock.Core;
 using Unity.Entities;
 using UnityEngine;
+using Exception = System.Exception;
 
 namespace ArenaBuilds.Helpers;
 
@@ -79,27 +80,26 @@ internal static class InventoryHelper
         UtilsHelper.CreateEventFromCharacter(character, new EquipItemEvent { SlotIndex = slot });
     }
 
-    public static void UnEquipEquipment(Entity character, EquipmentType equipmentType)
-    {
-       
-        UtilsHelper.CreateEventFromCharacter(character, new UnequipItemEvent
-        {
-            EquipmentType = equipmentType
-        });
-    }
-
     public static void ClearInventory(Entity character)
     {
         var equipment = Core.EntityManager.GetComponentData<Equipment>(character);
+        List<Entity> equippedEntity =
+        [
+            equipment.GetEquipmentEntity(EquipmentType.Headgear).GetEntityOnServer(),
+            equipment.GetEquipmentEntity(EquipmentType.Chest).GetEntityOnServer(),
+            equipment.GetEquipmentEntity(EquipmentType.Legs).GetEntityOnServer(),
+            equipment.GetEquipmentEntity(EquipmentType.Footgear).GetEntityOnServer(),
+            equipment.GetEquipmentEntity(EquipmentType.Gloves).GetEntityOnServer(),
+            equipment.GetEquipmentEntity(EquipmentType.Cloak).GetEntityOnServer(),
+            equipment.GetEquipmentEntity(EquipmentType.MagicSource).GetEntityOnServer(),
+            equipment.GetEquipmentEntity(EquipmentType.Bag).GetEntityOnServer(),
+            equipment.GetEquipmentEntity(EquipmentType.Weapon).GetEntityOnServer()
+        ];
 
-        UtilsHelper.DestroyTargetEntity(equipment.GetEquipmentEntity(EquipmentType.Headgear).GetEntityOnServer());
-        UtilsHelper.DestroyTargetEntity(equipment.GetEquipmentEntity(EquipmentType.Chest).GetEntityOnServer());
-        UtilsHelper.DestroyTargetEntity(equipment.GetEquipmentEntity(EquipmentType.Legs).GetEntityOnServer());
-        UtilsHelper.DestroyTargetEntity(equipment.GetEquipmentEntity(EquipmentType.Footgear).GetEntityOnServer());
-        UtilsHelper.DestroyTargetEntity(equipment.GetEquipmentEntity(EquipmentType.Gloves).GetEntityOnServer());
-        UtilsHelper.DestroyTargetEntity(equipment.GetEquipmentEntity(EquipmentType.Cloak).GetEntityOnServer());
-        UtilsHelper.DestroyTargetEntity(equipment.GetEquipmentEntity(EquipmentType.MagicSource).GetEntityOnServer());
-        UtilsHelper.DestroyTargetEntity(equipment.GetEquipmentEntity(EquipmentType.Bag).GetEntityOnServer());
+        foreach (var entity in equippedEntity.Where(entity => entity != new Entity()))
+        {
+            InventoryUtilitiesServer.TryUnEquipItem(Core.EntityManager, character, entity);
+        }
 
         InventoryUtilitiesServer.ClearInventory(Core.EntityManager, character);
         // TODO Clear Jewels
