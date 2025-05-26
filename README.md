@@ -1,7 +1,8 @@
-﻿# ArenaBuildsMod
+﻿# ArenaBuilds
 
-**ArenaBuildsMod** is a lightweight, server-side mod for *V Rising* that allows players to instantly equip ready-to-use PvP builds via simple in-game commands.  
+**ArenaBuilds** is a lightweight, server-side mod for *V Rising* that allows players to instantly equip ready-to-use PvP builds via simple in-game commands.  
 It’s designed to streamline arena practice and fast-paced duels without the need to manually gear up.
+Although this mod is primarily designed for arena use, it can also be leveraged to create highly specialized builds for PvE or other purposes.
 
 ---
 
@@ -15,7 +16,7 @@ It’s designed to streamline arena practice and fast-paced duels without the ne
   - Jewels
   - Passive spells
 - Default builds are based on PVP_Preset
-- Builds are fully customizable via the `builds.json` file
+- Builds are fully customizable via the `builds.json` filess
   - A list of valid `prefabName` values is available here: [VRising DB](https://vrising.gaming.tools)
   - For a comprehensive list of prefabName values, particularly those related to StatMod and SpellMod, refer to: [VRising Mods Wiki](https://wiki.vrisingmods.com/prefabs/Spell)
 
@@ -23,11 +24,11 @@ It’s designed to streamline arena practice and fast-paced duels without the ne
 
 ## 💬 Commands
 
-| Command            | Description                                                  |
-|--------------------|--------------------------------------------------------------|
-| `.build <class>`   | Equips the specified build with gear, spells, and passives   |
-| `.list_build`      | Displays the list of available builds                        |
-| `.clear_build`     | Clears your inventory, spells, and passives                  |
+| Command            | Description                                   |
+|--------------------|-----------------------------------------------|
+| `.build <class>`   | Equips the specified build                    |
+| `.list_build`      | Displays the list of available builds         |
+| `.clear_build`     | Clears your inventory, abilities and passives |
 
 ---
 
@@ -52,15 +53,14 @@ It’s designed to streamline arena practice and fast-paced duels without the ne
    - Move `VampireCommandFramework.dll` and `BuildArena.dll` to:  
      `BepInEx/Plugins/`
    - Move `builds.json` to:  
-     `BepInEx/config/ArenaBuildsMod/`
+     `BepInEx/config/ArenaBuilds/`
      > Note: The config folder may not exist until you've run the server at least once with BepInEx installed.
 
 ---
 
 ## 🐞 Known Issues
 
-- Weapon spell modifiers are not currently applied (only for Artifact).
-- The `.clear_build` command doesn't remove jewels.
+- The .clear_build command does not currently remove jewels. This is not a significant issue, as that functionality has not yet been implemented. 👀
 
 ---
 
@@ -74,7 +74,7 @@ It’s designed to streamline arena practice and fast-paced duels without the ne
 
 ## 🙌 Credits
 
-- Big thanks to the [V Rising Modding Community](https://vrisingmods.com/) for documentation and open-source tools.
+- Big thanks to the [V Rising Modding Community](https://vrisingmods.com/) for documentation and open-source mods.
 - Special thanks to [Odjit](https://github.com/Odjit) for the **KindredExtract** mod, which was a helpful reference.
 
 ---
@@ -82,6 +82,7 @@ It’s designed to streamline arena practice and fast-paced duels without the ne
 ## 👤 Author
 
 Developed by **Crostomos**
+Support me on Ko-Fi : https://ko-fi.com/crostomos
 
 ---
 
