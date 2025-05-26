@@ -17,12 +17,13 @@ internal static class ArmorHelper
             armors.Legs,
             armors.MagicSource,
             armors.Head,
-            armors.Cloak
+            armors.Cloak,
+            armors.Bag
         };
 
-        for (var i = 0; i < armorList.Length; i++)
+        foreach (var armor in armorList)
         {
-            if (UtilsHelper.TryGetPrefabGuid(armorList[i], out var guid))
+            if (UtilsHelper.TryGetPrefabGuid(armor, out var guid))
             {
                 GiveAndEquip(character, guid);
             }

@@ -16,4 +16,6 @@ public class Armors
     
     public string Cloak { get; set; }
     
+    public string Bag { get; set; }
+    
 }
