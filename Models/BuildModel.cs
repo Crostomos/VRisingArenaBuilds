@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace ArenaBuildsMod.Models;
+namespace ArenaBuilds.Models;
 
 public class BuildModel
 {

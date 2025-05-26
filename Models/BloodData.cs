@@ -1,4 +1,4 @@
-﻿namespace ArenaBuildsMod.Models;
+﻿namespace ArenaBuilds.Models;
 
 public class BloodData
 {

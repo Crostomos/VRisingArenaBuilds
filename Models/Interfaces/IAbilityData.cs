@@ -1,4 +1,4 @@
-﻿namespace ArenaBuildsMod.Models.Interfaces;
+﻿namespace ArenaBuilds.Models.Interfaces;
 
 public interface IAbilityData
 {

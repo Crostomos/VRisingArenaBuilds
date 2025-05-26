@@ -1,8 +1,8 @@
-﻿using ArenaBuildsMod.Models.Interfaces;
+﻿using ArenaBuilds.Models.Interfaces;
 
-namespace ArenaBuildsMod.Models;
+namespace ArenaBuilds.Models;
 
 public class UltimateAbilityData : IAbilityData
 {
-    public string Name { get; set; }    
+    public string Name { get; set; }
 }

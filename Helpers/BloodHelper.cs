@@ -1,7 +1,7 @@
 ﻿using ProjectM.Network;
 using Unity.Entities;
 
-namespace ArenaBuildsMod.Helpers;
+namespace ArenaBuilds.Helpers;
 
 internal static class BloodHelper
 {

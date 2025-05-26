@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using ArenaBuildsMod.Models;
+using ArenaBuilds.Models;
 using Data;
 using ProjectM;
 using ProjectM.Network;
@@ -8,7 +8,7 @@ using Stunlock.Core;
 using Unity.Entities;
 using UnityEngine;
 
-namespace ArenaBuildsMod.Helpers;
+namespace ArenaBuilds.Helpers;
 
 internal static class InventoryHelper
 {

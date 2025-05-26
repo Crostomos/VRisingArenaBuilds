@@ -1,15 +1,15 @@
-﻿using ArenaBuildsMod.Models;
+﻿using ArenaBuilds.Models;
 using ProjectM.Network;
 using Stunlock.Core;
 using UnityEngine;
 
-namespace ArenaBuildsMod.Helpers;
+namespace ArenaBuilds.Helpers;
 
 internal static class JewelHelper
 {
     public static void CreateAndEquip(User user, PrefabGUID abilityGuid, JewelData jewelData)
     {
-        var createjevelevent = new CreateJewelDebugEventV2
+        var jewelDebugEvent = new CreateJewelDebugEventV2
         {
             AbilityPrefabGuid = abilityGuid,
             Equip = true,
@@ -24,6 +24,6 @@ internal static class JewelHelper
             Tier = 3
         };
 
-        Core.DebugEventsSystem.CreateJewelEvent(user.Index, ref createjevelevent);
+        Core.DebugEventsSystem.CreateJewelEvent(user.Index, ref jewelDebugEvent);
     }
 }

@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Text.Json;
-using ArenaBuildsMod.Models;
+using ArenaBuilds.Models;
 
-namespace ArenaBuildsMod
+namespace ArenaBuilds
 {
     public static class BuildManager
     {

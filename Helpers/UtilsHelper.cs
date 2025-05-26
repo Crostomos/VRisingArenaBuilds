@@ -6,7 +6,7 @@ using ProjectM.Shared;
 using Stunlock.Core;
 using Unity.Entities;
 
-namespace ArenaBuildsMod.Helpers;
+namespace ArenaBuilds.Helpers;
 
 internal static class UtilsHelper
 {

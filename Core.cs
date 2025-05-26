@@ -4,7 +4,7 @@ using ProjectM.Gameplay.Systems;
 using ProjectM.Scripting;
 using Unity.Entities;
 
-namespace ArenaBuildsMod;
+namespace ArenaBuilds;
 
 internal class Core
 {

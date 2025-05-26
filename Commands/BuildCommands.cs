@@ -1,7 +1,7 @@
-﻿using ArenaBuildsMod.Helpers;
+﻿using ArenaBuilds.Helpers;
 using VampireCommandFramework;
 
-namespace ArenaBuildsMod.Commands;
+namespace ArenaBuilds.Commands;
 
 internal class BuildCommands
 {
@@ -26,9 +26,9 @@ internal class BuildCommands
                 secondaryQuality: build.Blood.SecondaryQuality
             );
             InventoryHelper.GiveItems(ctx.Event.SenderCharacterEntity, build.Items);
-            
-            ArmorHelper.EquipArmors(ctx.Event.SenderCharacterEntity, build.Armors); 
-            
+
+            ArmorHelper.EquipArmors(ctx.Event.SenderCharacterEntity, build.Armors);
+
             BloodHelper.SetBlood(
                 ctx.Event.SenderCharacterEntity,
                 build.Blood.PrimaryType,
@@ -60,16 +60,16 @@ internal class BuildCommands
         var buildList = BuildManager.GetBuildList();
         ctx.Reply($"Available builds :\n- {buildList}");
     }
-    
+
     [Command("clear_build", description: "Clear current build", adminOnly: false)]
     public static void ClearBuildCommand(ChatCommandContext ctx)
     {
         InventoryHelper.ClearInventory(ctx.Event.SenderCharacterEntity);
-        AbilityHelper.ClearPassiveSpells(ctx.Event.SenderCharacterEntity);      
-        AbilityHelper.ClearAbilities(ctx.Event.SenderCharacterEntity);      
+        AbilityHelper.ClearPassiveSpells(ctx.Event.SenderCharacterEntity);
+        AbilityHelper.ClearAbilities(ctx.Event.SenderCharacterEntity);
     }
-    
-    [Command("unlock_all", description: "Unlock All", adminOnly: false)]
+
+    [Command("unlock_all", description: "Unlock All", adminOnly: true)]
     public static void UnlockAllCommand(ChatCommandContext ctx)
     {
         PlayerHelper.UnlockAll(ctx.Event.SenderUserEntity, ctx.Event.SenderCharacterEntity);

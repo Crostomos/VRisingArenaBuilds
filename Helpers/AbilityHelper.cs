@@ -1,11 +1,11 @@
-﻿using ArenaBuildsMod.Models;
-using ArenaBuildsMod.Models.Interfaces;
+﻿using ArenaBuilds.Models;
+using ArenaBuilds.Models.Interfaces;
 using ProjectM;
 using ProjectM.Network;
 using Stunlock.Core;
 using Unity.Entities;
 
-namespace ArenaBuildsMod.Helpers;
+namespace ArenaBuilds.Helpers;
 
 internal static class AbilityHelper
 {

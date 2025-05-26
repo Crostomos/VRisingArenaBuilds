@@ -1,9 +1,9 @@
-﻿using ArenaBuildsMod.Models;
+﻿using ArenaBuilds.Models;
 using ProjectM;
 using Stunlock.Core;
 using Unity.Entities;
 
-namespace ArenaBuildsMod.Helpers;
+namespace ArenaBuilds.Helpers;
 
 internal static class ArmorHelper
 {

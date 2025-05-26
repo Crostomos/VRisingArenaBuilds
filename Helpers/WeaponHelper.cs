@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using ArenaBuildsMod.Models;
+using ArenaBuilds.Models;
 using ProjectM;
 using ProjectM.Network;
 using ProjectM.Shared;
@@ -7,7 +7,7 @@ using Stunlock.Core;
 using Unity.Entities;
 using UnityEngine;
 
-namespace ArenaBuildsMod.Helpers;
+namespace ArenaBuilds.Helpers;
 
 internal static class WeaponHelper
 {

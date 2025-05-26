@@ -1,10 +1,10 @@
-﻿using ArenaBuildsMod.Models.Interfaces;
+﻿using ArenaBuilds.Models.Interfaces;
 
-namespace ArenaBuildsMod.Models;
+namespace ArenaBuilds.Models;
 
 public class AbilityData : IAbilityData
 {
     public string Name { get; set; }
-    
+
     public JewelData Jewel { get; set; }
 }
