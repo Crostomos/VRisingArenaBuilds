@@ -1,1556 +1,1556 @@
 ﻿{
-  "offensive": {
-    "Blood": {
-      "PrimaryType": "BloodType_Draculin",
-      "SecondaryType": "BloodType_Scholar",
-      "PrimaryQuality": 100,
-      "SecondaryQuality": 100
-    },
-    "Armors": {
-      "Boots": "Item_Boots_T09_Dracula_Scholar",
-      "Chest": "Item_Chest_T09_Dracula_Scholar",
-      "Gloves": "Item_Gloves_T09_Dracula_Scholar",
-      "Legs": "Item_Legs_T09_Dracula_Scholar",
-      "MagicSource": "Item_MagicSource_General_T08_Frost",
-      "Head": "",
-      "Cloak": "Item_Cloak_Main_T03_Phantom",
-      "Bag": "Item_NewBag_T06"
-    },
-    "Weapons": [
-      {
-        "Name": "Item_Weapon_Axe_Unique_T08_Variation01",
-        "InfuseSpellMod": "SpellMod_Weapon_StormInfused",
-        "SpellMod1": "",
-        "SpellMod2": "",
-        "StatMod1": "StatMod_CriticalStrikePhysical",
-        "StatMod1Power": 1.0,
-        "StatMod2": "StatMod_MovementSpeed",
-        "StatMod2Power": 1.0,
-        "StatMod3": "StatMod_PhysicalPower",
-        "StatMod3Power": 1.0,
-        "StatMod4": "",
-        "StatMod4Power": 1.0
+   "offensive":{
+      "Blood":{
+         "PrimaryType":"BloodType_Draculin",
+         "SecondaryType":"BloodType_Scholar",
+         "PrimaryQuality":100,
+         "SecondaryQuality":100
       },
-      {
-        "Name": "Item_Weapon_Claws_Unique_T08_Variation01",
-        "InfuseSpellMod": "SpellMod_Weapon_StormInfused",
-        "SpellMod1": "",
-        "SpellMod2": "",
-        "StatMod1": "StatMod_CriticalStrikePhysical",
-        "StatMod1Power": 1.0,
-        "StatMod2": "StatMod_MovementSpeed",
-        "StatMod2Power": 1.0,
-        "StatMod3": "StatMod_PhysicalPower",
-        "StatMod3Power": 1.0,
-        "StatMod4": "",
-        "StatMod4Power": 1.0
+      "Armors":{
+         "Boots":"Item_Boots_T09_Dracula_Scholar",
+         "Chest":"Item_Chest_T09_Dracula_Scholar",
+         "Gloves":"Item_Gloves_T09_Dracula_Scholar",
+         "Legs":"Item_Legs_T09_Dracula_Scholar",
+         "MagicSource":"Item_MagicSource_General_T08_Frost",
+         "Head":"",
+         "Cloak":"Item_Cloak_Main_T03_Phantom",
+         "Bag":"Item_NewBag_T06"
       },
-      {
-        "Name": "Item_Weapon_Crossbow_Unique_T08_Variation01",
-        "InfuseSpellMod": "SpellMod_Weapon_StormInfused",
-        "SpellMod1": "",
-        "SpellMod2": "",
-        "StatMod1": "StatMod_CriticalStrikePhysical",
-        "StatMod1Power": 1.0,
-        "StatMod2": "StatMod_MovementSpeed",
-        "StatMod2Power": 1.0,
-        "StatMod3": "StatMod_PhysicalPower",
-        "StatMod3Power": 1.0,
-        "StatMod4": "",
-        "StatMod4Power": 1.0
+      "Weapons":[
+         {
+            "Name":"Item_Weapon_Axe_Unique_T08_Variation01",
+            "InfuseSpellMod":"SpellMod_Weapon_StormInfused",
+            "SpellMod1":"SpellMod_Axe_Frenzy_Duration",
+            "SpellMod2":"SpellMod_Axe_XStrike_MultiThrow",
+            "StatMod1":"StatMod_CriticalStrikePhysical",
+            "StatMod1Power":1.0,
+            "StatMod2":"StatMod_MovementSpeed",
+            "StatMod2Power":1.0,
+            "StatMod3":"StatMod_PhysicalPower",
+            "StatMod3Power":1.0,
+            "StatMod4":"",
+            "StatMod4Power":1.0
+         },
+         {
+            "Name":"Item_Weapon_Claws_Unique_T08_Variation01",
+            "InfuseSpellMod":"SpellMod_Weapon_StormInfused",
+            "SpellMod1":"SpellMod_Claws_VaultSlash_Unholy",
+            "SpellMod2":"SpellMod_Claws_SkeweringLeap_Unholy",
+            "StatMod1":"StatMod_CriticalStrikePhysical",
+            "StatMod1Power":1.0,
+            "StatMod2":"StatMod_MovementSpeed",
+            "StatMod2Power":1.0,
+            "StatMod3":"StatMod_PhysicalPower",
+            "StatMod3Power":1.0,
+            "StatMod4":"",
+            "StatMod4Power":1.0
+         },
+         {
+            "Name":"Item_Weapon_Crossbow_Unique_T08_Variation01",
+            "InfuseSpellMod":"SpellMod_Weapon_StormInfused",
+            "SpellMod1":"SpellMod_Crossbow_RainOfBolts_BonusArrows",
+            "SpellMod2":"SpellMod_Crossbow_Snapshot_Fear",
+            "StatMod1":"StatMod_CriticalStrikePhysical",
+            "StatMod1Power":1.0,
+            "StatMod2":"StatMod_MovementSpeed",
+            "StatMod2Power":1.0,
+            "StatMod3":"StatMod_PhysicalPower",
+            "StatMod3Power":1.0,
+            "StatMod4":"",
+            "StatMod4Power":1.0
+         },
+         {
+            "Name":"Item_Weapon_GreatSword_Unique_T08_Variation01",
+            "InfuseSpellMod":"SpellMod_Weapon_StormInfused",
+            "SpellMod1":"SpellMod_GreatSword_GreatCleaver_ChaosDamage",
+            "SpellMod2":"SpellMod_GreatSword_LeapAttack_Aftershock",
+            "StatMod1":"StatMod_CriticalStrikePhysical",
+            "StatMod1Power":1.0,
+            "StatMod2":"StatMod_MovementSpeed",
+            "StatMod2Power":1.0,
+            "StatMod3":"StatMod_PhysicalPower",
+            "StatMod3Power":1.0,
+            "StatMod4":"",
+            "StatMod4Power":1.0
+         },
+         {
+            "Name":"Item_Weapon_Longbow_Unique_T08_Variation01",
+            "InfuseSpellMod":"SpellMod_Weapon_StormInfused",
+            "SpellMod1":"SpellMod_Longbow_Multishot_Focus",
+            "SpellMod2":"SpellMod_Longbow_GuidedArrow_FirstHit",
+            "StatMod1":"StatMod_CriticalStrikePhysical",
+            "StatMod1Power":1.0,
+            "StatMod2":"StatMod_MovementSpeed",
+            "StatMod2Power":1.0,
+            "StatMod3":"StatMod_PhysicalPower",
+            "StatMod3Power":1.0,
+            "StatMod4":"",
+            "StatMod4Power":1.0
+         },
+         {
+            "Name":"Item_Weapon_Mace_Unique_T08_Variation01",
+            "InfuseSpellMod":"SpellMod_Weapon_StormInfused",
+            "SpellMod1":"SpellMod_Mace_CrushingBlow_Shatter",
+            "SpellMod2":"SpellMod_Mace_Smack_Freeze",
+            "StatMod1":"StatMod_CriticalStrikePhysical",
+            "StatMod1Power":1.0,
+            "StatMod2":"StatMod_MovementSpeed",
+            "StatMod2Power":1.0,
+            "StatMod3":"StatMod_PhysicalPower",
+            "StatMod3Power":1.0,
+            "StatMod4":"",
+            "StatMod4Power":1.0
+         },
+         {
+            "Name":"Item_Weapon_Pistols_Unique_T08_Variation01",
+            "InfuseSpellMod":"SpellMod_Weapon_StormInfused",
+            "SpellMod1":"SpellMod_Pistols_FanTheHammer_Move",
+            "SpellMod2":"SpellMod_Pistols_ExplosiveShot_DoubleBarrel",
+            "StatMod1":"StatMod_CriticalStrikePhysical",
+            "StatMod1Power":1.0,
+            "StatMod2":"StatMod_MovementSpeed",
+            "StatMod2Power":1.0,
+            "StatMod3":"StatMod_PhysicalPower",
+            "StatMod3Power":1.0,
+            "StatMod4":"",
+            "StatMod4Power":1.0
+         },
+         {
+            "Name":"Item_Weapon_Reaper_Unique_T08_Variation01",
+            "InfuseSpellMod":"SpellMod_Weapon_StormInfused",
+            "SpellMod1":"SpellMod_Reaper_HowlingReaper_VeilResetCD",
+            "SpellMod2":"SpellMod_Reaper_TendonSwing_Consume",
+            "StatMod1":"StatMod_CriticalStrikePhysical",
+            "StatMod1Power":1.0,
+            "StatMod2":"StatMod_MovementSpeed",
+            "StatMod2Power":1.0,
+            "StatMod3":"StatMod_PhysicalPower",
+            "StatMod3Power":1.0,
+            "StatMod4":"",
+            "StatMod4Power":1.0
+         },
+         {
+            "Name":"Item_Weapon_Slashers_Unique_T08_Variation01",
+            "InfuseSpellMod":"SpellMod_Weapon_StormInfused",
+            "SpellMod1":"SpellMod_Slashers_ElusiveStrike_BloodFountain",
+            "SpellMod2":"SpellMod_Slashers_Camouflage_Rupture",
+            "StatMod1":"StatMod_CriticalStrikePhysical",
+            "StatMod1Power":1.0,
+            "StatMod2":"StatMod_MovementSpeed",
+            "StatMod2Power":1.0,
+            "StatMod3":"StatMod_PhysicalPower",
+            "StatMod3Power":1.0,
+            "StatMod4":"",
+            "StatMod4Power":1.0
+         },
+         {
+            "Name":"Item_Weapon_Spear_Unique_T08_Variation01",
+            "InfuseSpellMod":"SpellMod_Weapon_StormInfused",
+            "SpellMod1":"SpellMod_Spear_AThousandSpears_BallLightning",
+            "SpellMod2":"SpellMod_Spear_Harpoon_DragSelf",
+            "StatMod1":"StatMod_CriticalStrikePhysical",
+            "StatMod1Power":1.0,
+            "StatMod2":"StatMod_MovementSpeed",
+            "StatMod2Power":1.0,
+            "StatMod3":"StatMod_PhysicalPower",
+            "StatMod3Power":1.0,
+            "StatMod4":"",
+            "StatMod4Power":1.0
+         },
+         {
+            "Name":"Item_Weapon_Sword_Unique_T08_Variation01",
+            "InfuseSpellMod":"SpellMod_Weapon_StormInfused",
+            "SpellMod1":"SpellMod_Sword_Whirlwind_ResetDurationOnKill",
+            "SpellMod2":"SpellMod_Sword_Shockwave_ReduceWhirlwindCDOnHit",
+            "StatMod1":"StatMod_CriticalStrikePhysical",
+            "StatMod1Power":1.0,
+            "StatMod2":"StatMod_MovementSpeed",
+            "StatMod2Power":1.0,
+            "StatMod3":"StatMod_PhysicalPower",
+            "StatMod3Power":1.0,
+            "StatMod4":"",
+            "StatMod4Power":1.0
+         },
+         {
+            "Name":"Item_Weapon_TwinBlades_Unique_T08_Variation01",
+            "InfuseSpellMod":"SpellMod_Weapon_StormInfused",
+            "SpellMod1":"SpellMod_TwinBlades_Javelin_Freeze",
+            "SpellMod2":"SpellMod_TwinBlades_SweepingStrike_DamageToFrost",
+            "StatMod1":"StatMod_CriticalStrikePhysical",
+            "StatMod1Power":1.0,
+            "StatMod2":"StatMod_MovementSpeed",
+            "StatMod2Power":1.0,
+            "StatMod3":"StatMod_PhysicalPower",
+            "StatMod3Power":1.0,
+            "StatMod4":"",
+            "StatMod4Power":1.0
+         },
+         {
+            "Name":"Item_Weapon_Whip_Unique_T08_Variation01",
+            "InfuseSpellMod":"SpellMod_Weapon_StormInfused",
+            "SpellMod1":"SpellMod_Whip_Dash_FlameWhip",
+            "SpellMod2":"SpellMod_Whip_Entangle_FlameWhip",
+            "StatMod1":"StatMod_CriticalStrikePhysical",
+            "StatMod1Power":1.0,
+            "StatMod2":"StatMod_MovementSpeed",
+            "StatMod2Power":1.0,
+            "StatMod3":"StatMod_PhysicalPower",
+            "StatMod3Power":1.0,
+            "StatMod4":"",
+            "StatMod4Power":1.0
+         }
+      ],
+      "Items":[
+         {
+            "Name":"Item_Consumable_HealingPotion_T02",
+            "Amount":10
+         }
+      ],
+      "Abilities":{
+         "Travel":{
+            "Name":"AB_Vampire_VeilOfChaos_Group",
+            "Jewel":{
+               "SpellMod1":"SpellMod_VeilOfChaos_BonusIllusion",
+               "SpellMod1Power":1.0,
+               "SpellMod2":"SpellMod_VeilOfChaos_BonusDamageOnExplode",
+               "SpellMod2Power":1.0,
+               "SpellMod3":"SpellMod_VeilOfChaos_ApplySnareOnExplode",
+               "SpellMod3Power":1.0,
+               "SpellMod4":"",
+               "SpellMod4Power":1.0
+            }
+         },
+         "Ability1":{
+            "Name":"AB_Frost_CrystalLance_AbilityGroup",
+            "Jewel":{
+               "SpellMod1":"SpellMod_CrystalLance_BonusDamageToFrosty",
+               "SpellMod1Power":1.0,
+               "SpellMod2":"SpellMod_CrystalLance_PierceEnemies",
+               "SpellMod2Power":1.0,
+               "SpellMod3":"",
+               "SpellMod3Power":1.0,
+               "SpellMod4":"",
+               "SpellMod4Power":1.0
+            }
+         },
+         "Ability2":{
+            "Name":"AB_Frost_ColdSnap_AbilityGroup",
+            "Jewel":{
+               "SpellMod1":"SpellMod_ColdSnap_BonusAbsorb",
+               "SpellMod1Power":1.0,
+               "SpellMod2":"SpellMod_ColdSnap_BonusDamage",
+               "SpellMod2Power":1.0,
+               "SpellMod3":"SpellMod_ColdSnap_HasteWhileShielded",
+               "SpellMod3Power":1.0,
+               "SpellMod4":"SpellMod_ColdSnap_Immaterial",
+               "SpellMod4Power":1.0
+            }
+         },
+         "Ultimate":{
+            "Name":"AB_Chaos_MercilessCharge_AbilityGroup"
+         }
       },
-      {
-        "Name": "Item_Weapon_GreatSword_Unique_T08_Variation01",
-        "InfuseSpellMod": "SpellMod_Weapon_StormInfused",
-        "SpellMod1": "",
-        "SpellMod2": "",
-        "StatMod1": "StatMod_CriticalStrikePhysical",
-        "StatMod1Power": 1.0,
-        "StatMod2": "StatMod_MovementSpeed",
-        "StatMod2Power": 1.0,
-        "StatMod3": "StatMod_PhysicalPower",
-        "StatMod3Power": 1.0,
-        "StatMod4": "",
-        "StatMod4Power": 1.0
-      },
-      {
-        "Name": "Item_Weapon_Longbow_Unique_T08_Variation01",
-        "InfuseSpellMod": "SpellMod_Weapon_StormInfused",
-        "SpellMod1": "",
-        "SpellMod2": "",
-        "StatMod1": "StatMod_CriticalStrikePhysical",
-        "StatMod1Power": 1.0,
-        "StatMod2": "StatMod_MovementSpeed",
-        "StatMod2Power": 1.0,
-        "StatMod3": "StatMod_PhysicalPower",
-        "StatMod3Power": 1.0,
-        "StatMod4": "",
-        "StatMod4Power": 1.0
-      },
-      {
-        "Name": "Item_Weapon_Mace_Unique_T08_Variation01",
-        "InfuseSpellMod": "SpellMod_Weapon_StormInfused",
-        "SpellMod1": "",
-        "SpellMod2": "",
-        "StatMod1": "StatMod_CriticalStrikePhysical",
-        "StatMod1Power": 1.0,
-        "StatMod2": "StatMod_MovementSpeed",
-        "StatMod2Power": 1.0,
-        "StatMod3": "StatMod_PhysicalPower",
-        "StatMod3Power": 1.0,
-        "StatMod4": "",
-        "StatMod4Power": 1.0
-      },
-      {
-        "Name": "Item_Weapon_Pistols_Unique_T08_Variation01",
-        "InfuseSpellMod": "SpellMod_Weapon_StormInfused",
-        "SpellMod1": "",
-        "SpellMod2": "",
-        "StatMod1": "StatMod_CriticalStrikePhysical",
-        "StatMod1Power": 1.0,
-        "StatMod2": "StatMod_MovementSpeed",
-        "StatMod2Power": 1.0,
-        "StatMod3": "StatMod_PhysicalPower",
-        "StatMod3Power": 1.0,
-        "StatMod4": "",
-        "StatMod4Power": 1.0
-      },
-      {
-        "Name": "Item_Weapon_Reaper_Unique_T08_Variation01",
-        "InfuseSpellMod": "SpellMod_Weapon_StormInfused",
-        "SpellMod1": "",
-        "SpellMod2": "",
-        "StatMod1": "StatMod_CriticalStrikePhysical",
-        "StatMod1Power": 1.0,
-        "StatMod2": "StatMod_MovementSpeed",
-        "StatMod2Power": 1.0,
-        "StatMod3": "StatMod_PhysicalPower",
-        "StatMod3Power": 1.0,
-        "StatMod4": "",
-        "StatMod4Power": 1.0
-      },
-      {
-        "Name": "Item_Weapon_Slashers_Unique_T08_Variation01",
-        "InfuseSpellMod": "SpellMod_Weapon_StormInfused",
-        "SpellMod1": "",
-        "SpellMod2": "",
-        "StatMod1": "StatMod_CriticalStrikePhysical",
-        "StatMod1Power": 1.0,
-        "StatMod2": "StatMod_MovementSpeed",
-        "StatMod2Power": 1.0,
-        "StatMod3": "StatMod_PhysicalPower",
-        "StatMod3Power": 1.0,
-        "StatMod4": "",
-        "StatMod4Power": 1.0
-      },
-      {
-        "Name": "Item_Weapon_Spear_Unique_T08_Variation01",
-        "InfuseSpellMod": "SpellMod_Weapon_StormInfused",
-        "SpellMod1": "",
-        "SpellMod2": "",
-        "StatMod1": "StatMod_CriticalStrikePhysical",
-        "StatMod1Power": 1.0,
-        "StatMod2": "StatMod_MovementSpeed",
-        "StatMod2Power": 1.0,
-        "StatMod3": "StatMod_PhysicalPower",
-        "StatMod3Power": 1.0,
-        "StatMod4": "",
-        "StatMod4Power": 1.0
-      },
-      {
-        "Name": "Item_Weapon_Sword_Unique_T08_Variation01",
-        "InfuseSpellMod": "SpellMod_Weapon_StormInfused",
-        "SpellMod1": "",
-        "SpellMod2": "",
-        "StatMod1": "StatMod_CriticalStrikePhysical",
-        "StatMod1Power": 1.0,
-        "StatMod2": "StatMod_MovementSpeed",
-        "StatMod2Power": 1.0,
-        "StatMod3": "StatMod_PhysicalPower",
-        "StatMod3Power": 1.0,
-        "StatMod4": "",
-        "StatMod4Power": 1.0
-      },
-      {
-        "Name": "Item_Weapon_TwinBlades_Unique_T08_Variation01",
-        "InfuseSpellMod": "SpellMod_Weapon_StormInfused",
-        "SpellMod1": "",
-        "SpellMod2": "",
-        "StatMod1": "StatMod_CriticalStrikePhysical",
-        "StatMod1Power": 1.0,
-        "StatMod2": "StatMod_MovementSpeed",
-        "StatMod2Power": 1.0,
-        "StatMod3": "StatMod_PhysicalPower",
-        "StatMod3Power": 1.0,
-        "StatMod4": "",
-        "StatMod4Power": 1.0
-      },
-      {
-        "Name": "Item_Weapon_Whip_Unique_T08_Variation01",
-        "InfuseSpellMod": "SpellMod_Weapon_StormInfused",
-        "SpellMod1": "",
-        "SpellMod2": "",
-        "StatMod1": "StatMod_CriticalStrikePhysical",
-        "StatMod1Power": 1.0,
-        "StatMod2": "StatMod_MovementSpeed",
-        "StatMod2Power": 1.0,
-        "StatMod3": "StatMod_PhysicalPower",
-        "StatMod3Power": 1.0,
-        "StatMod4": "",
-        "StatMod4Power": 1.0
+      "PassiveSpells":{
+         "PassiveSpell1":"SpellPassive_Frost_T02_ChillWeave",
+         "PassiveSpell2":"SpellPassive_Chaos_T03_Overpower",
+         "PassiveSpell3":"SpellPassive_Unholy_T04_EmbraceMayhem",
+         "PassiveSpell4":"SpellPassive_Storm_T04_TurbulentVelocity",
+         "PassiveSpell5":"SpellPassive_Frost_T01_ColdSoul"
       }
-    ],
-    "Items": [
-      {
-        "Name": "Item_Consumable_HealingPotion_T02",
-        "Amount": 10
+   },
+   "defensive":{
+      "Blood":{
+         "PrimaryType":"BloodType_Scholar",
+         "SecondaryType":"BloodType_Creature",
+         "PrimaryQuality":100,
+         "SecondaryQuality":100
+      },
+      "Armors":{
+         "Boots":"Item_Boots_T09_Dracula_Scholar",
+         "Chest":"Item_Chest_T09_Dracula_Scholar",
+         "Gloves":"Item_Gloves_T09_Dracula_Scholar",
+         "Legs":"Item_Legs_T09_Dracula_Scholar",
+         "MagicSource":"Item_MagicSource_General_T08_Blood",
+         "Head":"",
+         "Cloak":"Item_Cloak_Main_T03_Phantom",
+         "Bag":"Item_NewBag_T06"
+      },
+      "Weapons":[
+         {
+            "Name":"Item_Weapon_Axe_Unique_T08_Variation01",
+            "InfuseSpellMod":"SpellMod_Weapon_StormInfused",
+            "SpellMod1":"SpellMod_Axe_Frenzy_Duration",
+            "SpellMod2":"SpellMod_Axe_XStrike_MultiThrow",
+            "StatMod1":"StatMod_CriticalStrikePhysical",
+            "StatMod1Power":1.0,
+            "StatMod2":"StatMod_MovementSpeed",
+            "StatMod2Power":1.0,
+            "StatMod3":"StatMod_PhysicalPower",
+            "StatMod3Power":1.0,
+            "StatMod4":"",
+            "StatMod4Power":1.0
+         },
+         {
+            "Name":"Item_Weapon_Claws_Unique_T08_Variation01",
+            "InfuseSpellMod":"SpellMod_Weapon_StormInfused",
+            "SpellMod1":"SpellMod_Claws_VaultSlash_Unholy",
+            "SpellMod2":"SpellMod_Claws_SkeweringLeap_Unholy",
+            "StatMod1":"StatMod_CriticalStrikePhysical",
+            "StatMod1Power":1.0,
+            "StatMod2":"StatMod_MovementSpeed",
+            "StatMod2Power":1.0,
+            "StatMod3":"StatMod_PhysicalPower",
+            "StatMod3Power":1.0,
+            "StatMod4":"",
+            "StatMod4Power":1.0
+         },
+         {
+            "Name":"Item_Weapon_Crossbow_Unique_T08_Variation01",
+            "InfuseSpellMod":"SpellMod_Weapon_StormInfused",
+            "SpellMod1":"SpellMod_Crossbow_RainOfBolts_BonusArrows",
+            "SpellMod2":"SpellMod_Crossbow_Snapshot_Fear",
+            "StatMod1":"StatMod_CriticalStrikePhysical",
+            "StatMod1Power":1.0,
+            "StatMod2":"StatMod_MovementSpeed",
+            "StatMod2Power":1.0,
+            "StatMod3":"StatMod_PhysicalPower",
+            "StatMod3Power":1.0,
+            "StatMod4":"",
+            "StatMod4Power":1.0
+         },
+         {
+            "Name":"Item_Weapon_GreatSword_Unique_T08_Variation01",
+            "InfuseSpellMod":"SpellMod_Weapon_StormInfused",
+            "SpellMod1":"SpellMod_GreatSword_GreatCleaver_ChaosDamage",
+            "SpellMod2":"SpellMod_GreatSword_LeapAttack_Aftershock",
+            "StatMod1":"StatMod_CriticalStrikePhysical",
+            "StatMod1Power":1.0,
+            "StatMod2":"StatMod_MovementSpeed",
+            "StatMod2Power":1.0,
+            "StatMod3":"StatMod_PhysicalPower",
+            "StatMod3Power":1.0,
+            "StatMod4":"",
+            "StatMod4Power":1.0
+         },
+         {
+            "Name":"Item_Weapon_Longbow_Unique_T08_Variation01",
+            "InfuseSpellMod":"SpellMod_Weapon_StormInfused",
+            "SpellMod1":"SpellMod_Longbow_Multishot_Focus",
+            "SpellMod2":"SpellMod_Longbow_GuidedArrow_FirstHit",
+            "StatMod1":"StatMod_CriticalStrikePhysical",
+            "StatMod1Power":1.0,
+            "StatMod2":"StatMod_MovementSpeed",
+            "StatMod2Power":1.0,
+            "StatMod3":"StatMod_PhysicalPower",
+            "StatMod3Power":1.0,
+            "StatMod4":"",
+            "StatMod4Power":1.0
+         },
+         {
+            "Name":"Item_Weapon_Mace_Unique_T08_Variation01",
+            "InfuseSpellMod":"SpellMod_Weapon_StormInfused",
+            "SpellMod1":"SpellMod_Mace_CrushingBlow_Shatter",
+            "SpellMod2":"SpellMod_Mace_Smack_Freeze",
+            "StatMod1":"StatMod_CriticalStrikePhysical",
+            "StatMod1Power":1.0,
+            "StatMod2":"StatMod_MovementSpeed",
+            "StatMod2Power":1.0,
+            "StatMod3":"StatMod_PhysicalPower",
+            "StatMod3Power":1.0,
+            "StatMod4":"",
+            "StatMod4Power":1.0
+         },
+         {
+            "Name":"Item_Weapon_Pistols_Unique_T08_Variation01",
+            "InfuseSpellMod":"SpellMod_Weapon_StormInfused",
+            "SpellMod1":"SpellMod_Pistols_FanTheHammer_Move",
+            "SpellMod2":"SpellMod_Pistols_ExplosiveShot_DoubleBarrel",
+            "StatMod1":"StatMod_CriticalStrikePhysical",
+            "StatMod1Power":1.0,
+            "StatMod2":"StatMod_MovementSpeed",
+            "StatMod2Power":1.0,
+            "StatMod3":"StatMod_PhysicalPower",
+            "StatMod3Power":1.0,
+            "StatMod4":"",
+            "StatMod4Power":1.0
+         },
+         {
+            "Name":"Item_Weapon_Reaper_Unique_T08_Variation01",
+            "InfuseSpellMod":"SpellMod_Weapon_StormInfused",
+            "SpellMod1":"SpellMod_Reaper_HowlingReaper_VeilResetCD",
+            "SpellMod2":"SpellMod_Reaper_TendonSwing_Consume",
+            "StatMod1":"StatMod_CriticalStrikePhysical",
+            "StatMod1Power":1.0,
+            "StatMod2":"StatMod_MovementSpeed",
+            "StatMod2Power":1.0,
+            "StatMod3":"StatMod_PhysicalPower",
+            "StatMod3Power":1.0,
+            "StatMod4":"",
+            "StatMod4Power":1.0
+         },
+         {
+            "Name":"Item_Weapon_Slashers_Unique_T08_Variation01",
+            "InfuseSpellMod":"SpellMod_Weapon_StormInfused",
+            "SpellMod1":"SpellMod_Slashers_ElusiveStrike_BloodFountain",
+            "SpellMod2":"SpellMod_Slashers_Camouflage_Rupture",
+            "StatMod1":"StatMod_CriticalStrikePhysical",
+            "StatMod1Power":1.0,
+            "StatMod2":"StatMod_MovementSpeed",
+            "StatMod2Power":1.0,
+            "StatMod3":"StatMod_PhysicalPower",
+            "StatMod3Power":1.0,
+            "StatMod4":"",
+            "StatMod4Power":1.0
+         },
+         {
+            "Name":"Item_Weapon_Spear_Unique_T08_Variation01",
+            "InfuseSpellMod":"SpellMod_Weapon_StormInfused",
+            "SpellMod1":"SpellMod_Spear_AThousandSpears_BallLightning",
+            "SpellMod2":"SpellMod_Spear_Harpoon_DragSelf",
+            "StatMod1":"StatMod_CriticalStrikePhysical",
+            "StatMod1Power":1.0,
+            "StatMod2":"StatMod_MovementSpeed",
+            "StatMod2Power":1.0,
+            "StatMod3":"StatMod_PhysicalPower",
+            "StatMod3Power":1.0,
+            "StatMod4":"",
+            "StatMod4Power":1.0
+         },
+         {
+            "Name":"Item_Weapon_Sword_Unique_T08_Variation01",
+            "InfuseSpellMod":"SpellMod_Weapon_StormInfused",
+            "SpellMod1":"SpellMod_Sword_Whirlwind_ResetDurationOnKill",
+            "SpellMod2":"SpellMod_Sword_Shockwave_ReduceWhirlwindCDOnHit",
+            "StatMod1":"StatMod_CriticalStrikePhysical",
+            "StatMod1Power":1.0,
+            "StatMod2":"StatMod_MovementSpeed",
+            "StatMod2Power":1.0,
+            "StatMod3":"StatMod_PhysicalPower",
+            "StatMod3Power":1.0,
+            "StatMod4":"",
+            "StatMod4Power":1.0
+         },
+         {
+            "Name":"Item_Weapon_TwinBlades_Unique_T08_Variation01",
+            "InfuseSpellMod":"SpellMod_Weapon_StormInfused",
+            "SpellMod1":"SpellMod_TwinBlades_Javelin_Freeze",
+            "SpellMod2":"SpellMod_TwinBlades_SweepingStrike_DamageToFrost",
+            "StatMod1":"StatMod_CriticalStrikePhysical",
+            "StatMod1Power":1.0,
+            "StatMod2":"StatMod_MovementSpeed",
+            "StatMod2Power":1.0,
+            "StatMod3":"StatMod_PhysicalPower",
+            "StatMod3Power":1.0,
+            "StatMod4":"",
+            "StatMod4Power":1.0
+         },
+         {
+            "Name":"Item_Weapon_Whip_Unique_T08_Variation01",
+            "InfuseSpellMod":"SpellMod_Weapon_StormInfused",
+            "SpellMod1":"SpellMod_Whip_Dash_FlameWhip",
+            "SpellMod2":"SpellMod_Whip_Entangle_FlameWhip",
+            "StatMod1":"StatMod_CriticalStrikePhysical",
+            "StatMod1Power":1.0,
+            "StatMod2":"StatMod_MovementSpeed",
+            "StatMod2Power":1.0,
+            "StatMod3":"StatMod_PhysicalPower",
+            "StatMod3Power":1.0,
+            "StatMod4":"",
+            "StatMod4Power":1.0
+         }
+      ],
+      "Items":[
+         {
+            "Name":"Item_Consumable_HealingPotion_T02",
+            "Amount":10
+         }
+      ],
+      "Abilities":{
+         "Travel":{
+            "Name":"AB_Vampire_VeilOfChaos_Group",
+            "Jewel":{
+               "SpellMod1":"SpellMod_VeilOfChaos_BonusIllusion",
+               "SpellMod1Power":1.0,
+               "SpellMod2":"SpellMod_VeilOfChaos_BonusDamageOnExplode",
+               "SpellMod2Power":1.0,
+               "SpellMod3":"SpellMod_VeilOfChaos_ApplySnareOnExplode",
+               "SpellMod3Power":1.0,
+               "SpellMod4":"",
+               "SpellMod4Power":1.0
+            }
+         },
+         "Ability1":{
+            "Name":"AB_Illusion_PhantomAegis_AbilityGroup",
+            "Jewel":{
+               "SpellMod1":"SpellMod_PhantomAegis_ConsumeWeakenIntoFear",
+               "SpellMod1Power":1.0,
+               "SpellMod2":"SpellMod_PhantomAegis_ExplodeOnDestroy",
+               "SpellMod2Power":1.0,
+               "SpellMod3":"SpellMod_PhantomAegis_IncreaseLifetime",
+               "SpellMod3Power":1.0,
+               "SpellMod4":"SpellMod_PhantomAegis_IncreaseSpellPower",
+               "SpellMod4Power":1.0
+            }
+         },
+         "Ability2":{
+            "Name":"AB_Illusion_MistTrance_AbilityGroup",
+            "Jewel":{
+               "SpellMod1":"SpellMod_MistTrance_FearOnTrigger",
+               "SpellMod1Power":1.0,
+               "SpellMod2":"SpellMod_MistTrance_PhantasmOnTrigger",
+               "SpellMod2Power":1.0,
+               "SpellMod3":"SpellMod_MistTrance_HasteOnTrigger",
+               "SpellMod3Power":1.0,
+               "SpellMod4":"SpellMod_MistTrance_ReduceSecondaryWeaponCD",
+               "SpellMod4Power":1.0
+            }
+         },
+         "Ultimate":{
+            "Name":"AB_Illusion_WispDance_AbilityGroup"
+         }
+      },
+      "PassiveSpells":{
+         "PassiveSpell1":"SpellPassive_Illusion_T02_FlowingSorcery",
+         "PassiveSpell2":"SpellPassive_Chaos_T04_RavenousStrikes",
+         "PassiveSpell3":"SpellPassive_Frost_T04_DarkEnchantment",
+         "PassiveSpell4":"SpellPassive_Frost_T03_Bastion",
+         "PassiveSpell5":"SpellPassive_Storm_T04_TurbulentVelocity"
       }
-    ],
-    "Abilities": {
-      "Travel": {
-        "Name": "AB_Vampire_VeilOfChaos_Group",
-        "Jewel": {
-          "SpellMod1": "SpellMod_VeilOfChaos_BonusIllusion",
-          "SpellMod1Power": 1.0,
-          "SpellMod2": "SpellMod_VeilOfChaos_BonusDamageOnExplode",
-          "SpellMod2Power": 1.0,
-          "SpellMod3": "SpellMod_VeilOfChaos_ApplySnareOnExplode",
-          "SpellMod3Power": 1.0,
-          "SpellMod4": "",
-          "SpellMod4Power": 1.0
-        }
+   },
+   "minions":{
+      "Blood":{
+         "PrimaryType":"BloodType_Scholar",
+         "SecondaryType":"BloodType_Warrior",
+         "PrimaryQuality":100,
+         "SecondaryQuality":100
       },
-      "Ability1": {
-        "Name": "AB_Frost_CrystalLance_AbilityGroup",
-        "Jewel": {
-          "SpellMod1": "SpellMod_CrystalLance_BonusDamageToFrosty",
-          "SpellMod1Power": 1.0,
-          "SpellMod2": "SpellMod_CrystalLance_PierceEnemies",
-          "SpellMod2Power": 1.0,
-          "SpellMod3": "",
-          "SpellMod3Power": 1.0,
-          "SpellMod4": "",
-          "SpellMod4Power": 1.0
-        }
+      "Armors":{
+         "Boots":"Item_Boots_T09_Dracula_Rogue",
+         "Chest":"Item_Chest_T09_Dracula_Rogue",
+         "Gloves":"Item_Gloves_T09_Dracula_Rogue",
+         "Legs":"Item_Legs_T09_Dracula_Rogue",
+         "MagicSource":"Item_MagicSource_General_T08_Illusion",
+         "Head":"",
+         "Cloak":"Item_Cloak_Main_T03_Phantom",
+         "Bag":"Item_NewBag_T06"
       },
-      "Ability2": {
-        "Name": "AB_Frost_ColdSnap_AbilityGroup",
-        "Jewel": {
-          "SpellMod1": "SpellMod_ColdSnap_BonusAbsorb",
-          "SpellMod1Power": 1.0,
-          "SpellMod2": "SpellMod_ColdSnap_BonusDamage",
-          "SpellMod2Power": 1.0,
-          "SpellMod3": "SpellMod_ColdSnap_HasteWhileShielded",
-          "SpellMod3Power": 1.0,
-          "SpellMod4": "SpellMod_ColdSnap_Immaterial",
-          "SpellMod4Power": 1.0
-        }
+      "Weapons":[
+         {
+            "Name":"Item_Weapon_Axe_Unique_T08_Variation01",
+            "InfuseSpellMod":"SpellMod_Weapon_StormInfused",
+            "SpellMod1":"SpellMod_Axe_Frenzy_Duration",
+            "SpellMod2":"SpellMod_Axe_XStrike_MultiThrow",
+            "StatMod1":"StatMod_CriticalStrikePhysical",
+            "StatMod1Power":1.0,
+            "StatMod2":"StatMod_MovementSpeed",
+            "StatMod2Power":1.0,
+            "StatMod3":"StatMod_PhysicalPower",
+            "StatMod3Power":1.0,
+            "StatMod4":"",
+            "StatMod4Power":1.0
+         },
+         {
+            "Name":"Item_Weapon_Claws_Unique_T08_Variation01",
+            "InfuseSpellMod":"SpellMod_Weapon_StormInfused",
+            "SpellMod1":"SpellMod_Claws_VaultSlash_Unholy",
+            "SpellMod2":"SpellMod_Claws_SkeweringLeap_Unholy",
+            "StatMod1":"StatMod_CriticalStrikePhysical",
+            "StatMod1Power":1.0,
+            "StatMod2":"StatMod_MovementSpeed",
+            "StatMod2Power":1.0,
+            "StatMod3":"StatMod_PhysicalPower",
+            "StatMod3Power":1.0,
+            "StatMod4":"",
+            "StatMod4Power":1.0
+         },
+         {
+            "Name":"Item_Weapon_Crossbow_Unique_T08_Variation01",
+            "InfuseSpellMod":"SpellMod_Weapon_StormInfused",
+            "SpellMod1":"SpellMod_Crossbow_RainOfBolts_BonusArrows",
+            "SpellMod2":"SpellMod_Crossbow_Snapshot_Fear",
+            "StatMod1":"StatMod_CriticalStrikePhysical",
+            "StatMod1Power":1.0,
+            "StatMod2":"StatMod_MovementSpeed",
+            "StatMod2Power":1.0,
+            "StatMod3":"StatMod_PhysicalPower",
+            "StatMod3Power":1.0,
+            "StatMod4":"",
+            "StatMod4Power":1.0
+         },
+         {
+            "Name":"Item_Weapon_GreatSword_Unique_T08_Variation01",
+            "InfuseSpellMod":"SpellMod_Weapon_StormInfused",
+            "SpellMod1":"SpellMod_GreatSword_GreatCleaver_ChaosDamage",
+            "SpellMod2":"SpellMod_GreatSword_LeapAttack_Aftershock",
+            "StatMod1":"StatMod_CriticalStrikePhysical",
+            "StatMod1Power":1.0,
+            "StatMod2":"StatMod_MovementSpeed",
+            "StatMod2Power":1.0,
+            "StatMod3":"StatMod_PhysicalPower",
+            "StatMod3Power":1.0,
+            "StatMod4":"",
+            "StatMod4Power":1.0
+         },
+         {
+            "Name":"Item_Weapon_Longbow_Unique_T08_Variation01",
+            "InfuseSpellMod":"SpellMod_Weapon_StormInfused",
+            "SpellMod1":"SpellMod_Longbow_Multishot_Focus",
+            "SpellMod2":"SpellMod_Longbow_GuidedArrow_FirstHit",
+            "StatMod1":"StatMod_CriticalStrikePhysical",
+            "StatMod1Power":1.0,
+            "StatMod2":"StatMod_MovementSpeed",
+            "StatMod2Power":1.0,
+            "StatMod3":"StatMod_PhysicalPower",
+            "StatMod3Power":1.0,
+            "StatMod4":"",
+            "StatMod4Power":1.0
+         },
+         {
+            "Name":"Item_Weapon_Mace_Unique_T08_Variation01",
+            "InfuseSpellMod":"SpellMod_Weapon_StormInfused",
+            "SpellMod1":"SpellMod_Mace_CrushingBlow_Shatter",
+            "SpellMod2":"SpellMod_Mace_Smack_Freeze",
+            "StatMod1":"StatMod_CriticalStrikePhysical",
+            "StatMod1Power":1.0,
+            "StatMod2":"StatMod_MovementSpeed",
+            "StatMod2Power":1.0,
+            "StatMod3":"StatMod_PhysicalPower",
+            "StatMod3Power":1.0,
+            "StatMod4":"",
+            "StatMod4Power":1.0
+         },
+         {
+            "Name":"Item_Weapon_Pistols_Unique_T08_Variation01",
+            "InfuseSpellMod":"SpellMod_Weapon_StormInfused",
+            "SpellMod1":"SpellMod_Pistols_FanTheHammer_Move",
+            "SpellMod2":"SpellMod_Pistols_ExplosiveShot_DoubleBarrel",
+            "StatMod1":"StatMod_CriticalStrikePhysical",
+            "StatMod1Power":1.0,
+            "StatMod2":"StatMod_MovementSpeed",
+            "StatMod2Power":1.0,
+            "StatMod3":"StatMod_PhysicalPower",
+            "StatMod3Power":1.0,
+            "StatMod4":"",
+            "StatMod4Power":1.0
+         },
+         {
+            "Name":"Item_Weapon_Reaper_Unique_T08_Variation01",
+            "InfuseSpellMod":"SpellMod_Weapon_StormInfused",
+            "SpellMod1":"SpellMod_Reaper_HowlingReaper_VeilResetCD",
+            "SpellMod2":"SpellMod_Reaper_TendonSwing_Consume",
+            "StatMod1":"StatMod_CriticalStrikePhysical",
+            "StatMod1Power":1.0,
+            "StatMod2":"StatMod_MovementSpeed",
+            "StatMod2Power":1.0,
+            "StatMod3":"StatMod_PhysicalPower",
+            "StatMod3Power":1.0,
+            "StatMod4":"",
+            "StatMod4Power":1.0
+         },
+         {
+            "Name":"Item_Weapon_Slashers_Unique_T08_Variation01",
+            "InfuseSpellMod":"SpellMod_Weapon_StormInfused",
+            "SpellMod1":"SpellMod_Slashers_ElusiveStrike_BloodFountain",
+            "SpellMod2":"SpellMod_Slashers_Camouflage_Rupture",
+            "StatMod1":"StatMod_CriticalStrikePhysical",
+            "StatMod1Power":1.0,
+            "StatMod2":"StatMod_MovementSpeed",
+            "StatMod2Power":1.0,
+            "StatMod3":"StatMod_PhysicalPower",
+            "StatMod3Power":1.0,
+            "StatMod4":"",
+            "StatMod4Power":1.0
+         },
+         {
+            "Name":"Item_Weapon_Spear_Unique_T08_Variation01",
+            "InfuseSpellMod":"SpellMod_Weapon_StormInfused",
+            "SpellMod1":"SpellMod_Spear_AThousandSpears_BallLightning",
+            "SpellMod2":"SpellMod_Spear_Harpoon_DragSelf",
+            "StatMod1":"StatMod_CriticalStrikePhysical",
+            "StatMod1Power":1.0,
+            "StatMod2":"StatMod_MovementSpeed",
+            "StatMod2Power":1.0,
+            "StatMod3":"StatMod_PhysicalPower",
+            "StatMod3Power":1.0,
+            "StatMod4":"",
+            "StatMod4Power":1.0
+         },
+         {
+            "Name":"Item_Weapon_Sword_Unique_T08_Variation01",
+            "InfuseSpellMod":"SpellMod_Weapon_StormInfused",
+            "SpellMod1":"SpellMod_Sword_Whirlwind_ResetDurationOnKill",
+            "SpellMod2":"SpellMod_Sword_Shockwave_ReduceWhirlwindCDOnHit",
+            "StatMod1":"StatMod_CriticalStrikePhysical",
+            "StatMod1Power":1.0,
+            "StatMod2":"StatMod_MovementSpeed",
+            "StatMod2Power":1.0,
+            "StatMod3":"StatMod_PhysicalPower",
+            "StatMod3Power":1.0,
+            "StatMod4":"",
+            "StatMod4Power":1.0
+         },
+         {
+            "Name":"Item_Weapon_TwinBlades_Unique_T08_Variation01",
+            "InfuseSpellMod":"SpellMod_Weapon_StormInfused",
+            "SpellMod1":"SpellMod_TwinBlades_Javelin_Freeze",
+            "SpellMod2":"SpellMod_TwinBlades_SweepingStrike_DamageToFrost",
+            "StatMod1":"StatMod_CriticalStrikePhysical",
+            "StatMod1Power":1.0,
+            "StatMod2":"StatMod_MovementSpeed",
+            "StatMod2Power":1.0,
+            "StatMod3":"StatMod_PhysicalPower",
+            "StatMod3Power":1.0,
+            "StatMod4":"",
+            "StatMod4Power":1.0
+         },
+         {
+            "Name":"Item_Weapon_Whip_Unique_T08_Variation01",
+            "InfuseSpellMod":"SpellMod_Weapon_StormInfused",
+            "SpellMod1":"SpellMod_Whip_Dash_FlameWhip",
+            "SpellMod2":"SpellMod_Whip_Entangle_FlameWhip",
+            "StatMod1":"StatMod_CriticalStrikePhysical",
+            "StatMod1Power":1.0,
+            "StatMod2":"StatMod_MovementSpeed",
+            "StatMod2Power":1.0,
+            "StatMod3":"StatMod_PhysicalPower",
+            "StatMod3Power":1.0,
+            "StatMod4":"",
+            "StatMod4Power":1.0
+         }
+      ],
+      "Items":[
+         {
+            "Name":"Item_Consumable_HealingPotion_T02",
+            "Amount":10
+         }
+      ],
+      "Abilities":{
+         "Travel":{
+            "Name":"AB_Vampire_VeilOfIllusion_AbilityGroup",
+            "Jewel":{
+               "SpellMod1":"SpellMod_VeilOfIllusion_AttackInflictFadingSnare",
+               "SpellMod1Power":1.0,
+               "SpellMod2":"SpellMod_VeilOfIllusion_PhantasmOnHit",
+               "SpellMod2Power":1.0,
+               "SpellMod3":"SpellMod_VeilOfIllusion_RecastDetonate",
+               "SpellMod3Power":1.0,
+               "SpellMod4":"SpellMod_VeilOfIllusion_IllusionFireProjectiles",
+               "SpellMod4Power":1.0
+            }
+         },
+         "Ability1":{
+            "Name":"AB_Unholy_CorruptedSkull_AbilityGroup",
+            "Jewel":{
+               "SpellMod1":"SpellMod_CorruptedSkull_BoneSpirit",
+               "SpellMod1Power":1.0,
+               "SpellMod2":"SpellMod_CorruptedSkull_BonusDamage",
+               "SpellMod2Power":1.0,
+               "SpellMod3":"SpellMod_CorruptedSkull_DetonateSkeleton",
+               "SpellMod3Power":1.0,
+               "SpellMod4":"SpellMod_CorruptedSkull_LesserProjectiles",
+               "SpellMod4Power":1.0
+            }
+         },
+         "Ability2":{
+            "Name":"AB_Unholy_DeathKnight_AbilityGroup",
+            "Jewel":{
+               "SpellMod1":"SpellMod_DeathKnight_BonusDamage",
+               "SpellMod1Power":1.0,
+               "SpellMod2":"SpellMod_DeathKnight_IncreaseLifetime",
+               "SpellMod2Power":1.0,
+               "SpellMod3":"SpellMod_DeathKnight_SkeletonMageOnDeath",
+               "SpellMod3Power":1.0,
+               "SpellMod4":"SpellMod_DeathKnight_SnareEnemiesOnSummon",
+               "SpellMod4Power":1.0
+            }
+         },
+         "Ultimate":{
+            "Name":"AB_Unholy_ArmyOfTheDead_AbilityGroup"
+         }
       },
-      "Ultimate": {
-        "Name": "AB_Chaos_MercilessCharge_AbilityGroup"
+      "PassiveSpells":{
+         "PassiveSpell1":"SpellPassive_Unholy_T01_ArcaneAnimator",
+         "PassiveSpell2":"SpellPassive_Illusion_T02_FlowingSorcery",
+         "PassiveSpell3":"SpellPassive_Storm_T04_TurbulentVelocity",
+         "PassiveSpell4":"SpellPassive_Illusion_T04_WickedPower",
+         "PassiveSpell5":"SpellPassive_Chaos_T01_ChaosKindling"
       }
-    },
-    "PassiveSpells": {
-      "PassiveSpell1": "SpellPassive_Frost_T02_ChillWeave",
-      "PassiveSpell2": "SpellPassive_Chaos_T03_Overpower",
-      "PassiveSpell3": "SpellPassive_Unholy_T04_EmbraceMayhem",
-      "PassiveSpell4": "SpellPassive_Storm_T04_TurbulentVelocity",
-      "PassiveSpell5": "SpellPassive_Frost_T01_ColdSoul"
-    }
-  },
-  "defensive": {
-    "Blood": {
-      "PrimaryType": "BloodType_Scholar",
-      "SecondaryType": "BloodType_Creature",
-      "PrimaryQuality": 100,
-      "SecondaryQuality": 100
-    },
-    "Armors": {
-      "Boots": "Item_Boots_T09_Dracula_Scholar",
-      "Chest": "Item_Chest_T09_Dracula_Scholar",
-      "Gloves": "Item_Gloves_T09_Dracula_Scholar",
-      "Legs": "Item_Legs_T09_Dracula_Scholar",
-      "MagicSource": "Item_MagicSource_General_T08_Blood",
-      "Head": "",
-      "Cloak": "Item_Cloak_Main_T03_Phantom",
-      "Bag": "Item_NewBag_T06"
-    },
-    "Weapons": [
-      {
-        "Name": "Item_Weapon_Axe_Unique_T08_Variation01",
-        "InfuseSpellMod": "SpellMod_Weapon_BloodInfused",
-        "SpellMod1": "",
-        "SpellMod2": "",
-        "StatMod1": "StatMod_DamageReduction",
-        "StatMod1Power": 1.0,
-        "StatMod2": "StatMod_MovementSpeed",
-        "StatMod2Power": 1.0,
-        "StatMod3": "StatMod_SpellPower",
-        "StatMod3Power": 1.0,
-        "StatMod4": "",
-        "StatMod4Power": 1.0
+   },
+   "movement":{
+      "Blood":{
+         "PrimaryType":"BloodType_Rogue",
+         "SecondaryType":"BloodType_Brute",
+         "PrimaryQuality":100,
+         "SecondaryQuality":100
       },
-      {
-        "Name": "Item_Weapon_Claws_Unique_T08_Variation01",
-        "InfuseSpellMod": "SpellMod_Weapon_BloodInfused",
-        "SpellMod1": "",
-        "SpellMod2": "",
-        "StatMod1": "StatMod_DamageReduction",
-        "StatMod1Power": 1.0,
-        "StatMod2": "StatMod_MovementSpeed",
-        "StatMod2Power": 1.0,
-        "StatMod3": "StatMod_SpellPower",
-        "StatMod3Power": 1.0,
-        "StatMod4": "",
-        "StatMod4Power": 1.0
+      "Armors":{
+         "Boots":"Item_Boots_T09_Dracula_Rogue",
+         "Chest":"Item_Chest_T09_Dracula_Rogue",
+         "Gloves":"Item_Gloves_T09_Dracula_Rogue",
+         "Legs":"Item_Legs_T09_Dracula_Rogue",
+         "MagicSource":"Item_MagicSource_General_T08_Unholy",
+         "Head":"",
+         "Cloak":"Item_Cloak_Main_T03_Phantom",
+         "Bag":"Item_NewBag_T06"
       },
-      {
-        "Name": "Item_Weapon_Crossbow_Unique_T08_Variation01",
-        "InfuseSpellMod": "SpellMod_Weapon_BloodInfused",
-        "SpellMod1": "",
-        "SpellMod2": "",
-        "StatMod1": "StatMod_DamageReduction",
-        "StatMod1Power": 1.0,
-        "StatMod2": "StatMod_MovementSpeed",
-        "StatMod2Power": 1.0,
-        "StatMod3": "StatMod_SpellPower",
-        "StatMod3Power": 1.0,
-        "StatMod4": "",
-        "StatMod4Power": 1.0
+      "Weapons":[
+         {
+            "Name":"Item_Weapon_Axe_Unique_T08_Variation01",
+            "InfuseSpellMod":"SpellMod_Weapon_StormInfused",
+            "SpellMod1":"SpellMod_Axe_Frenzy_Duration",
+            "SpellMod2":"SpellMod_Axe_XStrike_MultiThrow",
+            "StatMod1":"StatMod_CriticalStrikePhysical",
+            "StatMod1Power":1.0,
+            "StatMod2":"StatMod_MovementSpeed",
+            "StatMod2Power":1.0,
+            "StatMod3":"StatMod_PhysicalPower",
+            "StatMod3Power":1.0,
+            "StatMod4":"",
+            "StatMod4Power":1.0
+         },
+         {
+            "Name":"Item_Weapon_Claws_Unique_T08_Variation01",
+            "InfuseSpellMod":"SpellMod_Weapon_StormInfused",
+            "SpellMod1":"SpellMod_Claws_VaultSlash_Unholy",
+            "SpellMod2":"SpellMod_Claws_SkeweringLeap_Unholy",
+            "StatMod1":"StatMod_CriticalStrikePhysical",
+            "StatMod1Power":1.0,
+            "StatMod2":"StatMod_MovementSpeed",
+            "StatMod2Power":1.0,
+            "StatMod3":"StatMod_PhysicalPower",
+            "StatMod3Power":1.0,
+            "StatMod4":"",
+            "StatMod4Power":1.0
+         },
+         {
+            "Name":"Item_Weapon_Crossbow_Unique_T08_Variation01",
+            "InfuseSpellMod":"SpellMod_Weapon_StormInfused",
+            "SpellMod1":"SpellMod_Crossbow_RainOfBolts_BonusArrows",
+            "SpellMod2":"SpellMod_Crossbow_Snapshot_Fear",
+            "StatMod1":"StatMod_CriticalStrikePhysical",
+            "StatMod1Power":1.0,
+            "StatMod2":"StatMod_MovementSpeed",
+            "StatMod2Power":1.0,
+            "StatMod3":"StatMod_PhysicalPower",
+            "StatMod3Power":1.0,
+            "StatMod4":"",
+            "StatMod4Power":1.0
+         },
+         {
+            "Name":"Item_Weapon_GreatSword_Unique_T08_Variation01",
+            "InfuseSpellMod":"SpellMod_Weapon_StormInfused",
+            "SpellMod1":"SpellMod_GreatSword_GreatCleaver_ChaosDamage",
+            "SpellMod2":"SpellMod_GreatSword_LeapAttack_Aftershock",
+            "StatMod1":"StatMod_CriticalStrikePhysical",
+            "StatMod1Power":1.0,
+            "StatMod2":"StatMod_MovementSpeed",
+            "StatMod2Power":1.0,
+            "StatMod3":"StatMod_PhysicalPower",
+            "StatMod3Power":1.0,
+            "StatMod4":"",
+            "StatMod4Power":1.0
+         },
+         {
+            "Name":"Item_Weapon_Longbow_Unique_T08_Variation01",
+            "InfuseSpellMod":"SpellMod_Weapon_StormInfused",
+            "SpellMod1":"SpellMod_Longbow_Multishot_Focus",
+            "SpellMod2":"SpellMod_Longbow_GuidedArrow_FirstHit",
+            "StatMod1":"StatMod_CriticalStrikePhysical",
+            "StatMod1Power":1.0,
+            "StatMod2":"StatMod_MovementSpeed",
+            "StatMod2Power":1.0,
+            "StatMod3":"StatMod_PhysicalPower",
+            "StatMod3Power":1.0,
+            "StatMod4":"",
+            "StatMod4Power":1.0
+         },
+         {
+            "Name":"Item_Weapon_Mace_Unique_T08_Variation01",
+            "InfuseSpellMod":"SpellMod_Weapon_StormInfused",
+            "SpellMod1":"SpellMod_Mace_CrushingBlow_Shatter",
+            "SpellMod2":"SpellMod_Mace_Smack_Freeze",
+            "StatMod1":"StatMod_CriticalStrikePhysical",
+            "StatMod1Power":1.0,
+            "StatMod2":"StatMod_MovementSpeed",
+            "StatMod2Power":1.0,
+            "StatMod3":"StatMod_PhysicalPower",
+            "StatMod3Power":1.0,
+            "StatMod4":"",
+            "StatMod4Power":1.0
+         },
+         {
+            "Name":"Item_Weapon_Pistols_Unique_T08_Variation01",
+            "InfuseSpellMod":"SpellMod_Weapon_StormInfused",
+            "SpellMod1":"SpellMod_Pistols_FanTheHammer_Move",
+            "SpellMod2":"SpellMod_Pistols_ExplosiveShot_DoubleBarrel",
+            "StatMod1":"StatMod_CriticalStrikePhysical",
+            "StatMod1Power":1.0,
+            "StatMod2":"StatMod_MovementSpeed",
+            "StatMod2Power":1.0,
+            "StatMod3":"StatMod_PhysicalPower",
+            "StatMod3Power":1.0,
+            "StatMod4":"",
+            "StatMod4Power":1.0
+         },
+         {
+            "Name":"Item_Weapon_Reaper_Unique_T08_Variation01",
+            "InfuseSpellMod":"SpellMod_Weapon_StormInfused",
+            "SpellMod1":"SpellMod_Reaper_HowlingReaper_VeilResetCD",
+            "SpellMod2":"SpellMod_Reaper_TendonSwing_Consume",
+            "StatMod1":"StatMod_CriticalStrikePhysical",
+            "StatMod1Power":1.0,
+            "StatMod2":"StatMod_MovementSpeed",
+            "StatMod2Power":1.0,
+            "StatMod3":"StatMod_PhysicalPower",
+            "StatMod3Power":1.0,
+            "StatMod4":"",
+            "StatMod4Power":1.0
+         },
+         {
+            "Name":"Item_Weapon_Slashers_Unique_T08_Variation01",
+            "InfuseSpellMod":"SpellMod_Weapon_StormInfused",
+            "SpellMod1":"SpellMod_Slashers_ElusiveStrike_BloodFountain",
+            "SpellMod2":"SpellMod_Slashers_Camouflage_Rupture",
+            "StatMod1":"StatMod_CriticalStrikePhysical",
+            "StatMod1Power":1.0,
+            "StatMod2":"StatMod_MovementSpeed",
+            "StatMod2Power":1.0,
+            "StatMod3":"StatMod_PhysicalPower",
+            "StatMod3Power":1.0,
+            "StatMod4":"",
+            "StatMod4Power":1.0
+         },
+         {
+            "Name":"Item_Weapon_Spear_Unique_T08_Variation01",
+            "InfuseSpellMod":"SpellMod_Weapon_StormInfused",
+            "SpellMod1":"SpellMod_Spear_AThousandSpears_BallLightning",
+            "SpellMod2":"SpellMod_Spear_Harpoon_DragSelf",
+            "StatMod1":"StatMod_CriticalStrikePhysical",
+            "StatMod1Power":1.0,
+            "StatMod2":"StatMod_MovementSpeed",
+            "StatMod2Power":1.0,
+            "StatMod3":"StatMod_PhysicalPower",
+            "StatMod3Power":1.0,
+            "StatMod4":"",
+            "StatMod4Power":1.0
+         },
+         {
+            "Name":"Item_Weapon_Sword_Unique_T08_Variation01",
+            "InfuseSpellMod":"SpellMod_Weapon_StormInfused",
+            "SpellMod1":"SpellMod_Sword_Whirlwind_ResetDurationOnKill",
+            "SpellMod2":"SpellMod_Sword_Shockwave_ReduceWhirlwindCDOnHit",
+            "StatMod1":"StatMod_CriticalStrikePhysical",
+            "StatMod1Power":1.0,
+            "StatMod2":"StatMod_MovementSpeed",
+            "StatMod2Power":1.0,
+            "StatMod3":"StatMod_PhysicalPower",
+            "StatMod3Power":1.0,
+            "StatMod4":"",
+            "StatMod4Power":1.0
+         },
+         {
+            "Name":"Item_Weapon_TwinBlades_Unique_T08_Variation01",
+            "InfuseSpellMod":"SpellMod_Weapon_StormInfused",
+            "SpellMod1":"SpellMod_TwinBlades_Javelin_Freeze",
+            "SpellMod2":"SpellMod_TwinBlades_SweepingStrike_DamageToFrost",
+            "StatMod1":"StatMod_CriticalStrikePhysical",
+            "StatMod1Power":1.0,
+            "StatMod2":"StatMod_MovementSpeed",
+            "StatMod2Power":1.0,
+            "StatMod3":"StatMod_PhysicalPower",
+            "StatMod3Power":1.0,
+            "StatMod4":"",
+            "StatMod4Power":1.0
+         },
+         {
+            "Name":"Item_Weapon_Whip_Unique_T08_Variation01",
+            "InfuseSpellMod":"SpellMod_Weapon_StormInfused",
+            "SpellMod1":"SpellMod_Whip_Dash_FlameWhip",
+            "SpellMod2":"SpellMod_Whip_Entangle_FlameWhip",
+            "StatMod1":"StatMod_CriticalStrikePhysical",
+            "StatMod1Power":1.0,
+            "StatMod2":"StatMod_MovementSpeed",
+            "StatMod2Power":1.0,
+            "StatMod3":"StatMod_PhysicalPower",
+            "StatMod3Power":1.0,
+            "StatMod4":"",
+            "StatMod4Power":1.0
+         }
+      ],
+      "Items":[
+         {
+            "Name":"Item_Consumable_HealingPotion_T02",
+            "Amount":10
+         }
+      ],
+      "Abilities":{
+         "Travel":{
+            "Name":"AB_Vampire_VeilOfChaos_Group",
+            "Jewel":{
+               "SpellMod1":"SpellMod_VeilOfChaos_BonusIllusion",
+               "SpellMod1Power":1.0,
+               "SpellMod2":"SpellMod_VeilOfChaos_BonusDamageOnExplode",
+               "SpellMod2Power":1.0,
+               "SpellMod3":"SpellMod_VeilOfChaos_ApplySnareOnExplode",
+               "SpellMod3Power":1.0,
+               "SpellMod4":"",
+               "SpellMod4Power":1.0
+            }
+         },
+         "Ability1":{
+            "Name":"AB_Illusion_MistTrance_AbilityGroup",
+            "Jewel":{
+               "SpellMod1":"SpellMod_MistTrance_FearOnTrigger",
+               "SpellMod1Power":1.0,
+               "SpellMod2":"SpellMod_MistTrance_PhantasmOnTrigger",
+               "SpellMod2Power":1.0,
+               "SpellMod3":"SpellMod_MistTrance_HasteOnTrigger",
+               "SpellMod3Power":1.0,
+               "SpellMod4":"SpellMod_MistTrance_ReduceSecondaryWeaponCD",
+               "SpellMod4Power":1.0
+            }
+         },
+         "Ability2":{
+            "Name":"AB_Illusion_PhantomAegis_AbilityGroup",
+            "Jewel":{
+               "SpellMod1":"SpellMod_PhantomAegis_ConsumeWeakenIntoFear",
+               "SpellMod1Power":1.0,
+               "SpellMod2":"SpellMod_PhantomAegis_ExplodeOnDestroy",
+               "SpellMod2Power":1.0,
+               "SpellMod3":"SpellMod_PhantomAegis_IncreaseLifetime",
+               "SpellMod3Power":1.0,
+               "SpellMod4":"SpellMod_PhantomAegis_IncreaseSpellPower",
+               "SpellMod4Power":1.0
+            }
+         },
+         "Ultimate":{
+            "Name":"AB_Storm_RagingTempest_AbilityGroup"
+         }
       },
-      {
-        "Name": "Item_Weapon_GreatSword_Unique_T08_Variation01",
-        "InfuseSpellMod": "SpellMod_Weapon_BloodInfused",
-        "SpellMod1": "",
-        "SpellMod2": "",
-        "StatMod1": "StatMod_DamageReduction",
-        "StatMod1Power": 1.0,
-        "StatMod2": "StatMod_MovementSpeed",
-        "StatMod2Power": 1.0,
-        "StatMod3": "StatMod_SpellPower",
-        "StatMod3Power": 1.0,
-        "StatMod4": "",
-        "StatMod4Power": 1.0
-      },
-      {
-        "Name": "Item_Weapon_Longbow_Unique_T08_Variation01",
-        "InfuseSpellMod": "SpellMod_Weapon_BloodInfused",
-        "SpellMod1": "",
-        "SpellMod2": "",
-        "StatMod1": "StatMod_DamageReduction",
-        "StatMod1Power": 1.0,
-        "StatMod2": "StatMod_MovementSpeed",
-        "StatMod2Power": 1.0,
-        "StatMod3": "StatMod_SpellPower",
-        "StatMod3Power": 1.0,
-        "StatMod4": "",
-        "StatMod4Power": 1.0
-      },
-      {
-        "Name": "Item_Weapon_Mace_Unique_T08_Variation01",
-        "InfuseSpellMod": "SpellMod_Weapon_BloodInfused",
-        "SpellMod1": "",
-        "SpellMod2": "",
-        "StatMod1": "StatMod_DamageReduction",
-        "StatMod1Power": 1.0,
-        "StatMod2": "StatMod_MovementSpeed",
-        "StatMod2Power": 1.0,
-        "StatMod3": "StatMod_SpellPower",
-        "StatMod3Power": 1.0,
-        "StatMod4": "",
-        "StatMod4Power": 1.0
-      },
-      {
-        "Name": "Item_Weapon_Pistols_Unique_T08_Variation01",
-        "InfuseSpellMod": "SpellMod_Weapon_BloodInfused",
-        "SpellMod1": "",
-        "SpellMod2": "",
-        "StatMod1": "StatMod_DamageReduction",
-        "StatMod1Power": 1.0,
-        "StatMod2": "StatMod_MovementSpeed",
-        "StatMod2Power": 1.0,
-        "StatMod3": "StatMod_SpellPower",
-        "StatMod3Power": 1.0,
-        "StatMod4": "",
-        "StatMod4Power": 1.0
-      },
-      {
-        "Name": "Item_Weapon_Reaper_Unique_T08_Variation01",
-        "InfuseSpellMod": "SpellMod_Weapon_BloodInfused",
-        "SpellMod1": "",
-        "SpellMod2": "",
-        "StatMod1": "StatMod_DamageReduction",
-        "StatMod1Power": 1.0,
-        "StatMod2": "StatMod_MovementSpeed",
-        "StatMod2Power": 1.0,
-        "StatMod3": "StatMod_SpellPower",
-        "StatMod3Power": 1.0,
-        "StatMod4": "",
-        "StatMod4Power": 1.0
-      },
-      {
-        "Name": "Item_Weapon_Slashers_Unique_T08_Variation01",
-        "InfuseSpellMod": "SpellMod_Weapon_BloodInfused",
-        "SpellMod1": "",
-        "SpellMod2": "",
-        "StatMod1": "StatMod_DamageReduction",
-        "StatMod1Power": 1.0,
-        "StatMod2": "StatMod_MovementSpeed",
-        "StatMod2Power": 1.0,
-        "StatMod3": "StatMod_SpellPower",
-        "StatMod3Power": 1.0,
-        "StatMod4": "",
-        "StatMod4Power": 1.0
-      },
-      {
-        "Name": "Item_Weapon_Spear_Unique_T08_Variation01",
-        "InfuseSpellMod": "SpellMod_Weapon_BloodInfused",
-        "SpellMod1": "",
-        "SpellMod2": "",
-        "StatMod1": "StatMod_DamageReduction",
-        "StatMod1Power": 1.0,
-        "StatMod2": "StatMod_MovementSpeed",
-        "StatMod2Power": 1.0,
-        "StatMod3": "StatMod_SpellPower",
-        "StatMod3Power": 1.0,
-        "StatMod4": "",
-        "StatMod4Power": 1.0
-      },
-      {
-        "Name": "Item_Weapon_Sword_Unique_T08_Variation01",
-        "InfuseSpellMod": "SpellMod_Weapon_BloodInfused",
-        "SpellMod1": "",
-        "SpellMod2": "",
-        "StatMod1": "StatMod_DamageReduction",
-        "StatMod1Power": 1.0,
-        "StatMod2": "StatMod_MovementSpeed",
-        "StatMod2Power": 1.0,
-        "StatMod3": "StatMod_SpellPower",
-        "StatMod3Power": 1.0,
-        "StatMod4": "",
-        "StatMod4Power": 1.0
-      },
-      {
-        "Name": "Item_Weapon_TwinBlades_Unique_T08_Variation01",
-        "InfuseSpellMod": "SpellMod_Weapon_BloodInfused",
-        "SpellMod1": "",
-        "SpellMod2": "",
-        "StatMod1": "StatMod_DamageReduction",
-        "StatMod1Power": 1.0,
-        "StatMod2": "StatMod_MovementSpeed",
-        "StatMod2Power": 1.0,
-        "StatMod3": "StatMod_SpellPower",
-        "StatMod3Power": 1.0,
-        "StatMod4": "",
-        "StatMod4Power": 1.0
-      },
-      {
-        "Name": "Item_Weapon_Whip_Unique_T08_Variation01",
-        "InfuseSpellMod": "SpellMod_Weapon_BloodInfused",
-        "SpellMod1": "",
-        "SpellMod2": "",
-        "StatMod1": "StatMod_DamageReduction",
-        "StatMod1Power": 1.0,
-        "StatMod2": "StatMod_MovementSpeed",
-        "StatMod2Power": 1.0,
-        "StatMod3": "StatMod_SpellPower",
-        "StatMod3Power": 1.0,
-        "StatMod4": "",
-        "StatMod4Power": 1.0
+      "PassiveSpells":{
+         "PassiveSpell1":"SpellPassive_Chaos_T03_Overpower",
+         "PassiveSpell2":"SpellPassive_Storm_T01_LightningFastStrikes",
+         "PassiveSpell3":"SpellPassive_Storm_T02_EnhancedConductivity",
+         "PassiveSpell4":"SpellPassive_Storm_T04_TurbulentVelocity",
+         "PassiveSpell5":"SpellPassive_Blood_T02_BloodTypeEfficiency"
       }
-    ],
-    "Items": [
-      {
-        "Name": "Item_Consumable_HealingPotion_T02",
-        "Amount": 10
+   },
+   "tank":{
+      "Blood":{
+         "PrimaryType":"BloodType_Brute",
+         "SecondaryType":"BloodType_Warrior",
+         "PrimaryQuality":100,
+         "SecondaryQuality":100
+      },
+      "Armors":{
+         "Boots":"Item_Boots_T09_Dracula_Brute",
+         "Chest":"Item_Chest_T09_Dracula_Brute",
+         "Gloves":"Item_Gloves_T09_Dracula_Brute",
+         "Legs":"Item_Legs_T09_Dracula_Brute",
+         "MagicSource":"Item_MagicSource_General_T08_Blood",
+         "Head":"",
+         "Cloak":"Item_Cloak_Main_T03_Phantom",
+         "Bag":"Item_NewBag_T06"
+      },
+      "Weapons":[
+         {
+            "Name":"Item_Weapon_Axe_Unique_T08_Variation01",
+            "InfuseSpellMod":"SpellMod_Weapon_StormInfused",
+            "SpellMod1":"SpellMod_Axe_Frenzy_Duration",
+            "SpellMod2":"SpellMod_Axe_XStrike_MultiThrow",
+            "StatMod1":"StatMod_CriticalStrikePhysical",
+            "StatMod1Power":1.0,
+            "StatMod2":"StatMod_MovementSpeed",
+            "StatMod2Power":1.0,
+            "StatMod3":"StatMod_PhysicalPower",
+            "StatMod3Power":1.0,
+            "StatMod4":"",
+            "StatMod4Power":1.0
+         },
+         {
+            "Name":"Item_Weapon_Claws_Unique_T08_Variation01",
+            "InfuseSpellMod":"SpellMod_Weapon_StormInfused",
+            "SpellMod1":"SpellMod_Claws_VaultSlash_Unholy",
+            "SpellMod2":"SpellMod_Claws_SkeweringLeap_Unholy",
+            "StatMod1":"StatMod_CriticalStrikePhysical",
+            "StatMod1Power":1.0,
+            "StatMod2":"StatMod_MovementSpeed",
+            "StatMod2Power":1.0,
+            "StatMod3":"StatMod_PhysicalPower",
+            "StatMod3Power":1.0,
+            "StatMod4":"",
+            "StatMod4Power":1.0
+         },
+         {
+            "Name":"Item_Weapon_Crossbow_Unique_T08_Variation01",
+            "InfuseSpellMod":"SpellMod_Weapon_StormInfused",
+            "SpellMod1":"SpellMod_Crossbow_RainOfBolts_BonusArrows",
+            "SpellMod2":"SpellMod_Crossbow_Snapshot_Fear",
+            "StatMod1":"StatMod_CriticalStrikePhysical",
+            "StatMod1Power":1.0,
+            "StatMod2":"StatMod_MovementSpeed",
+            "StatMod2Power":1.0,
+            "StatMod3":"StatMod_PhysicalPower",
+            "StatMod3Power":1.0,
+            "StatMod4":"",
+            "StatMod4Power":1.0
+         },
+         {
+            "Name":"Item_Weapon_GreatSword_Unique_T08_Variation01",
+            "InfuseSpellMod":"SpellMod_Weapon_StormInfused",
+            "SpellMod1":"SpellMod_GreatSword_GreatCleaver_ChaosDamage",
+            "SpellMod2":"SpellMod_GreatSword_LeapAttack_Aftershock",
+            "StatMod1":"StatMod_CriticalStrikePhysical",
+            "StatMod1Power":1.0,
+            "StatMod2":"StatMod_MovementSpeed",
+            "StatMod2Power":1.0,
+            "StatMod3":"StatMod_PhysicalPower",
+            "StatMod3Power":1.0,
+            "StatMod4":"",
+            "StatMod4Power":1.0
+         },
+         {
+            "Name":"Item_Weapon_Longbow_Unique_T08_Variation01",
+            "InfuseSpellMod":"SpellMod_Weapon_StormInfused",
+            "SpellMod1":"SpellMod_Longbow_Multishot_Focus",
+            "SpellMod2":"SpellMod_Longbow_GuidedArrow_FirstHit",
+            "StatMod1":"StatMod_CriticalStrikePhysical",
+            "StatMod1Power":1.0,
+            "StatMod2":"StatMod_MovementSpeed",
+            "StatMod2Power":1.0,
+            "StatMod3":"StatMod_PhysicalPower",
+            "StatMod3Power":1.0,
+            "StatMod4":"",
+            "StatMod4Power":1.0
+         },
+         {
+            "Name":"Item_Weapon_Mace_Unique_T08_Variation01",
+            "InfuseSpellMod":"SpellMod_Weapon_StormInfused",
+            "SpellMod1":"SpellMod_Mace_CrushingBlow_Shatter",
+            "SpellMod2":"SpellMod_Mace_Smack_Freeze",
+            "StatMod1":"StatMod_CriticalStrikePhysical",
+            "StatMod1Power":1.0,
+            "StatMod2":"StatMod_MovementSpeed",
+            "StatMod2Power":1.0,
+            "StatMod3":"StatMod_PhysicalPower",
+            "StatMod3Power":1.0,
+            "StatMod4":"",
+            "StatMod4Power":1.0
+         },
+         {
+            "Name":"Item_Weapon_Pistols_Unique_T08_Variation01",
+            "InfuseSpellMod":"SpellMod_Weapon_StormInfused",
+            "SpellMod1":"SpellMod_Pistols_FanTheHammer_Move",
+            "SpellMod2":"SpellMod_Pistols_ExplosiveShot_DoubleBarrel",
+            "StatMod1":"StatMod_CriticalStrikePhysical",
+            "StatMod1Power":1.0,
+            "StatMod2":"StatMod_MovementSpeed",
+            "StatMod2Power":1.0,
+            "StatMod3":"StatMod_PhysicalPower",
+            "StatMod3Power":1.0,
+            "StatMod4":"",
+            "StatMod4Power":1.0
+         },
+         {
+            "Name":"Item_Weapon_Reaper_Unique_T08_Variation01",
+            "InfuseSpellMod":"SpellMod_Weapon_StormInfused",
+            "SpellMod1":"SpellMod_Reaper_HowlingReaper_VeilResetCD",
+            "SpellMod2":"SpellMod_Reaper_TendonSwing_Consume",
+            "StatMod1":"StatMod_CriticalStrikePhysical",
+            "StatMod1Power":1.0,
+            "StatMod2":"StatMod_MovementSpeed",
+            "StatMod2Power":1.0,
+            "StatMod3":"StatMod_PhysicalPower",
+            "StatMod3Power":1.0,
+            "StatMod4":"",
+            "StatMod4Power":1.0
+         },
+         {
+            "Name":"Item_Weapon_Slashers_Unique_T08_Variation01",
+            "InfuseSpellMod":"SpellMod_Weapon_StormInfused",
+            "SpellMod1":"SpellMod_Slashers_ElusiveStrike_BloodFountain",
+            "SpellMod2":"SpellMod_Slashers_Camouflage_Rupture",
+            "StatMod1":"StatMod_CriticalStrikePhysical",
+            "StatMod1Power":1.0,
+            "StatMod2":"StatMod_MovementSpeed",
+            "StatMod2Power":1.0,
+            "StatMod3":"StatMod_PhysicalPower",
+            "StatMod3Power":1.0,
+            "StatMod4":"",
+            "StatMod4Power":1.0
+         },
+         {
+            "Name":"Item_Weapon_Spear_Unique_T08_Variation01",
+            "InfuseSpellMod":"SpellMod_Weapon_StormInfused",
+            "SpellMod1":"SpellMod_Spear_AThousandSpears_BallLightning",
+            "SpellMod2":"SpellMod_Spear_Harpoon_DragSelf",
+            "StatMod1":"StatMod_CriticalStrikePhysical",
+            "StatMod1Power":1.0,
+            "StatMod2":"StatMod_MovementSpeed",
+            "StatMod2Power":1.0,
+            "StatMod3":"StatMod_PhysicalPower",
+            "StatMod3Power":1.0,
+            "StatMod4":"",
+            "StatMod4Power":1.0
+         },
+         {
+            "Name":"Item_Weapon_Sword_Unique_T08_Variation01",
+            "InfuseSpellMod":"SpellMod_Weapon_StormInfused",
+            "SpellMod1":"SpellMod_Sword_Whirlwind_ResetDurationOnKill",
+            "SpellMod2":"SpellMod_Sword_Shockwave_ReduceWhirlwindCDOnHit",
+            "StatMod1":"StatMod_CriticalStrikePhysical",
+            "StatMod1Power":1.0,
+            "StatMod2":"StatMod_MovementSpeed",
+            "StatMod2Power":1.0,
+            "StatMod3":"StatMod_PhysicalPower",
+            "StatMod3Power":1.0,
+            "StatMod4":"",
+            "StatMod4Power":1.0
+         },
+         {
+            "Name":"Item_Weapon_TwinBlades_Unique_T08_Variation01",
+            "InfuseSpellMod":"SpellMod_Weapon_StormInfused",
+            "SpellMod1":"SpellMod_TwinBlades_Javelin_Freeze",
+            "SpellMod2":"SpellMod_TwinBlades_SweepingStrike_DamageToFrost",
+            "StatMod1":"StatMod_CriticalStrikePhysical",
+            "StatMod1Power":1.0,
+            "StatMod2":"StatMod_MovementSpeed",
+            "StatMod2Power":1.0,
+            "StatMod3":"StatMod_PhysicalPower",
+            "StatMod3Power":1.0,
+            "StatMod4":"",
+            "StatMod4Power":1.0
+         },
+         {
+            "Name":"Item_Weapon_Whip_Unique_T08_Variation01",
+            "InfuseSpellMod":"SpellMod_Weapon_StormInfused",
+            "SpellMod1":"SpellMod_Whip_Dash_FlameWhip",
+            "SpellMod2":"SpellMod_Whip_Entangle_FlameWhip",
+            "StatMod1":"StatMod_CriticalStrikePhysical",
+            "StatMod1Power":1.0,
+            "StatMod2":"StatMod_MovementSpeed",
+            "StatMod2Power":1.0,
+            "StatMod3":"StatMod_PhysicalPower",
+            "StatMod3Power":1.0,
+            "StatMod4":"",
+            "StatMod4Power":1.0
+         }
+      ],
+      "Items":[
+         {
+            "Name":"Item_Consumable_HealingPotion_T02",
+            "Amount":10
+         }
+      ],
+      "Abilities":{
+         "Travel":{
+            "Name":"AB_Vampire_VeilOfBlood_Group",
+            "Jewel":{
+               "SpellMod1":"SpellMod_VeilOfBlood_SelfHealing",
+               "SpellMod1Power":1.0,
+               "SpellMod2":"SpellMod_VeilOfBlood_BloodNova",
+               "SpellMod2Power":1.0,
+               "SpellMod3":"SpellMod_VeilOfBlood_BloodNovaArea",
+               "SpellMod3Power":1.0,
+               "SpellMod4":"SpellMod_VeilOfBlood_DashInflictLeech",
+               "SpellMod4Power":1.0
+            }
+         },
+         "Ability1":{
+            "Name":"AB_Blood_BloodRage_AbilityGroup",
+            "Jewel":{
+               "SpellMod1":"SpellMod_BloodRage_IncreaseArea",
+               "SpellMod1Power":1.0,
+               "SpellMod2":"SpellMod_BloodRage_IncreaseLifetime",
+               "SpellMod2Power":1.0,
+               "SpellMod3":"SpellMod_BloodRage_IncreaseMoveSpeed",
+               "SpellMod3Power":1.0,
+               "SpellMod4":"SpellMod_BloodRage_Shield",
+               "SpellMod4Power":1.0
+            }
+         },
+         "Ability2":{
+            "Name":"AB_Blood_BloodRite_AbilityGroup",
+            "Jewel":{
+               "SpellMod1":"SpellMod_BloodRite_HealOnTrigger",
+               "SpellMod1Power":1.0,
+               "SpellMod2":"SpellMod_BloodRite_ConsumeLeechHealXTimes",
+               "SpellMod2Power":1.0,
+               "SpellMod3":"SpellMod_BloodRite_ConsumeLeechReduceCooldownXTimes",
+               "SpellMod3Power":1.0,
+               "SpellMod4":"SpellMod_BloodRite_Stealth",
+               "SpellMod4Power":1.0
+            }
+         },
+         "Ultimate":{
+            "Name":"AB_Storm_LightningTyphoon_AbilityGroup"
+         }
+      },
+      "PassiveSpells":{
+         "PassiveSpell1":"SpellPassive_Frost_T03_Bastion",
+         "PassiveSpell2":"SpellPassive_Frost_T04_DarkEnchantment",
+         "PassiveSpell3":"SpellPassive_Blood_T02_BloodTypeEfficiency",
+         "PassiveSpell4":"SpellPassive_Storm_T03_HungerForPower",
+         "PassiveSpell5":"SpellPassive_Storm_T04_TurbulentVelocity"
       }
-    ],
-    "Abilities": {
-      "Travel": {
-        "Name": "AB_Vampire_VeilOfChaos_Group",
-        "Jewel": {
-          "SpellMod1": "SpellMod_VeilOfChaos_BonusIllusion",
-          "SpellMod1Power": 1.0,
-          "SpellMod2": "SpellMod_VeilOfChaos_BonusDamageOnExplode",
-          "SpellMod2Power": 1.0,
-          "SpellMod3": "SpellMod_VeilOfChaos_ApplySnareOnExplode",
-          "SpellMod3Power": 1.0,
-          "SpellMod4": "",
-          "SpellMod4Power": 1.0
-        }
+   },
+   "weapon":{
+      "Blood":{
+         "PrimaryType":"BloodType_Warrior",
+         "SecondaryType":"BloodType_Rogue",
+         "PrimaryQuality":100,
+         "SecondaryQuality":100
       },
-      "Ability1": {
-        "Name": "AB_Illusion_PhantomAegis_AbilityGroup",
-        "Jewel": {
-          "SpellMod1": "SpellMod_PhantomAegis_ConsumeWeakenIntoFear",
-          "SpellMod1Power": 1.0,
-          "SpellMod2": "SpellMod_PhantomAegis_ExplodeOnDestroy",
-          "SpellMod2Power": 1.0,
-          "SpellMod3": "SpellMod_PhantomAegis_IncreaseLifetime",
-          "SpellMod3Power": 1.0,
-          "SpellMod4": "SpellMod_PhantomAegis_IncreaseSpellPower",
-          "SpellMod4Power": 1.0
-        }
+      "Armors":{
+         "Boots":"Item_Boots_T09_Dracula_Warrior",
+         "Chest":"Item_Chest_T09_Dracula_Warrior",
+         "Gloves":"Item_Gloves_T09_Dracula_Warrior",
+         "Legs":"Item_Legs_T09_Dracula_Warrior",
+         "MagicSource":"Item_MagicSource_General_T08_Storm",
+         "Head":"",
+         "Cloak":"Item_Cloak_Main_T03_Phantom",
+         "Bag":"Item_NewBag_T06"
       },
-      "Ability2": {
-        "Name": "AB_Illusion_MistTrance_AbilityGroup",
-        "Jewel": {
-          "SpellMod1": "SpellMod_MistTrance_FearOnTrigger",
-          "SpellMod1Power": 1.0,
-          "SpellMod2": "SpellMod_MistTrance_PhantasmOnTrigger",
-          "SpellMod2Power": 1.0,
-          "SpellMod3": "SpellMod_MistTrance_HasteOnTrigger",
-          "SpellMod3Power": 1.0,
-          "SpellMod4": "SpellMod_MistTrance_ReduceSecondaryWeaponCD",
-          "SpellMod4Power": 1.0
-        }
+      "Weapons":[
+         {
+            "Name":"Item_Weapon_Axe_Unique_T08_Variation01",
+            "InfuseSpellMod":"SpellMod_Weapon_StormInfused",
+            "SpellMod1":"SpellMod_Axe_Frenzy_Duration",
+            "SpellMod2":"SpellMod_Axe_XStrike_MultiThrow",
+            "StatMod1":"StatMod_CriticalStrikePhysical",
+            "StatMod1Power":1.0,
+            "StatMod2":"StatMod_MovementSpeed",
+            "StatMod2Power":1.0,
+            "StatMod3":"StatMod_PhysicalPower",
+            "StatMod3Power":1.0,
+            "StatMod4":"",
+            "StatMod4Power":1.0
+         },
+         {
+            "Name":"Item_Weapon_Claws_Unique_T08_Variation01",
+            "InfuseSpellMod":"SpellMod_Weapon_StormInfused",
+            "SpellMod1":"SpellMod_Claws_VaultSlash_Unholy",
+            "SpellMod2":"SpellMod_Claws_SkeweringLeap_Unholy",
+            "StatMod1":"StatMod_CriticalStrikePhysical",
+            "StatMod1Power":1.0,
+            "StatMod2":"StatMod_MovementSpeed",
+            "StatMod2Power":1.0,
+            "StatMod3":"StatMod_PhysicalPower",
+            "StatMod3Power":1.0,
+            "StatMod4":"",
+            "StatMod4Power":1.0
+         },
+         {
+            "Name":"Item_Weapon_Crossbow_Unique_T08_Variation01",
+            "InfuseSpellMod":"SpellMod_Weapon_StormInfused",
+            "SpellMod1":"SpellMod_Crossbow_RainOfBolts_BonusArrows",
+            "SpellMod2":"SpellMod_Crossbow_Snapshot_Fear",
+            "StatMod1":"StatMod_CriticalStrikePhysical",
+            "StatMod1Power":1.0,
+            "StatMod2":"StatMod_MovementSpeed",
+            "StatMod2Power":1.0,
+            "StatMod3":"StatMod_PhysicalPower",
+            "StatMod3Power":1.0,
+            "StatMod4":"",
+            "StatMod4Power":1.0
+         },
+         {
+            "Name":"Item_Weapon_GreatSword_Unique_T08_Variation01",
+            "InfuseSpellMod":"SpellMod_Weapon_StormInfused",
+            "SpellMod1":"SpellMod_GreatSword_GreatCleaver_ChaosDamage",
+            "SpellMod2":"SpellMod_GreatSword_LeapAttack_Aftershock",
+            "StatMod1":"StatMod_CriticalStrikePhysical",
+            "StatMod1Power":1.0,
+            "StatMod2":"StatMod_MovementSpeed",
+            "StatMod2Power":1.0,
+            "StatMod3":"StatMod_PhysicalPower",
+            "StatMod3Power":1.0,
+            "StatMod4":"",
+            "StatMod4Power":1.0
+         },
+         {
+            "Name":"Item_Weapon_Longbow_Unique_T08_Variation01",
+            "InfuseSpellMod":"SpellMod_Weapon_StormInfused",
+            "SpellMod1":"SpellMod_Longbow_Multishot_Focus",
+            "SpellMod2":"SpellMod_Longbow_GuidedArrow_FirstHit",
+            "StatMod1":"StatMod_CriticalStrikePhysical",
+            "StatMod1Power":1.0,
+            "StatMod2":"StatMod_MovementSpeed",
+            "StatMod2Power":1.0,
+            "StatMod3":"StatMod_PhysicalPower",
+            "StatMod3Power":1.0,
+            "StatMod4":"",
+            "StatMod4Power":1.0
+         },
+         {
+            "Name":"Item_Weapon_Mace_Unique_T08_Variation01",
+            "InfuseSpellMod":"SpellMod_Weapon_StormInfused",
+            "SpellMod1":"SpellMod_Mace_CrushingBlow_Shatter",
+            "SpellMod2":"SpellMod_Mace_Smack_Freeze",
+            "StatMod1":"StatMod_CriticalStrikePhysical",
+            "StatMod1Power":1.0,
+            "StatMod2":"StatMod_MovementSpeed",
+            "StatMod2Power":1.0,
+            "StatMod3":"StatMod_PhysicalPower",
+            "StatMod3Power":1.0,
+            "StatMod4":"",
+            "StatMod4Power":1.0
+         },
+         {
+            "Name":"Item_Weapon_Pistols_Unique_T08_Variation01",
+            "InfuseSpellMod":"SpellMod_Weapon_StormInfused",
+            "SpellMod1":"SpellMod_Pistols_FanTheHammer_Move",
+            "SpellMod2":"SpellMod_Pistols_ExplosiveShot_DoubleBarrel",
+            "StatMod1":"StatMod_CriticalStrikePhysical",
+            "StatMod1Power":1.0,
+            "StatMod2":"StatMod_MovementSpeed",
+            "StatMod2Power":1.0,
+            "StatMod3":"StatMod_PhysicalPower",
+            "StatMod3Power":1.0,
+            "StatMod4":"",
+            "StatMod4Power":1.0
+         },
+         {
+            "Name":"Item_Weapon_Reaper_Unique_T08_Variation01",
+            "InfuseSpellMod":"SpellMod_Weapon_StormInfused",
+            "SpellMod1":"SpellMod_Reaper_HowlingReaper_VeilResetCD",
+            "SpellMod2":"SpellMod_Reaper_TendonSwing_Consume",
+            "StatMod1":"StatMod_CriticalStrikePhysical",
+            "StatMod1Power":1.0,
+            "StatMod2":"StatMod_MovementSpeed",
+            "StatMod2Power":1.0,
+            "StatMod3":"StatMod_PhysicalPower",
+            "StatMod3Power":1.0,
+            "StatMod4":"",
+            "StatMod4Power":1.0
+         },
+         {
+            "Name":"Item_Weapon_Slashers_Unique_T08_Variation01",
+            "InfuseSpellMod":"SpellMod_Weapon_StormInfused",
+            "SpellMod1":"SpellMod_Slashers_ElusiveStrike_BloodFountain",
+            "SpellMod2":"SpellMod_Slashers_Camouflage_Rupture",
+            "StatMod1":"StatMod_CriticalStrikePhysical",
+            "StatMod1Power":1.0,
+            "StatMod2":"StatMod_MovementSpeed",
+            "StatMod2Power":1.0,
+            "StatMod3":"StatMod_PhysicalPower",
+            "StatMod3Power":1.0,
+            "StatMod4":"",
+            "StatMod4Power":1.0
+         },
+         {
+            "Name":"Item_Weapon_Spear_Unique_T08_Variation01",
+            "InfuseSpellMod":"SpellMod_Weapon_StormInfused",
+            "SpellMod1":"SpellMod_Spear_AThousandSpears_BallLightning",
+            "SpellMod2":"SpellMod_Spear_Harpoon_DragSelf",
+            "StatMod1":"StatMod_CriticalStrikePhysical",
+            "StatMod1Power":1.0,
+            "StatMod2":"StatMod_MovementSpeed",
+            "StatMod2Power":1.0,
+            "StatMod3":"StatMod_PhysicalPower",
+            "StatMod3Power":1.0,
+            "StatMod4":"",
+            "StatMod4Power":1.0
+         },
+         {
+            "Name":"Item_Weapon_Sword_Unique_T08_Variation01",
+            "InfuseSpellMod":"SpellMod_Weapon_StormInfused",
+            "SpellMod1":"SpellMod_Sword_Whirlwind_ResetDurationOnKill",
+            "SpellMod2":"SpellMod_Sword_Shockwave_ReduceWhirlwindCDOnHit",
+            "StatMod1":"StatMod_CriticalStrikePhysical",
+            "StatMod1Power":1.0,
+            "StatMod2":"StatMod_MovementSpeed",
+            "StatMod2Power":1.0,
+            "StatMod3":"StatMod_PhysicalPower",
+            "StatMod3Power":1.0,
+            "StatMod4":"",
+            "StatMod4Power":1.0
+         },
+         {
+            "Name":"Item_Weapon_TwinBlades_Unique_T08_Variation01",
+            "InfuseSpellMod":"SpellMod_Weapon_StormInfused",
+            "SpellMod1":"SpellMod_TwinBlades_Javelin_Freeze",
+            "SpellMod2":"SpellMod_TwinBlades_SweepingStrike_DamageToFrost",
+            "StatMod1":"StatMod_CriticalStrikePhysical",
+            "StatMod1Power":1.0,
+            "StatMod2":"StatMod_MovementSpeed",
+            "StatMod2Power":1.0,
+            "StatMod3":"StatMod_PhysicalPower",
+            "StatMod3Power":1.0,
+            "StatMod4":"",
+            "StatMod4Power":1.0
+         },
+         {
+            "Name":"Item_Weapon_Whip_Unique_T08_Variation01",
+            "InfuseSpellMod":"SpellMod_Weapon_StormInfused",
+            "SpellMod1":"SpellMod_Whip_Dash_FlameWhip",
+            "SpellMod2":"SpellMod_Whip_Entangle_FlameWhip",
+            "StatMod1":"StatMod_CriticalStrikePhysical",
+            "StatMod1Power":1.0,
+            "StatMod2":"StatMod_MovementSpeed",
+            "StatMod2Power":1.0,
+            "StatMod3":"StatMod_PhysicalPower",
+            "StatMod3Power":1.0,
+            "StatMod4":"",
+            "StatMod4Power":1.0
+         }
+      ],
+      "Items":[
+         {
+            "Name":"Item_Consumable_HealingPotion_T02",
+            "Amount":10
+         }
+      ],
+      "Abilities":{
+         "Travel":{
+            "Name":"AB_Vampire_VeilOfChaos_Group",
+            "Jewel":{
+               "SpellMod1":"SpellMod_VeilOfChaos_BonusIllusion",
+               "SpellMod1Power":1.0,
+               "SpellMod2":"SpellMod_VeilOfChaos_BonusDamageOnExplode",
+               "SpellMod2Power":1.0,
+               "SpellMod3":"SpellMod_VeilOfChaos_ApplySnareOnExplode",
+               "SpellMod3Power":1.0,
+               "SpellMod4":"",
+               "SpellMod4Power":1.0
+            }
+         },
+         "Ability1":{
+            "Name":"AB_Illusion_MistTrance_AbilityGroup",
+            "Jewel":{
+               "SpellMod1":"SpellMod_MistTrance_FearOnTrigger",
+               "SpellMod1Power":1.0,
+               "SpellMod2":"SpellMod_MistTrance_PhantasmOnTrigger",
+               "SpellMod2Power":1.0,
+               "SpellMod3":"SpellMod_MistTrance_HasteOnTrigger",
+               "SpellMod3Power":1.0,
+               "SpellMod4":"SpellMod_MistTrance_ReduceSecondaryWeaponCD",
+               "SpellMod4Power":1.0
+            }
+         },
+         "Ability2":{
+            "Name":"AB_Storm_Discharge_AbilityGroup",
+            "Jewel":{
+               "SpellMod1":"SpellMod_Discharge_Immaterial",
+               "SpellMod1Power":1.0,
+               "SpellMod2":"SpellMod_Discharge_RecastDetonate",
+               "SpellMod2Power":1.0,
+               "SpellMod3":"SpellMod_Discharge_IncreaseStunDuration",
+               "SpellMod3Power":1.0,
+               "SpellMod4":"SpellMod_Discharge_BonusDamage",
+               "SpellMod4Power":1.0
+            }
+         },
+         "Ultimate":{
+            "Name":"AB_Frost_ArcticLeap_AbilityGroup"
+         }
       },
-      "Ultimate": {
-        "Name": "AB_Illusion_WispDance_AbilityGroup"
+      "PassiveSpells":{
+         "PassiveSpell1":"SpellPassive_Chaos_T03_Overpower",
+         "PassiveSpell2":"SpellPassive_Storm_T04_TurbulentVelocity",
+         "PassiveSpell3":"SpellPassive_Blood_T01_BloodSpray",
+         "PassiveSpell4":"SpellPassive_Blood_T02_BloodTypeEfficiency",
+         "PassiveSpell5":"SpellPassive_Chaos_T04_RavenousStrikes"
       }
-    },
-    "PassiveSpells": {
-      "PassiveSpell1": "SpellPassive_Illusion_T02_FlowingSorcery",
-      "PassiveSpell2": "SpellPassive_Chaos_T04_RavenousStrikes",
-      "PassiveSpell3": "SpellPassive_Frost_T04_DarkEnchantment",
-      "PassiveSpell4": "SpellPassive_Frost_T03_Bastion",
-      "PassiveSpell5": "SpellPassive_Storm_T04_TurbulentVelocity"
-    }
-  },
-  "minions": {
-    "Blood": {
-      "PrimaryType": "BloodType_Scholar",
-      "SecondaryType": "BloodType_Warrior",
-      "PrimaryQuality": 100,
-      "SecondaryQuality": 100
-    },
-    "Armors": {
-      "Boots": "Item_Boots_T09_Dracula_Rogue",
-      "Chest": "Item_Chest_T09_Dracula_Rogue",
-      "Gloves": "Item_Gloves_T09_Dracula_Rogue",
-      "Legs": "Item_Legs_T09_Dracula_Rogue",
-      "MagicSource": "Item_MagicSource_General_T08_Illusion",
-      "Head": "",
-      "Cloak": "Item_Cloak_Main_T03_Phantom",
-      "Bag": "Item_NewBag_T06"
-    },
-    "Weapons": [
-      {
-        "Name": "Item_Weapon_Axe_Unique_T08_Variation01",
-        "InfuseSpellMod": "SpellMod_Weapon_StormInfused",
-        "SpellMod1": "",
-        "SpellMod2": "",
-        "StatMod1": "StatMod_SpellLeech",
-        "StatMod1Power": 1.0,
-        "StatMod2": "StatMod_MovementSpeed",
-        "StatMod2Power": 1.0,
-        "StatMod3": "StatMod_DamageReduction",
-        "StatMod3Power": 1.0,
-        "StatMod4": "",
-        "StatMod4Power": 1.0
-      },
-      {
-        "Name": "Item_Weapon_Claws_Unique_T08_Variation01",
-        "InfuseSpellMod": "SpellMod_Weapon_StormInfused",
-        "SpellMod1": "",
-        "SpellMod2": "",
-        "StatMod1": "StatMod_SpellLeech",
-        "StatMod1Power": 1.0,
-        "StatMod2": "StatMod_MovementSpeed",
-        "StatMod2Power": 1.0,
-        "StatMod3": "StatMod_DamageReduction",
-        "StatMod3Power": 1.0,
-        "StatMod4": "",
-        "StatMod4Power": 1.0
-      },
-      {
-        "Name": "Item_Weapon_Crossbow_Unique_T08_Variation01",
-        "InfuseSpellMod": "SpellMod_Weapon_StormInfused",
-        "SpellMod1": "",
-        "SpellMod2": "",
-        "StatMod1": "StatMod_SpellLeech",
-        "StatMod1Power": 1.0,
-        "StatMod2": "StatMod_MovementSpeed",
-        "StatMod2Power": 1.0,
-        "StatMod3": "StatMod_DamageReduction",
-        "StatMod3Power": 1.0,
-        "StatMod4": "",
-        "StatMod4Power": 1.0
-      },
-      {
-        "Name": "Item_Weapon_GreatSword_Unique_T08_Variation01",
-        "InfuseSpellMod": "SpellMod_Weapon_StormInfused",
-        "SpellMod1": "",
-        "SpellMod2": "",
-        "StatMod1": "StatMod_SpellLeech",
-        "StatMod1Power": 1.0,
-        "StatMod2": "StatMod_MovementSpeed",
-        "StatMod2Power": 1.0,
-        "StatMod3": "StatMod_DamageReduction",
-        "StatMod3Power": 1.0,
-        "StatMod4": "",
-        "StatMod4Power": 1.0
-      },
-      {
-        "Name": "Item_Weapon_Longbow_Unique_T08_Variation01",
-        "InfuseSpellMod": "SpellMod_Weapon_StormInfused",
-        "SpellMod1": "",
-        "SpellMod2": "",
-        "StatMod1": "StatMod_SpellLeech",
-        "StatMod1Power": 1.0,
-        "StatMod2": "StatMod_MovementSpeed",
-        "StatMod2Power": 1.0,
-        "StatMod3": "StatMod_DamageReduction",
-        "StatMod3Power": 1.0,
-        "StatMod4": "",
-        "StatMod4Power": 1.0
-      },
-      {
-        "Name": "Item_Weapon_Mace_Unique_T08_Variation01",
-        "InfuseSpellMod": "SpellMod_Weapon_StormInfused",
-        "SpellMod1": "",
-        "SpellMod2": "",
-        "StatMod1": "StatMod_SpellLeech",
-        "StatMod1Power": 1.0,
-        "StatMod2": "StatMod_MovementSpeed",
-        "StatMod2Power": 1.0,
-        "StatMod3": "StatMod_DamageReduction",
-        "StatMod3Power": 1.0,
-        "StatMod4": "",
-        "StatMod4Power": 1.0
-      },
-      {
-        "Name": "Item_Weapon_Pistols_Unique_T08_Variation01",
-        "InfuseSpellMod": "SpellMod_Weapon_StormInfused",
-        "SpellMod1": "",
-        "SpellMod2": "",
-        "StatMod1": "StatMod_SpellLeech",
-        "StatMod1Power": 1.0,
-        "StatMod2": "StatMod_MovementSpeed",
-        "StatMod2Power": 1.0,
-        "StatMod3": "StatMod_DamageReduction",
-        "StatMod3Power": 1.0,
-        "StatMod4": "",
-        "StatMod4Power": 1.0
-      },
-      {
-        "Name": "Item_Weapon_Reaper_Unique_T08_Variation01",
-        "InfuseSpellMod": "SpellMod_Weapon_StormInfused",
-        "SpellMod1": "",
-        "SpellMod2": "",
-        "StatMod1": "StatMod_SpellLeech",
-        "StatMod1Power": 1.0,
-        "StatMod2": "StatMod_MovementSpeed",
-        "StatMod2Power": 1.0,
-        "StatMod3": "StatMod_DamageReduction",
-        "StatMod3Power": 1.0,
-        "StatMod4": "",
-        "StatMod4Power": 1.0
-      },
-      {
-        "Name": "Item_Weapon_Slashers_Unique_T08_Variation01",
-        "InfuseSpellMod": "SpellMod_Weapon_StormInfused",
-        "SpellMod1": "",
-        "SpellMod2": "",
-        "StatMod1": "StatMod_SpellLeech",
-        "StatMod1Power": 1.0,
-        "StatMod2": "StatMod_MovementSpeed",
-        "StatMod2Power": 1.0,
-        "StatMod3": "StatMod_DamageReduction",
-        "StatMod3Power": 1.0,
-        "StatMod4": "",
-        "StatMod4Power": 1.0
-      },
-      {
-        "Name": "Item_Weapon_Spear_Unique_T08_Variation01",
-        "InfuseSpellMod": "SpellMod_Weapon_StormInfused",
-        "SpellMod1": "",
-        "SpellMod2": "",
-        "StatMod1": "StatMod_SpellLeech",
-        "StatMod1Power": 1.0,
-        "StatMod2": "StatMod_MovementSpeed",
-        "StatMod2Power": 1.0,
-        "StatMod3": "StatMod_DamageReduction",
-        "StatMod3Power": 1.0,
-        "StatMod4": "",
-        "StatMod4Power": 1.0
-      },
-      {
-        "Name": "Item_Weapon_Sword_Unique_T08_Variation01",
-        "InfuseSpellMod": "SpellMod_Weapon_StormInfused",
-        "SpellMod1": "",
-        "SpellMod2": "",
-        "StatMod1": "StatMod_SpellLeech",
-        "StatMod1Power": 1.0,
-        "StatMod2": "StatMod_MovementSpeed",
-        "StatMod2Power": 1.0,
-        "StatMod3": "StatMod_DamageReduction",
-        "StatMod3Power": 1.0,
-        "StatMod4": "",
-        "StatMod4Power": 1.0
-      },
-      {
-        "Name": "Item_Weapon_TwinBlades_Unique_T08_Variation01",
-        "InfuseSpellMod": "SpellMod_Weapon_StormInfused",
-        "SpellMod1": "",
-        "SpellMod2": "",
-        "StatMod1": "StatMod_SpellLeech",
-        "StatMod1Power": 1.0,
-        "StatMod2": "StatMod_MovementSpeed",
-        "StatMod2Power": 1.0,
-        "StatMod3": "StatMod_DamageReduction",
-        "StatMod3Power": 1.0,
-        "StatMod4": "",
-        "StatMod4Power": 1.0
-      },
-      {
-        "Name": "Item_Weapon_Whip_Unique_T08_Variation01",
-        "InfuseSpellMod": "SpellMod_Weapon_StormInfused",
-        "SpellMod1": "",
-        "SpellMod2": "",
-        "StatMod1": "StatMod_SpellLeech",
-        "StatMod1Power": 1.0,
-        "StatMod2": "StatMod_MovementSpeed",
-        "StatMod2Power": 1.0,
-        "StatMod3": "StatMod_DamageReduction",
-        "StatMod3Power": 1.0,
-        "StatMod4": "",
-        "StatMod4Power": 1.0
-      }
-    ],
-    "Items": [
-      {
-        "Name": "Item_Consumable_HealingPotion_T02",
-        "Amount": 10
-      }
-    ],
-    "Abilities": {
-      "Travel": {
-        "Name": "AB_Vampire_VeilOfIllusion_AbilityGroup",
-        "Jewel": {
-          "SpellMod1": "SpellMod_VeilOfIllusion_AttackInflictFadingSnare",
-          "SpellMod1Power": 1.0,
-          "SpellMod2": "SpellMod_VeilOfIllusion_PhantasmOnHit",
-          "SpellMod2Power": 1.0,
-          "SpellMod3": "SpellMod_VeilOfIllusion_RecastDetonate",
-          "SpellMod3Power": 1.0,
-          "SpellMod4": "SpellMod_VeilOfIllusion_IllusionFireProjectiles",
-          "SpellMod4Power": 1.0
-        }
-      },
-      "Ability1": {
-        "Name": "AB_Unholy_CorruptedSkull_AbilityGroup",
-        "Jewel": {
-          "SpellMod1": "SpellMod_CorruptedSkull_BoneSpirit",
-          "SpellMod1Power": 1.0,
-          "SpellMod2": "SpellMod_CorruptedSkull_BonusDamage",
-          "SpellMod2Power": 1.0,
-          "SpellMod3": "SpellMod_CorruptedSkull_DetonateSkeleton",
-          "SpellMod3Power": 1.0,
-          "SpellMod4": "SpellMod_CorruptedSkull_LesserProjectiles",
-          "SpellMod4Power": 1.0
-        }
-      },
-      "Ability2": {
-        "Name": "AB_Unholy_DeathKnight_AbilityGroup",
-        "Jewel": {
-          "SpellMod1": "SpellMod_DeathKnight_BonusDamage",
-          "SpellMod1Power": 1.0,
-          "SpellMod2": "SpellMod_DeathKnight_IncreaseLifetime",
-          "SpellMod2Power": 1.0,
-          "SpellMod3": "SpellMod_DeathKnight_SkeletonMageOnDeath",
-          "SpellMod3Power": 1.0,
-          "SpellMod4": "SpellMod_DeathKnight_SnareEnemiesOnSummon",
-          "SpellMod4Power": 1.0
-        }
-      },
-      "Ultimate": {
-        "Name": "AB_Unholy_ArmyOfTheDead_AbilityGroup"
-      }
-    },
-    "PassiveSpells": {
-      "PassiveSpell1": "SpellPassive_Unholy_T01_ArcaneAnimator",
-      "PassiveSpell2": "SpellPassive_Illusion_T02_FlowingSorcery",
-      "PassiveSpell3": "SpellPassive_Storm_T04_TurbulentVelocity",
-      "PassiveSpell4": "SpellPassive_Illusion_T04_WickedPower",
-      "PassiveSpell5": "SpellPassive_Chaos_T01_ChaosKindling"
-    }
-  },
-  "movement": {
-    "Blood": {
-      "PrimaryType": "BloodType_Rogue",
-      "SecondaryType": "BloodType_Brute",
-      "PrimaryQuality": 100,
-      "SecondaryQuality": 100
-    },
-    "Armors": {
-      "Boots": "Item_Boots_T09_Dracula_Rogue",
-      "Chest": "Item_Chest_T09_Dracula_Rogue",
-      "Gloves": "Item_Gloves_T09_Dracula_Rogue",
-      "Legs": "Item_Legs_T09_Dracula_Rogue",
-      "MagicSource": "Item_MagicSource_General_T08_Unholy",
-      "Head": "",
-      "Cloak": "Item_Cloak_Main_T03_Phantom",
-      "Bag": "Item_NewBag_T06"
-    },
-    "Weapons": [
-      {
-        "Name": "Item_Weapon_Axe_Unique_T08_Variation01",
-        "InfuseSpellMod": "SpellMod_Weapon_StormInfused",
-        "SpellMod1": "",
-        "SpellMod2": "",
-        "StatMod1": "StatMod_AttackSpeed",
-        "StatMod1Power": 1.0,
-        "StatMod2": "StatMod_CriticalStrikePhysical",
-        "StatMod2Power": 1.0,
-        "StatMod3": "StatMod_CriticalStrikePhysicalPower",
-        "StatMod3Power": 1.0,
-        "StatMod4": "",
-        "StatMod4Power": 1.0
-      },
-      {
-        "Name": "Item_Weapon_Claws_Unique_T08_Variation01",
-        "InfuseSpellMod": "SpellMod_Weapon_StormInfused",
-        "SpellMod1": "",
-        "SpellMod2": "",
-        "StatMod1": "StatMod_AttackSpeed",
-        "StatMod1Power": 1.0,
-        "StatMod2": "StatMod_CriticalStrikePhysical",
-        "StatMod2Power": 1.0,
-        "StatMod3": "StatMod_CriticalStrikePhysicalPower",
-        "StatMod3Power": 1.0,
-        "StatMod4": "",
-        "StatMod4Power": 1.0
-      },
-      {
-        "Name": "Item_Weapon_Crossbow_Unique_T08_Variation01",
-        "InfuseSpellMod": "SpellMod_Weapon_StormInfused",
-        "SpellMod1": "",
-        "SpellMod2": "",
-        "StatMod1": "StatMod_AttackSpeed",
-        "StatMod1Power": 1.0,
-        "StatMod2": "StatMod_CriticalStrikePhysical",
-        "StatMod2Power": 1.0,
-        "StatMod3": "StatMod_CriticalStrikePhysicalPower",
-        "StatMod3Power": 1.0,
-        "StatMod4": "",
-        "StatMod4Power": 1.0
-      },
-      {
-        "Name": "Item_Weapon_GreatSword_Unique_T08_Variation01",
-        "InfuseSpellMod": "SpellMod_Weapon_StormInfused",
-        "SpellMod1": "",
-        "SpellMod2": "",
-        "StatMod1": "StatMod_AttackSpeed",
-        "StatMod1Power": 1.0,
-        "StatMod2": "StatMod_CriticalStrikePhysical",
-        "StatMod2Power": 1.0,
-        "StatMod3": "StatMod_CriticalStrikePhysicalPower",
-        "StatMod3Power": 1.0,
-        "StatMod4": "",
-        "StatMod4Power": 1.0
-      },
-      {
-        "Name": "Item_Weapon_Longbow_Unique_T08_Variation01",
-        "InfuseSpellMod": "SpellMod_Weapon_StormInfused",
-        "SpellMod1": "",
-        "SpellMod2": "",
-        "StatMod1": "StatMod_AttackSpeed",
-        "StatMod1Power": 1.0,
-        "StatMod2": "StatMod_CriticalStrikePhysical",
-        "StatMod2Power": 1.0,
-        "StatMod3": "StatMod_CriticalStrikePhysicalPower",
-        "StatMod3Power": 1.0,
-        "StatMod4": "",
-        "StatMod4Power": 1.0
-      },
-      {
-        "Name": "Item_Weapon_Mace_Unique_T08_Variation01",
-        "InfuseSpellMod": "SpellMod_Weapon_StormInfused",
-        "SpellMod1": "",
-        "SpellMod2": "",
-        "StatMod1": "StatMod_AttackSpeed",
-        "StatMod1Power": 1.0,
-        "StatMod2": "StatMod_CriticalStrikePhysical",
-        "StatMod2Power": 1.0,
-        "StatMod3": "StatMod_CriticalStrikePhysicalPower",
-        "StatMod3Power": 1.0,
-        "StatMod4": "",
-        "StatMod4Power": 1.0
-      },
-      {
-        "Name": "Item_Weapon_Pistols_Unique_T08_Variation01",
-        "InfuseSpellMod": "SpellMod_Weapon_StormInfused",
-        "SpellMod1": "",
-        "SpellMod2": "",
-        "StatMod1": "StatMod_AttackSpeed",
-        "StatMod1Power": 1.0,
-        "StatMod2": "StatMod_CriticalStrikePhysical",
-        "StatMod2Power": 1.0,
-        "StatMod3": "StatMod_CriticalStrikePhysicalPower",
-        "StatMod3Power": 1.0,
-        "StatMod4": "",
-        "StatMod4Power": 1.0
-      },
-      {
-        "Name": "Item_Weapon_Reaper_Unique_T08_Variation01",
-        "InfuseSpellMod": "SpellMod_Weapon_StormInfused",
-        "SpellMod1": "",
-        "SpellMod2": "",
-        "StatMod1": "StatMod_AttackSpeed",
-        "StatMod1Power": 1.0,
-        "StatMod2": "StatMod_CriticalStrikePhysical",
-        "StatMod2Power": 1.0,
-        "StatMod3": "StatMod_CriticalStrikePhysicalPower",
-        "StatMod3Power": 1.0,
-        "StatMod4": "",
-        "StatMod4Power": 1.0
-      },
-      {
-        "Name": "Item_Weapon_Slashers_Unique_T08_Variation01",
-        "InfuseSpellMod": "SpellMod_Weapon_StormInfused",
-        "SpellMod1": "",
-        "SpellMod2": "",
-        "StatMod1": "StatMod_AttackSpeed",
-        "StatMod1Power": 1.0,
-        "StatMod2": "StatMod_CriticalStrikePhysical",
-        "StatMod2Power": 1.0,
-        "StatMod3": "StatMod_CriticalStrikePhysicalPower",
-        "StatMod3Power": 1.0,
-        "StatMod4": "",
-        "StatMod4Power": 1.0
-      },
-      {
-        "Name": "Item_Weapon_Spear_Unique_T08_Variation01",
-        "InfuseSpellMod": "SpellMod_Weapon_StormInfused",
-        "SpellMod1": "",
-        "SpellMod2": "",
-        "StatMod1": "StatMod_AttackSpeed",
-        "StatMod1Power": 1.0,
-        "StatMod2": "StatMod_CriticalStrikePhysical",
-        "StatMod2Power": 1.0,
-        "StatMod3": "StatMod_CriticalStrikePhysicalPower",
-        "StatMod3Power": 1.0,
-        "StatMod4": "",
-        "StatMod4Power": 1.0
-      },
-      {
-        "Name": "Item_Weapon_Sword_Unique_T08_Variation01",
-        "InfuseSpellMod": "SpellMod_Weapon_StormInfused",
-        "SpellMod1": "",
-        "SpellMod2": "",
-        "StatMod1": "StatMod_AttackSpeed",
-        "StatMod1Power": 1.0,
-        "StatMod2": "StatMod_CriticalStrikePhysical",
-        "StatMod2Power": 1.0,
-        "StatMod3": "StatMod_CriticalStrikePhysicalPower",
-        "StatMod3Power": 1.0,
-        "StatMod4": "",
-        "StatMod4Power": 1.0
-      },
-      {
-        "Name": "Item_Weapon_TwinBlades_Unique_T08_Variation01",
-        "InfuseSpellMod": "SpellMod_Weapon_StormInfused",
-        "SpellMod1": "",
-        "SpellMod2": "",
-        "StatMod1": "StatMod_AttackSpeed",
-        "StatMod1Power": 1.0,
-        "StatMod2": "StatMod_CriticalStrikePhysical",
-        "StatMod2Power": 1.0,
-        "StatMod3": "StatMod_CriticalStrikePhysicalPower",
-        "StatMod3Power": 1.0,
-        "StatMod4": "",
-        "StatMod4Power": 1.0
-      },
-      {
-        "Name": "Item_Weapon_Whip_Unique_T08_Variation01",
-        "InfuseSpellMod": "SpellMod_Weapon_StormInfused",
-        "SpellMod1": "",
-        "SpellMod2": "",
-        "StatMod1": "StatMod_AttackSpeed",
-        "StatMod1Power": 1.0,
-        "StatMod2": "StatMod_CriticalStrikePhysical",
-        "StatMod2Power": 1.0,
-        "StatMod3": "StatMod_CriticalStrikePhysicalPower",
-        "StatMod3Power": 1.0,
-        "StatMod4": "",
-        "StatMod4Power": 1.0
-      }
-    ],
-    "Items": [
-      {
-        "Name": "Item_Consumable_HealingPotion_T02",
-        "Amount": 10
-      }
-    ],
-    "Abilities": {
-      "Travel": {
-        "Name": "AB_Vampire_VeilOfChaos_Group",
-        "Jewel": {
-          "SpellMod1": "SpellMod_VeilOfChaos_BonusIllusion",
-          "SpellMod1Power": 1.0,
-          "SpellMod2": "SpellMod_VeilOfChaos_BonusDamageOnExplode",
-          "SpellMod2Power": 1.0,
-          "SpellMod3": "SpellMod_VeilOfChaos_ApplySnareOnExplode",
-          "SpellMod3Power": 1.0,
-          "SpellMod4": "",
-          "SpellMod4Power": 1.0
-        }
-      },
-      "Ability1": {
-        "Name": "AB_Illusion_MistTrance_AbilityGroup",
-        "Jewel": {
-          "SpellMod1": "SpellMod_MistTrance_FearOnTrigger",
-          "SpellMod1Power": 1.0,
-          "SpellMod2": "SpellMod_MistTrance_PhantasmOnTrigger",
-          "SpellMod2Power": 1.0,
-          "SpellMod3": "SpellMod_MistTrance_HasteOnTrigger",
-          "SpellMod3Power": 1.0,
-          "SpellMod4": "SpellMod_MistTrance_ReduceSecondaryWeaponCD",
-          "SpellMod4Power": 1.0
-        }
-      },
-      "Ability2": {
-        "Name": "AB_Illusion_PhantomAegis_AbilityGroup",
-        "Jewel": {
-          "SpellMod1": "SpellMod_PhantomAegis_ConsumeWeakenIntoFear",
-          "SpellMod1Power": 1.0,
-          "SpellMod2": "SpellMod_PhantomAegis_ExplodeOnDestroy",
-          "SpellMod2Power": 1.0,
-          "SpellMod3": "SpellMod_PhantomAegis_IncreaseLifetime",
-          "SpellMod3Power": 1.0,
-          "SpellMod4": "SpellMod_PhantomAegis_IncreaseSpellPower",
-          "SpellMod4Power": 1.0
-        }
-      },
-      "Ultimate": {
-        "Name": "AB_Storm_RagingTempest_AbilityGroup"
-      }
-    },
-    "PassiveSpells": {
-      "PassiveSpell1": "SpellPassive_Chaos_T03_Overpower",
-      "PassiveSpell2": "SpellPassive_Storm_T01_LightningFastStrikes",
-      "PassiveSpell3": "SpellPassive_Storm_T02_EnhancedConductivity",
-      "PassiveSpell4": "SpellPassive_Storm_T04_TurbulentVelocity",
-      "PassiveSpell5": "SpellPassive_Blood_T02_BloodTypeEfficiency"
-    }
-  },
-  "tank": {
-    "Blood": {
-      "PrimaryType": "BloodType_Brute",
-      "SecondaryType": "BloodType_Warrior",
-      "PrimaryQuality": 100,
-      "SecondaryQuality": 100
-    },
-    "Armors": {
-      "Boots": "Item_Boots_T09_Dracula_Brute",
-      "Chest": "Item_Chest_T09_Dracula_Brute",
-      "Gloves": "Item_Gloves_T09_Dracula_Brute",
-      "Legs": "Item_Legs_T09_Dracula_Brute",
-      "MagicSource": "Item_MagicSource_General_T08_Blood",
-      "Head": "",
-      "Cloak": "Item_Cloak_Main_T03_Phantom",
-      "Bag": "Item_NewBag_T06"
-    },
-    "Weapons": [
-      {
-        "Name": "Item_Weapon_Axe_Unique_T08_Variation01",
-        "InfuseSpellMod": "SpellMod_Weapon_StormInfused",
-        "SpellMod1": "",
-        "SpellMod2": "",
-        "StatMod1": "StatMod_MaxHealth",
-        "StatMod1Power": 1.0,
-        "StatMod2": "StatMod_AttackSpeed",
-        "StatMod2Power": 1.0,
-        "StatMod3": "StatMod_PhysicalPower",
-        "StatMod3Power": 1.0,
-        "StatMod4": "",
-        "StatMod4Power": 1.0
-      },
-      {
-        "Name": "Item_Weapon_Claws_Unique_T08_Variation01",
-        "InfuseSpellMod": "SpellMod_Weapon_StormInfused",
-        "SpellMod1": "",
-        "SpellMod2": "",
-        "StatMod1": "StatMod_MaxHealth",
-        "StatMod1Power": 1.0,
-        "StatMod2": "StatMod_AttackSpeed",
-        "StatMod2Power": 1.0,
-        "StatMod3": "StatMod_PhysicalPower",
-        "StatMod3Power": 1.0,
-        "StatMod4": "",
-        "StatMod4Power": 1.0
-      },
-      {
-        "Name": "Item_Weapon_Crossbow_Unique_T08_Variation01",
-        "InfuseSpellMod": "SpellMod_Weapon_StormInfused",
-        "SpellMod1": "",
-        "SpellMod2": "",
-        "StatMod1": "StatMod_MaxHealth",
-        "StatMod1Power": 1.0,
-        "StatMod2": "StatMod_AttackSpeed",
-        "StatMod2Power": 1.0,
-        "StatMod3": "StatMod_PhysicalPower",
-        "StatMod3Power": 1.0,
-        "StatMod4": "",
-        "StatMod4Power": 1.0
-      },
-      {
-        "Name": "Item_Weapon_GreatSword_Unique_T08_Variation01",
-        "InfuseSpellMod": "SpellMod_Weapon_StormInfused",
-        "SpellMod1": "",
-        "SpellMod2": "",
-        "StatMod1": "StatMod_MaxHealth",
-        "StatMod1Power": 1.0,
-        "StatMod2": "StatMod_AttackSpeed",
-        "StatMod2Power": 1.0,
-        "StatMod3": "StatMod_PhysicalPower",
-        "StatMod3Power": 1.0,
-        "StatMod4": "",
-        "StatMod4Power": 1.0
-      },
-      {
-        "Name": "Item_Weapon_Longbow_Unique_T08_Variation01",
-        "InfuseSpellMod": "SpellMod_Weapon_StormInfused",
-        "SpellMod1": "",
-        "SpellMod2": "",
-        "StatMod1": "StatMod_MaxHealth",
-        "StatMod1Power": 1.0,
-        "StatMod2": "StatMod_AttackSpeed",
-        "StatMod2Power": 1.0,
-        "StatMod3": "StatMod_PhysicalPower",
-        "StatMod3Power": 1.0,
-        "StatMod4": "",
-        "StatMod4Power": 1.0
-      },
-      {
-        "Name": "Item_Weapon_Mace_Unique_T08_Variation01",
-        "InfuseSpellMod": "SpellMod_Weapon_StormInfused",
-        "SpellMod1": "",
-        "SpellMod2": "",
-        "StatMod1": "StatMod_MaxHealth",
-        "StatMod1Power": 1.0,
-        "StatMod2": "StatMod_AttackSpeed",
-        "StatMod2Power": 1.0,
-        "StatMod3": "StatMod_PhysicalPower",
-        "StatMod3Power": 1.0,
-        "StatMod4": "",
-        "StatMod4Power": 1.0
-      },
-      {
-        "Name": "Item_Weapon_Pistols_Unique_T08_Variation01",
-        "InfuseSpellMod": "SpellMod_Weapon_StormInfused",
-        "SpellMod1": "",
-        "SpellMod2": "",
-        "StatMod1": "StatMod_MaxHealth",
-        "StatMod1Power": 1.0,
-        "StatMod2": "StatMod_AttackSpeed",
-        "StatMod2Power": 1.0,
-        "StatMod3": "StatMod_PhysicalPower",
-        "StatMod3Power": 1.0,
-        "StatMod4": "",
-        "StatMod4Power": 1.0
-      },
-      {
-        "Name": "Item_Weapon_Reaper_Unique_T08_Variation01",
-        "InfuseSpellMod": "SpellMod_Weapon_StormInfused",
-        "SpellMod1": "",
-        "SpellMod2": "",
-        "StatMod1": "StatMod_MaxHealth",
-        "StatMod1Power": 1.0,
-        "StatMod2": "StatMod_AttackSpeed",
-        "StatMod2Power": 1.0,
-        "StatMod3": "StatMod_PhysicalPower",
-        "StatMod3Power": 1.0,
-        "StatMod4": "",
-        "StatMod4Power": 1.0
-      },
-      {
-        "Name": "Item_Weapon_Slashers_Unique_T08_Variation01",
-        "InfuseSpellMod": "SpellMod_Weapon_StormInfused",
-        "SpellMod1": "",
-        "SpellMod2": "",
-        "StatMod1": "StatMod_MaxHealth",
-        "StatMod1Power": 1.0,
-        "StatMod2": "StatMod_AttackSpeed",
-        "StatMod2Power": 1.0,
-        "StatMod3": "StatMod_PhysicalPower",
-        "StatMod3Power": 1.0,
-        "StatMod4": "",
-        "StatMod4Power": 1.0
-      },
-      {
-        "Name": "Item_Weapon_Spear_Unique_T08_Variation01",
-        "InfuseSpellMod": "SpellMod_Weapon_StormInfused",
-        "SpellMod1": "",
-        "SpellMod2": "",
-        "StatMod1": "StatMod_MaxHealth",
-        "StatMod1Power": 1.0,
-        "StatMod2": "StatMod_AttackSpeed",
-        "StatMod2Power": 1.0,
-        "StatMod3": "StatMod_PhysicalPower",
-        "StatMod3Power": 1.0,
-        "StatMod4": "",
-        "StatMod4Power": 1.0
-      },
-      {
-        "Name": "Item_Weapon_Sword_Unique_T08_Variation01",
-        "InfuseSpellMod": "SpellMod_Weapon_StormInfused",
-        "SpellMod1": "",
-        "SpellMod2": "",
-        "StatMod1": "StatMod_MaxHealth",
-        "StatMod1Power": 1.0,
-        "StatMod2": "StatMod_AttackSpeed",
-        "StatMod2Power": 1.0,
-        "StatMod3": "StatMod_PhysicalPower",
-        "StatMod3Power": 1.0,
-        "StatMod4": "",
-        "StatMod4Power": 1.0
-      },
-      {
-        "Name": "Item_Weapon_TwinBlades_Unique_T08_Variation01",
-        "InfuseSpellMod": "SpellMod_Weapon_StormInfused",
-        "SpellMod1": "",
-        "SpellMod2": "",
-        "StatMod1": "StatMod_MaxHealth",
-        "StatMod1Power": 1.0,
-        "StatMod2": "StatMod_AttackSpeed",
-        "StatMod2Power": 1.0,
-        "StatMod3": "StatMod_PhysicalPower",
-        "StatMod3Power": 1.0,
-        "StatMod4": "",
-        "StatMod4Power": 1.0
-      },
-      {
-        "Name": "Item_Weapon_Whip_Unique_T08_Variation01",
-        "InfuseSpellMod": "SpellMod_Weapon_StormInfused",
-        "SpellMod1": "",
-        "SpellMod2": "",
-        "StatMod1": "StatMod_MaxHealth",
-        "StatMod1Power": 1.0,
-        "StatMod2": "StatMod_AttackSpeed",
-        "StatMod2Power": 1.0,
-        "StatMod3": "StatMod_PhysicalPower",
-        "StatMod3Power": 1.0,
-        "StatMod4": "",
-        "StatMod4Power": 1.0
-      }
-    ],
-    "Items": [
-      {
-        "Name": "Item_Consumable_HealingPotion_T02",
-        "Amount": 10
-      }
-    ],
-    "Abilities": {
-      "Travel": {
-        "Name": "AB_Vampire_VeilOfBlood_Group",
-        "Jewel": {
-          "SpellMod1": "SpellMod_VeilOfBlood_SelfHealing",
-          "SpellMod1Power": 1.0,
-          "SpellMod2": "SpellMod_VeilOfBlood_BloodNova",
-          "SpellMod2Power": 1.0,
-          "SpellMod3": "SpellMod_VeilOfBlood_BloodNovaArea",
-          "SpellMod3Power": 1.0,
-          "SpellMod4": "SpellMod_VeilOfBlood_DashInflictLeech",
-          "SpellMod4Power": 1.0
-        }
-      },
-      "Ability1": {
-        "Name": "AB_Blood_BloodRage_AbilityGroup",
-        "Jewel": {
-          "SpellMod1": "SpellMod_BloodRage_IncreaseArea",
-          "SpellMod1Power": 1.0,
-          "SpellMod2": "SpellMod_BloodRage_IncreaseLifetime",
-          "SpellMod2Power": 1.0,
-          "SpellMod3": "SpellMod_BloodRage_IncreaseMoveSpeed",
-          "SpellMod3Power": 1.0,
-          "SpellMod4": "SpellMod_BloodRage_Shield",
-          "SpellMod4Power": 1.0
-        }
-      },
-      "Ability2": {
-        "Name": "AB_Blood_BloodRite_AbilityGroup",
-        "Jewel": {
-          "SpellMod1": "SpellMod_BloodRite_HealOnTrigger",
-          "SpellMod1Power": 1.0,
-          "SpellMod2": "SpellMod_BloodRite_ConsumeLeechHealXTimes",
-          "SpellMod2Power": 1.0,
-          "SpellMod3": "SpellMod_BloodRite_ConsumeLeechReduceCooldownXTimes",
-          "SpellMod3Power": 1.0,
-          "SpellMod4": "SpellMod_BloodRite_Stealth",
-          "SpellMod4Power": 1.0
-        }
-      },
-      "Ultimate": {
-        "Name": "AB_Storm_LightningTyphoon_AbilityGroup"
-      }
-    },
-    "PassiveSpells": {
-      "PassiveSpell1": "SpellPassive_Frost_T03_Bastion",
-      "PassiveSpell2": "SpellPassive_Frost_T04_DarkEnchantment",
-      "PassiveSpell3": "SpellPassive_Blood_T02_BloodTypeEfficiency",
-      "PassiveSpell4": "SpellPassive_Storm_T03_HungerForPower",
-      "PassiveSpell5": "SpellPassive_Storm_T04_TurbulentVelocity"
-    }
-  },
-  "weapon": {
-    "Blood": {
-      "PrimaryType": "BloodType_Warrior",
-      "SecondaryType": "BloodType_Rogue",
-      "PrimaryQuality": 100,
-      "SecondaryQuality": 100
-    },
-    "Armors": {
-      "Boots": "Item_Boots_T09_Dracula_Warrior",
-      "Chest": "Item_Chest_T09_Dracula_Warrior",
-      "Gloves": "Item_Gloves_T09_Dracula_Warrior",
-      "Legs": "Item_Legs_T09_Dracula_Warrior",
-      "MagicSource": "Item_MagicSource_General_T08_Storm",
-      "Head": "",
-      "Cloak": "Item_Cloak_Main_T03_Phantom",
-      "Bag": "Item_NewBag_T06"
-    },
-    "Weapons": [
-      {
-        "Name": "Item_Weapon_Axe_Unique_T08_Variation01",
-        "InfuseSpellMod": "SpellMod_Weapon_StormInfused",
-        "SpellMod1": "",
-        "SpellMod2": "",
-        "StatMod1": "StatMod_CriticalStrikePhysical",
-        "StatMod1Power": 1.0,
-        "StatMod2": "StatMod_MovementSpeed",
-        "StatMod2Power": 1.0,
-        "StatMod3": "StatMod_PhysicalPower",
-        "StatMod3Power": 1.0,
-        "StatMod4": "",
-        "StatMod4Power": 1.0
-      },
-      {
-        "Name": "Item_Weapon_Claws_Unique_T08_Variation01",
-        "InfuseSpellMod": "SpellMod_Weapon_StormInfused",
-        "SpellMod1": "",
-        "SpellMod2": "",
-        "StatMod1": "StatMod_CriticalStrikePhysical",
-        "StatMod1Power": 1.0,
-        "StatMod2": "StatMod_MovementSpeed",
-        "StatMod2Power": 1.0,
-        "StatMod3": "StatMod_PhysicalPower",
-        "StatMod3Power": 1.0,
-        "StatMod4": "",
-        "StatMod4Power": 1.0
-      },
-      {
-        "Name": "Item_Weapon_Crossbow_Unique_T08_Variation01",
-        "InfuseSpellMod": "SpellMod_Weapon_StormInfused",
-        "SpellMod1": "",
-        "SpellMod2": "",
-        "StatMod1": "StatMod_CriticalStrikePhysical",
-        "StatMod1Power": 1.0,
-        "StatMod2": "StatMod_MovementSpeed",
-        "StatMod2Power": 1.0,
-        "StatMod3": "StatMod_PhysicalPower",
-        "StatMod3Power": 1.0,
-        "StatMod4": "",
-        "StatMod4Power": 1.0
-      },
-      {
-        "Name": "Item_Weapon_GreatSword_Unique_T08_Variation01",
-        "InfuseSpellMod": "SpellMod_Weapon_StormInfused",
-        "SpellMod1": "",
-        "SpellMod2": "",
-        "StatMod1": "StatMod_CriticalStrikePhysical",
-        "StatMod1Power": 1.0,
-        "StatMod2": "StatMod_MovementSpeed",
-        "StatMod2Power": 1.0,
-        "StatMod3": "StatMod_PhysicalPower",
-        "StatMod3Power": 1.0,
-        "StatMod4": "",
-        "StatMod4Power": 1.0
-      },
-      {
-        "Name": "Item_Weapon_Longbow_Unique_T08_Variation01",
-        "InfuseSpellMod": "SpellMod_Weapon_StormInfused",
-        "SpellMod1": "",
-        "SpellMod2": "",
-        "StatMod1": "StatMod_CriticalStrikePhysical",
-        "StatMod1Power": 1.0,
-        "StatMod2": "StatMod_MovementSpeed",
-        "StatMod2Power": 1.0,
-        "StatMod3": "StatMod_PhysicalPower",
-        "StatMod3Power": 1.0,
-        "StatMod4": "",
-        "StatMod4Power": 1.0
-      },
-      {
-        "Name": "Item_Weapon_Mace_Unique_T08_Variation01",
-        "InfuseSpellMod": "SpellMod_Weapon_StormInfused",
-        "SpellMod1": "",
-        "SpellMod2": "",
-        "StatMod1": "StatMod_CriticalStrikePhysical",
-        "StatMod1Power": 1.0,
-        "StatMod2": "StatMod_MovementSpeed",
-        "StatMod2Power": 1.0,
-        "StatMod3": "StatMod_PhysicalPower",
-        "StatMod3Power": 1.0,
-        "StatMod4": "",
-        "StatMod4Power": 1.0
-      },
-      {
-        "Name": "Item_Weapon_Pistols_Unique_T08_Variation01",
-        "InfuseSpellMod": "SpellMod_Weapon_StormInfused",
-        "SpellMod1": "",
-        "SpellMod2": "",
-        "StatMod1": "StatMod_CriticalStrikePhysical",
-        "StatMod1Power": 1.0,
-        "StatMod2": "StatMod_MovementSpeed",
-        "StatMod2Power": 1.0,
-        "StatMod3": "StatMod_PhysicalPower",
-        "StatMod3Power": 1.0,
-        "StatMod4": "",
-        "StatMod4Power": 1.0
-      },
-      {
-        "Name": "Item_Weapon_Reaper_Unique_T08_Variation01",
-        "InfuseSpellMod": "SpellMod_Weapon_StormInfused",
-        "SpellMod1": "",
-        "SpellMod2": "",
-        "StatMod1": "StatMod_CriticalStrikePhysical",
-        "StatMod1Power": 1.0,
-        "StatMod2": "StatMod_MovementSpeed",
-        "StatMod2Power": 1.0,
-        "StatMod3": "StatMod_PhysicalPower",
-        "StatMod3Power": 1.0,
-        "StatMod4": "",
-        "StatMod4Power": 1.0
-      },
-      {
-        "Name": "Item_Weapon_Slashers_Unique_T08_Variation01",
-        "InfuseSpellMod": "SpellMod_Weapon_StormInfused",
-        "SpellMod1": "",
-        "SpellMod2": "",
-        "StatMod1": "StatMod_CriticalStrikePhysical",
-        "StatMod1Power": 1.0,
-        "StatMod2": "StatMod_MovementSpeed",
-        "StatMod2Power": 1.0,
-        "StatMod3": "StatMod_PhysicalPower",
-        "StatMod3Power": 1.0,
-        "StatMod4": "",
-        "StatMod4Power": 1.0
-      },
-      {
-        "Name": "Item_Weapon_Spear_Unique_T08_Variation01",
-        "InfuseSpellMod": "SpellMod_Weapon_StormInfused",
-        "SpellMod1": "",
-        "SpellMod2": "",
-        "StatMod1": "StatMod_CriticalStrikePhysical",
-        "StatMod1Power": 1.0,
-        "StatMod2": "StatMod_MovementSpeed",
-        "StatMod2Power": 1.0,
-        "StatMod3": "StatMod_PhysicalPower",
-        "StatMod3Power": 1.0,
-        "StatMod4": "",
-        "StatMod4Power": 1.0
-      },
-      {
-        "Name": "Item_Weapon_Sword_Unique_T08_Variation01",
-        "InfuseSpellMod": "SpellMod_Weapon_StormInfused",
-        "SpellMod1": "",
-        "SpellMod2": "",
-        "StatMod1": "StatMod_CriticalStrikePhysical",
-        "StatMod1Power": 1.0,
-        "StatMod2": "StatMod_MovementSpeed",
-        "StatMod2Power": 1.0,
-        "StatMod3": "StatMod_PhysicalPower",
-        "StatMod3Power": 1.0,
-        "StatMod4": "",
-        "StatMod4Power": 1.0
-      },
-      {
-        "Name": "Item_Weapon_TwinBlades_Unique_T08_Variation01",
-        "InfuseSpellMod": "SpellMod_Weapon_StormInfused",
-        "SpellMod1": "",
-        "SpellMod2": "",
-        "StatMod1": "StatMod_CriticalStrikePhysical",
-        "StatMod1Power": 1.0,
-        "StatMod2": "StatMod_MovementSpeed",
-        "StatMod2Power": 1.0,
-        "StatMod3": "StatMod_PhysicalPower",
-        "StatMod3Power": 1.0,
-        "StatMod4": "",
-        "StatMod4Power": 1.0
-      },
-      {
-        "Name": "Item_Weapon_Whip_Unique_T08_Variation01",
-        "InfuseSpellMod": "SpellMod_Weapon_StormInfused",
-        "SpellMod1": "",
-        "SpellMod2": "",
-        "StatMod1": "StatMod_CriticalStrikePhysical",
-        "StatMod1Power": 1.0,
-        "StatMod2": "StatMod_MovementSpeed",
-        "StatMod2Power": 1.0,
-        "StatMod3": "StatMod_PhysicalPower",
-        "StatMod3Power": 1.0,
-        "StatMod4": "",
-        "StatMod4Power": 1.0
-      }
-    ],
-    "Items": [
-      {
-        "Name": "Item_Consumable_HealingPotion_T02",
-        "Amount": 10
-      }
-    ],
-    "Abilities": {
-      "Travel": {
-        "Name": "AB_Vampire_VeilOfChaos_Group",
-        "Jewel": {
-          "SpellMod1": "SpellMod_VeilOfChaos_BonusIllusion",
-          "SpellMod1Power": 1.0,
-          "SpellMod2": "SpellMod_VeilOfChaos_BonusDamageOnExplode",
-          "SpellMod2Power": 1.0,
-          "SpellMod3": "SpellMod_VeilOfChaos_ApplySnareOnExplode",
-          "SpellMod3Power": 1.0,
-          "SpellMod4": "",
-          "SpellMod4Power": 1.0
-        }
-      },
-      "Ability1": {
-        "Name": "AB_Illusion_MistTrance_AbilityGroup",
-        "Jewel": {
-          "SpellMod1": "SpellMod_MistTrance_FearOnTrigger",
-          "SpellMod1Power": 1.0,
-          "SpellMod2": "SpellMod_MistTrance_PhantasmOnTrigger",
-          "SpellMod2Power": 1.0,
-          "SpellMod3": "SpellMod_MistTrance_HasteOnTrigger",
-          "SpellMod3Power": 1.0,
-          "SpellMod4": "SpellMod_MistTrance_ReduceSecondaryWeaponCD",
-          "SpellMod4Power": 1.0
-        }
-      },
-      "Ability2": {
-        "Name": "AB_Storm_Discharge_AbilityGroup",
-        "Jewel": {
-          "SpellMod1": "SpellMod_Discharge_Immaterial",
-          "SpellMod1Power": 1.0,
-          "SpellMod2": "SpellMod_Discharge_RecastDetonate",
-          "SpellMod2Power": 1.0,
-          "SpellMod3": "SpellMod_Discharge_IncreaseStunDuration",
-          "SpellMod3Power": 1.0,
-          "SpellMod4": "SpellMod_Discharge_BonusDamage",
-          "SpellMod4Power": 1.0
-        }
-      },
-      "Ultimate": {
-        "Name": "AB_Frost_ArcticLeap_AbilityGroup"
-      }
-    },
-    "PassiveSpells": {
-      "PassiveSpell1": "SpellPassive_Chaos_T03_Overpower",
-      "PassiveSpell2": "SpellPassive_Storm_T04_TurbulentVelocity",
-      "PassiveSpell3": "SpellPassive_Blood_T01_BloodSpray",
-      "PassiveSpell4": "SpellPassive_Blood_T02_BloodTypeEfficiency",
-      "PassiveSpell5": "SpellPassive_Chaos_T04_RavenousStrikes"
-    }
-  },
+   }
 }
