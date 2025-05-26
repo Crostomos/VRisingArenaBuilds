@@ -6,7 +6,7 @@ using ArenaBuilds.Models;
 
 namespace ArenaBuilds
 {
-    public static class BuildManager
+    internal static class BuildManager
     {
         private static readonly string FileDirectory = Path.Combine("BepInEx", "config", MyPluginInfo.PLUGIN_NAME);
         private const string BuildFile = "builds.json";
@@ -14,7 +14,7 @@ namespace ArenaBuilds
         public static Dictionary<string, BuildModel> Builds { get; private set; } = new(StringComparer.OrdinalIgnoreCase);
 
 
-        internal static void LoadData()
+        public static void LoadData()
         {
             if (!File.Exists(BuildPath))
             {
@@ -28,7 +28,7 @@ namespace ArenaBuilds
             Plugin.Logger.LogInfo($"Loaded {Builds.Count} builds from Builds.json");
         }
 
-        public static void CreateEmptyBuildsFile()
+        private static void CreateEmptyBuildsFile()
         {
             if (!Directory.Exists(FileDirectory))
             {
@@ -47,19 +47,6 @@ namespace ArenaBuilds
             }
 
             return string.Join("\n- ", Builds.Keys);
-        }
-
-        public static void LogInfoJson()
-        {
-            foreach (var kvp in Builds)
-            {
-                Plugin.Logger.LogInfo($"Clé : {kvp.Key}");
-                var json = JsonSerializer.Serialize(kvp.Value, new JsonSerializerOptions
-                {
-                    WriteIndented = true
-                });
-                Plugin.Logger.LogInfo(json);
-            }
         }
     }
 }
