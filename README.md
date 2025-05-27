@@ -19,7 +19,7 @@ Although this mod is primarily designed for arena use, it can also be leveraged 
   - Jewels
   - Passive spells
 - Default builds are based on PVP_Preset
-- Builds are fully customizable via the `builds.json` filess
+- Builds are fully customizable via the `builds.json` files
   - A list of valid `prefabName` values is available here: [VRising DB](https://vrising.gaming.tools)
   - For a comprehensive list of prefabName values, particularly those related to StatMod and SpellMod, refer to: [VRising Mods Wiki](https://wiki.vrisingmods.com/prefabs/Spell)
 
