@@ -2,6 +2,7 @@
 
 **ArenaBuilds** is a lightweight, server-side mod for *V Rising* that allows players to instantly equip ready-to-use PvP builds via simple in-game commands.  
 It’s designed to streamline arena practice and fast-paced duels without the need to manually gear up.
+
 Although this mod is primarily designed for arena use, it can also be leveraged to create highly specialized builds for PvE or other purposes.
 
 ---
@@ -29,6 +30,7 @@ Although this mod is primarily designed for arena use, it can also be leveraged 
 | `.build <class>`   | Equips the specified build                    |
 | `.list_build`      | Displays the list of available builds         |
 | `.clear_build`     | Clears your inventory, abilities and passives |
+| `.unlock_all`      | Unlock abilities, passives...                 |
 
 ---
 
@@ -60,13 +62,14 @@ Although this mod is primarily designed for arena use, it can also be leveraged 
 
 ## 🐞 Known Issues
 
-- The .clear_build command does not currently remove jewels. This is not a significant issue, as that functionality has not yet been implemented. 👀
+- The `.clear_build` command does not currently remove jewels. This is not a significant issue, as that functionality has not yet been implemented. 👀
 
 ---
 
 ## 🚧 Planned Features
 
 - Save and restore your character’s original state before and after using a build.
+- Automatically unlock abilities & passives
 - Restrict `.build` usage to specific arena zones (can be toggled via config).
 - Load several builds.json.
 
