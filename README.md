@@ -90,6 +90,7 @@ Although this mod is primarily designed for arena use, it can also be leveraged 
 ## 👤 Author
 
 Developed by **Crostomos**
+
 Support me on Ko-Fi : https://ko-fi.com/crostomos
 
 ---
