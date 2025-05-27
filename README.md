@@ -1,4 +1,6 @@
-﻿# ArenaBuilds
+﻿![](logo.png)
+
+# ArenaBuilds
 
 **ArenaBuilds** is a lightweight, server-side mod for *V Rising* that allows players to instantly equip ready-to-use PvP builds via simple in-game commands.  
 It’s designed to streamline arena practice and fast-paced duels without the need to manually gear up.
@@ -25,12 +27,12 @@ Although this mod is primarily designed for arena use, it can also be leveraged 
 
 ## 💬 Commands
 
-| Command            | Description                                   |
-|--------------------|-----------------------------------------------|
-| `.build <class>`   | Equips the specified build                    |
-| `.list_build`      | Displays the list of available builds         |
-| `.clear_build`     | Clears your inventory, abilities and passives |
-| `.unlock_all`      | Unlock abilities, passives...                 |
+| Command          | Description                                   |
+| ---------------- | --------------------------------------------- |
+| `.build <class>` | Equips the specified build                    |
+| `.list_build`    | Displays the list of available builds         |
+| `.clear_build`   | Clears your inventory, abilities and passives |
+| `.unlock_all`    | Unlock abilities, passives...                 |
 
 ---
 
@@ -52,10 +54,13 @@ Although this mod is primarily designed for arena use, it can also be leveraged 
    Grab the `BuildArena.dll` and `builds.json` files from the [Releases](#) section.
 
 4. **Place the files**  
+   
    - Move `VampireCommandFramework.dll` and `BuildArena.dll` to:  
      `BepInEx/Plugins/`
+   
    - Move `builds.json` to:  
      `BepInEx/config/ArenaBuilds/`
+     
      > Note: The config folder may not exist until you've run the server at least once with BepInEx installed.
 
 ---
