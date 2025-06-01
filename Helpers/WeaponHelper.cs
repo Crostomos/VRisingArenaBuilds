@@ -167,5 +167,4 @@ internal static class WeaponHelper
 
         return new Entity();
     }
-
 }

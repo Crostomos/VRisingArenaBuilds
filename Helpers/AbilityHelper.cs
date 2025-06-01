@@ -54,7 +54,7 @@ internal static class AbilityHelper
 
     public static void ClearAbilities(Entity character)
     {
-        if (Core.ServerGameManager.TryGetBuffer<VBloodAbilityBuffEntry>(character, out var buffer))
+        if (Core.EntityManager.TryGetBuffer<VBloodAbilityBuffEntry>(character, out var buffer))
         {
             foreach (var abilityEntry in buffer)
             {
@@ -68,7 +68,7 @@ internal static class AbilityHelper
 
     public static void ClearPassiveSpells(Entity character)
     {
-        if (Core.ServerGameManager.TryGetBuffer<ActivePassivesBuffer>(character, out var buffer))
+        if (Core.EntityManager.TryGetBuffer<ActivePassivesBuffer>(character, out var buffer))
         {
             for (var i = 0; i < buffer.Length; ++i)
             {
@@ -91,7 +91,7 @@ internal static class AbilityHelper
 
     private static void EquipSpellPassive(Entity character, PrefabGUID guid, int slot)
     {
-        if (Core.ServerGameManager.TryGetBuffer<ActivePassivesBuffer>(character, out var buffer))
+        if (Core.EntityManager.TryGetBuffer<ActivePassivesBuffer>(character, out var buffer))
             buffer[slot] = new ActivePassivesBuffer
             {
                 Entity = new Entity(),
