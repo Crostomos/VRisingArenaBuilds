@@ -5,7 +5,7 @@ namespace ArenaBuilds.Commands;
 
 internal class BuildCommands
 {
-    [Command("build", description: "Give a full build for arena", adminOnly: false)]
+    [Command("give_build", "giveb", description: "Give a full build", adminOnly: false)]
     public static void BuildCommand(ChatCommandContext ctx, string targetBuild)
     {
         if (BuildManager.Builds.Count == 0)
@@ -49,7 +49,7 @@ internal class BuildCommands
         }
     }
 
-    [Command("list_build", description: "List available builds", adminOnly: false)]
+    [Command("list_build", "listb", description: "List available builds", adminOnly: false)]
     public static void ListBuildCommand(ChatCommandContext ctx)
     {
         if (BuildManager.Builds == null)
@@ -61,7 +61,7 @@ internal class BuildCommands
         ctx.Reply($"Available builds :\n- {buildList}");
     }
 
-    [Command("clear_build", description: "Clear current build", adminOnly: false)]
+    [Command("clear_build", "clearb", description: "Clear current build", adminOnly: false)]
     public static void ClearBuildCommand(ChatCommandContext ctx)
     {
         InventoryHelper.ClearInventory(ctx.Event.SenderCharacterEntity);
