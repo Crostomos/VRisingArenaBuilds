@@ -27,12 +27,12 @@ Although this mod is primarily designed for arena use, it can also be leveraged 
 
 ## 💬 Commands
 
-| Command          | Description                                   |
-| ---------------- | --------------------------------------------- |
-| `.build <class>` | Equips the specified build                    |
-| `.list_build`    | Displays the list of available builds         |
-| `.clear_build`   | Clears your inventory, abilities and passives |
-| `.unlock_all`    | Unlock abilities, passives...                 |
+| Command               | Description                                   |
+| --------------------- | --------------------------------------------- |
+| `.give_build <class>` | Equips the specified build                    |
+| `.list_build`         | Displays the list of available builds         |
+| `.clear_build`        | Clears your inventory, abilities and passives |
+| `.unlock_all`         | Unlock abilities, passives...                 |
 
 ---
 
