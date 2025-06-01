@@ -5,15 +5,15 @@ namespace ArenaBuilds.Commands;
 
 internal class BuildCommands
 {
-    [Command("build", description: "Give a full build for arena", adminOnly: false)]
-    public static void BuildCommand(ChatCommandContext ctx, string targetBuild)
+    [Command("give_build", "giveb", description: "Give a full build", adminOnly: false)]
+    public static void BuildCommand(ChatCommandContext ctx, string buildName)
     {
         if (BuildManager.Builds.Count == 0)
         {
             BuildManager.LoadData();
         }
 
-        if (BuildManager.Builds.TryGetValue(targetBuild, out var build))
+        if (BuildManager.Builds.TryGetValue(buildName, out var build))
         {
             InventoryHelper.ClearInventory(ctx.Event.SenderCharacterEntity);
 
@@ -41,15 +41,15 @@ internal class BuildCommands
             AbilityHelper.EquipAbilities(ctx.Event.SenderCharacterEntity, ctx.User, build.Abilities);
             AbilityHelper.EquipPassiveSpells(ctx.Event.SenderCharacterEntity, build.PassiveSpells);
 
-            ctx.Reply($"Equipped build <color=white>{targetBuild}</color>.");
+            ctx.Reply($"Equipped build <color=white>{buildName}</color>.");
         }
         else
         {
-            ctx.Reply($"Unknown build <color=white>{targetBuild}</color>.");
+            ctx.Reply($"Unknown build <color=white>{buildName}</color>.");
         }
     }
 
-    [Command("list_build", description: "List available builds", adminOnly: false)]
+    [Command("list_build", "listb", description: "List available builds", adminOnly: false)]
     public static void ListBuildCommand(ChatCommandContext ctx)
     {
         if (BuildManager.Builds == null)
@@ -61,7 +61,7 @@ internal class BuildCommands
         ctx.Reply($"Available builds :\n- {buildList}");
     }
 
-    [Command("clear_build", description: "Clear current build", adminOnly: false)]
+    [Command("clear_build", "clearb", description: "Clear current build", adminOnly: false)]
     public static void ClearBuildCommand(ChatCommandContext ctx)
     {
         InventoryHelper.ClearInventory(ctx.Event.SenderCharacterEntity);
