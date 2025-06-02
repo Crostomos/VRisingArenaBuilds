@@ -1,3 +1,6 @@
+`0.1.13-dev`
+- Add `ClearInventory` option (clear inventory before giving build if true).
+
 `0.1.12`
 - Fixed nullable errors during JSON deserialization.
 - Resolved JSON loading failure caused by trailing comma.
