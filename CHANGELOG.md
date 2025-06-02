@@ -1,5 +1,8 @@
 `0.1.13-dev`
-- Add `ClearInventory` option (clear inventory before giving build if true).
+- Added `ClearInventory` option (clear inventory before giving build if true).
+- Added `SeconDaryBuffIndex` option to chose secondary blood bonus.
+- Added `FillBloodPool` option.
+- Added `GiveBloodPotion` option.
 
 `0.1.12`
 - Fixed nullable errors during JSON deserialization.
