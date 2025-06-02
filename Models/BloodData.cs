@@ -2,11 +2,11 @@
 
 public class BloodData
 {
-    public string PrimaryType { get; set; }
+    public string PrimaryType { get; set; } = string.Empty;
 
-    public string SecondaryType { get; set; }
+    public string SecondaryType { get; set; } = string.Empty;
 
-    public float PrimaryQuality { get; set; }
+    public float PrimaryQuality { get; set; } = 0;
 
-    public float SecondaryQuality { get; set; }
+    public float SecondaryQuality { get; set; } = 0;
 }

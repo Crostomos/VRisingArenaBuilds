@@ -4,5 +4,5 @@ namespace ArenaBuilds.Models;
 
 public class UltimateAbilityData : IAbilityData
 {
-    public string Name { get; set; }
+    public string Name { get; set; } = string.Empty;
 }

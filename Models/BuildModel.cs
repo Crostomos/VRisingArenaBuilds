@@ -8,11 +8,13 @@ public class BuildModel
 
     public List<BuildItemData> Items { get; set; }
 
-    public Abilities Abilities { get; set; }
+    public List<BuildItemData> Items { get; set; } = [];
 
-    public PassiveSpells PassiveSpells { get; set; }
+    public Abilities Abilities { get; set; } = new();
 
-    public Armors Armors { get; set; }
+    public PassiveSpells PassiveSpells { get; set; } = new();
 
-    public List<WeaponData> Weapons { get; set; }
+    public Armors Armors { get; set; } = new();
+
+    public List<WeaponData> Weapons { get; set; } = [];
 }

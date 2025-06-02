@@ -4,7 +4,7 @@ namespace ArenaBuilds.Models;
 
 public class AbilityData : IAbilityData
 {
-    public string Name { get; set; }
+    public string Name { get; set; } = string.Empty;
 
-    public JewelData Jewel { get; set; }
+    public JewelData Jewel { get; set; } = new();
 }
