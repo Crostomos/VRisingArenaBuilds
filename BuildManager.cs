@@ -23,7 +23,11 @@ namespace ArenaBuilds
             }
 
             var jsonString = File.ReadAllText(BuildPath);
-            var tempDict = JsonSerializer.Deserialize<Dictionary<string, BuildModel>>(jsonString);
+            var tempDict = JsonSerializer.Deserialize<Dictionary<string, BuildModel>>(jsonString,
+                new JsonSerializerOptions
+                {
+                    AllowTrailingCommas = true
+                });
             Builds = new Dictionary<string, BuildModel>(tempDict, StringComparer.OrdinalIgnoreCase);
             Plugin.Logger.LogInfo($"Loaded {Builds.Count} builds from Builds.json");
         }
