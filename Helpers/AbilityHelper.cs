@@ -21,6 +21,7 @@ internal static class AbilityHelper
 
         foreach (var (ability, slot) in abilityMappings)
         {
+            if (string.IsNullOrEmpty(ability.Name)) continue;
             if (UtilsHelper.TryGetPrefabGuid(ability.Name, out var guid))
             {
                 EquipAbility(character, guid, slot);
@@ -49,6 +50,7 @@ internal static class AbilityHelper
 
         for (var i = 0; i < spells.Length; i++)
         {
+            if (string.IsNullOrEmpty(spells[i])) continue;
             if (UtilsHelper.TryGetPrefabGuid(spells[i], out var spellGuid))
             {
                 EquipSpellPassive(character, spellGuid, i);

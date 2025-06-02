@@ -23,6 +23,7 @@ internal static class ArmorHelper
 
         foreach (var armor in armorList)
         {
+            if (string.IsNullOrEmpty(armor)) continue;
             if (UtilsHelper.TryGetPrefabGuid(armor, out var guid))
             {
                 GiveAndEquip(character, guid);

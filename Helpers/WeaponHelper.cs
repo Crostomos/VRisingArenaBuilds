@@ -63,6 +63,7 @@ internal static class WeaponHelper
 
     private static void CreateAndGiveWeapon(Entity character, WeaponData weaponData)
     {
+        if (string.IsNullOrEmpty(weaponData.Name)) return;
         if (UtilsHelper.TryGetPrefabGuid(weaponData.Name, out var weaponGuid))
         {
             InventoryHelper.AddItemToInventory(character, weaponGuid, 1);
@@ -108,9 +109,9 @@ internal static class WeaponHelper
 
     private static void CreateAndGiveLegendaryWeapon(int userIndex, WeaponData weaponData)
     {
+        if (string.IsNullOrEmpty(weaponData.Name)) return;
         if (!UtilsHelper.TryGetPrefabGuid(weaponData.Name, out var weaponGuid))
         {
-            
             Plugin.Logger.LogWarning($"Weapon guid not found for {weaponData.Name}.");
             return;
         }
