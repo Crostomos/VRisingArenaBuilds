@@ -1,5 +1,6 @@
 ﻿using ProjectM.Network;
 using Unity.Entities;
+using UnityEngine;
 
 namespace ArenaBuilds.Helpers;
 
@@ -20,8 +21,8 @@ internal static class BloodHelper
                 var bloodEvent = new ConsumeBloodAdminEvent
                 {
                     Amount = amount,
-                    PrimaryQuality = primaryQuality,
-                    SecondaryQuality = secondaryQuality,
+                    PrimaryQuality = Mathf.Clamp(primaryQuality, 0, 100),
+                    SecondaryQuality = Mathf.Clamp(secondaryQuality, 0, 100),
                     PrimaryType = primaryBloodTypeGuid,
                     SecondaryType = secondaryBloodTypeGuid,
                     SecondaryBuffIndex = 1,

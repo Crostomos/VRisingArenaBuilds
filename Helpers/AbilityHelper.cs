@@ -29,6 +29,10 @@ internal static class AbilityHelper
                     JewelHelper.CreateAndEquip(user, guid, normalAbility.Jewel);
                 }
             }
+            else
+            {
+                Plugin.Logger.LogWarning($"Ability guid not found for {ability.Name}.");
+            }
         }
     }
 
@@ -48,6 +52,10 @@ internal static class AbilityHelper
             if (UtilsHelper.TryGetPrefabGuid(spells[i], out var spellGuid))
             {
                 EquipSpellPassive(character, spellGuid, i);
+            }
+            else
+            {
+                Plugin.Logger.LogWarning($"Passive spell guid not found for {spells[i]}.");
             }
         }
     }

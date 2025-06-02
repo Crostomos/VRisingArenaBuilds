@@ -21,6 +21,10 @@ internal static class InventoryHelper
             {
                 AddItemToInventory(character, itemGuid, item.Amount);
             }
+            else
+            {
+                Plugin.Logger.LogWarning($"Item guid not found for {item.Name}.");
+            }
         }
     }
 

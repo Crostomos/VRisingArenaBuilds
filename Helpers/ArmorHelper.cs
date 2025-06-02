@@ -27,6 +27,10 @@ internal static class ArmorHelper
             {
                 GiveAndEquip(character, guid);
             }
+            else
+            {
+                Plugin.Logger.LogWarning($"Armor guid not found for {armor}.");
+            }
         }
     }
 

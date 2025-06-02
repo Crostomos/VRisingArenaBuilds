@@ -67,6 +67,10 @@ internal static class WeaponHelper
         {
             InventoryHelper.AddItemToInventory(character, weaponGuid, 1);
         }
+        else
+        {
+            Plugin.Logger.LogWarning($"Weapon guid not found for {weaponData.Name}.");
+        }
     }
 
     private static SpellMod CreateSpellMod(string statMod, float statPower)
@@ -104,7 +108,12 @@ internal static class WeaponHelper
 
     private static void CreateAndGiveLegendaryWeapon(int userIndex, WeaponData weaponData)
     {
-        if (!UtilsHelper.TryGetPrefabGuid(weaponData.Name, out var weaponGuid)) return;
+        if (!UtilsHelper.TryGetPrefabGuid(weaponData.Name, out var weaponGuid))
+        {
+            
+            Plugin.Logger.LogWarning($"Weapon guid not found for {weaponData.Name}.");
+            return;
+        }
 
         var legendaryWeaponEvent = new CreateLegendaryWeaponDebugEvent
         {
