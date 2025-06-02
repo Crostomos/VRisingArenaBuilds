@@ -13,13 +13,12 @@ internal static class BloodHelper
         string secondaryBloodType = "",
         float primaryQuality = 100,
         float secondaryQuality = 100,
+        int secondaryBuffIndex = 0,
         int amount = 100)
     {
         if (string.IsNullOrEmpty(primaryBloodType)) return;
         if (UtilsHelper.TryGetPrefabGuid(primaryBloodType, out var primaryBloodTypeGuid))
         {
-            var secondaryBuffIndex = 1;
-
             if (string.IsNullOrEmpty(primaryBloodType) ||
                 !UtilsHelper.TryGetPrefabGuid(secondaryBloodType, out var secondaryBloodTypeGuid))
             {
@@ -35,7 +34,7 @@ internal static class BloodHelper
                 SecondaryQuality = Mathf.Clamp(secondaryQuality, 0, 100),
                 PrimaryType = primaryBloodTypeGuid,
                 SecondaryType = secondaryBloodTypeGuid,
-                SecondaryBuffIndex = (byte)secondaryBuffIndex,
+                SecondaryBuffIndex = (byte)Mathf.Clamp(secondaryBuffIndex, 0, 2),
                 ApplyTier4SecondaryBuff = secondaryBloodTypeGuid != new PrefabGUID(0)
             };
 
