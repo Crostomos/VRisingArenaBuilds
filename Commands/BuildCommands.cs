@@ -24,7 +24,7 @@ internal class BuildCommands
 
             if (build.Blood.GiveBloodPotion)
             {
-                InventoryHelper.GiveBloodPotion(
+                BloodHelper.GiveBloodPotion(
                     ctx.Event.SenderCharacterEntity,
                     build.Blood.PrimaryType,
                     secondaryBloodType: build.Blood.SecondaryType,

@@ -1,13 +1,10 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using ArenaBuilds.Models;
-using Data;
 using ProjectM;
 using ProjectM.Network;
-using ProjectM.Shared;
 using Stunlock.Core;
 using Unity.Entities;
-using UnityEngine;
 using Exception = System.Exception;
 
 namespace ArenaBuilds.Helpers;
@@ -27,46 +24,6 @@ internal static class InventoryHelper
             {
                 Plugin.Logger.LogWarning($"Item guid not found for {item.Name}.");
             }
-        }
-    }
-
-    public static void GiveBloodPotion(
-        Entity character,
-        string primaryBloodType,
-        string secondaryBloodType = "",
-        float primaryQuality = 100,
-        float secondaryQuality = 100,
-        int secondaryBuffIndex = 0)
-    {
-        if (string.IsNullOrEmpty(primaryBloodType)) return;
-        if (UtilsHelper.TryGetPrefabGuid(primaryBloodType, out var primaryBloodTypeGuid))
-        {
-            if (string.IsNullOrEmpty(primaryBloodType) ||
-                !UtilsHelper.TryGetPrefabGuid(secondaryBloodType, out var secondaryBloodTypeGuid))
-            {
-                secondaryBloodTypeGuid = new PrefabGUID(0);
-                secondaryQuality = 0;
-                secondaryBuffIndex = 0;
-            }
-
-            var entity = AddItemToInventory(character, Prefabs.Item_Consumable_PrisonPotion_Bloodwine, 1);
-            var blood = new StoredBlood
-            {
-                BloodQuality = Mathf.Clamp(primaryQuality, 0, 100),
-                PrimaryBloodType = primaryBloodTypeGuid,
-                SecondaryBlood = new SecondaryBloodData
-                {
-                    Type = secondaryBloodTypeGuid,
-                    Quality = Mathf.Clamp(secondaryQuality, 0, 100),
-                    BuffIndex = (byte)Mathf.Clamp(secondaryBuffIndex, 0, 2)
-                }
-            };
-
-            Core.EntityManager.SetComponentData(entity, blood);
-        }
-        else
-        {
-            Plugin.Logger.LogWarning($"Primary Blood type guid not found for {primaryBloodType}.");
         }
     }
 
