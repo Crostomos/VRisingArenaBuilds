@@ -4,15 +4,15 @@ namespace ArenaBuilds.Models;
 
 public class BuildModel
 {
-    public BloodData Blood { get; set; }
+    public BloodData Blood { get; set; } = new();
 
-    public List<BuildItemData> Items { get; set; }
+    public List<BuildItemData> Items { get; set; } = [];
 
-    public Abilities Abilities { get; set; }
+    public Abilities Abilities { get; set; } = new();
 
-    public PassiveSpells PassiveSpells { get; set; }
+    public PassiveSpells PassiveSpells { get; set; } = new();
 
-    public Armors Armors { get; set; }
+    public Armors Armors { get; set; } = new();
 
-    public List<WeaponData> Weapons { get; set; }
+    public List<WeaponData> Weapons { get; set; } = [];
 }

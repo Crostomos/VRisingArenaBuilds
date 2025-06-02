@@ -6,7 +6,6 @@ using ProjectM;
 using ProjectM.Network;
 using Stunlock.Core;
 using Unity.Entities;
-using UnityEngine;
 using Exception = System.Exception;
 
 namespace ArenaBuilds.Helpers;
@@ -17,42 +16,52 @@ internal static class InventoryHelper
     {
         foreach (var item in items)
         {
+            if (string.IsNullOrEmpty(item.Name)) continue;
             if (UtilsHelper.TryGetPrefabGuid(item.Name, out var itemGuid))
             {
                 AddItemToInventory(character, itemGuid, item.Amount);
             }
+            else
+            {
+                Plugin.Logger.LogWarning($"Item guid not found for {item.Name}.");
+            }
         }
     }
 
-    public static void GiveBloodPotion(Entity character, string primaryBloodType,
-        string secondaryBloodType = "BloodType_None", float primaryQuality = 100, float secondaryQuality = 100)
+    public static void GiveBloodPotion(
+        Entity character,
+        string primaryBloodType,
+        string secondaryBloodType = "",
+        float primaryQuality = 100,
+        float secondaryQuality = 100)
     {
+        if (string.IsNullOrEmpty(primaryBloodType)) return;
         if (UtilsHelper.TryGetPrefabGuid(primaryBloodType, out var primaryBloodTypeGuid))
         {
-            if (UtilsHelper.TryGetPrefabGuid(secondaryBloodType, out var secondaryBloodTypeGuid))
-            {
-                primaryQuality = Mathf.Clamp(primaryQuality, 0, 100);
-                secondaryQuality = Mathf.Clamp(secondaryQuality, 0, 100);
+            var secondaryBuffIndex = 1;
 
-                var entity = AddItemToInventory(character, Prefabs.Item_Consumable_PrisonPotion_Bloodwine, 1);
-                var blood = new StoredBlood
+            if (string.IsNullOrEmpty(primaryBloodType) ||
+                !UtilsHelper.TryGetPrefabGuid(secondaryBloodType, out var secondaryBloodTypeGuid))
+            {
+                secondaryBloodTypeGuid = new PrefabGUID(0);
+                secondaryQuality = 0;
+                secondaryBuffIndex = 0;
+            }
+
+            var entity = AddItemToInventory(character, Prefabs.Item_Consumable_PrisonPotion_Bloodwine, 1);
+            var blood = new StoredBlood
+            {
+                BloodQuality = primaryQuality,
+                PrimaryBloodType = primaryBloodTypeGuid,
+                SecondaryBlood = new()
                 {
-                    BloodQuality = primaryQuality,
-                    PrimaryBloodType = primaryBloodTypeGuid,
-                    SecondaryBlood = new()
-                    {
-                        Type = secondaryBloodTypeGuid,
-                        Quality = secondaryQuality,
-                        BuffIndex = 0
-                    }
-                };
+                    Type = secondaryBloodTypeGuid,
+                    Quality = secondaryQuality,
+                    BuffIndex = (byte)secondaryBuffIndex
+                }
+            };
 
-                Core.EntityManager.SetComponentData(entity, blood);
-            }
-            else
-            {
-                Plugin.Logger.LogWarning($"Secondary Blood type guid not found for {secondaryBloodType}.");
-            }
+            Core.EntityManager.SetComponentData(entity, blood);
         }
         else
         {

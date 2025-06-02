@@ -23,7 +23,11 @@ namespace ArenaBuilds
             }
 
             var jsonString = File.ReadAllText(BuildPath);
-            var tempDict = JsonSerializer.Deserialize<Dictionary<string, BuildModel>>(jsonString);
+            var tempDict = JsonSerializer.Deserialize<Dictionary<string, BuildModel>>(jsonString,
+                new JsonSerializerOptions
+                {
+                    AllowTrailingCommas = true
+                });
             Builds = new Dictionary<string, BuildModel>(tempDict, StringComparer.OrdinalIgnoreCase);
             Plugin.Logger.LogInfo($"Loaded {Builds.Count} builds from Builds.json");
         }
@@ -35,7 +39,12 @@ namespace ArenaBuilds
                 Directory.CreateDirectory(FileDirectory);
             }
 
-            File.WriteAllText(BuildPath, "{}");
+            var emptyBuilds = new Dictionary<string, BuildModel> { { "EmptyDefault", new BuildModel() } };
+            var json = JsonSerializer.Serialize(emptyBuilds, new JsonSerializerOptions
+            {
+                WriteIndented = true,
+            });
+            File.WriteAllText(BuildPath, json);
             Plugin.Logger.LogInfo($"Created empty Builds.json at {BuildPath}");
         }
 

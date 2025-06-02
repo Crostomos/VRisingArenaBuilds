@@ -57,6 +57,12 @@ internal class BuildCommands
             BuildManager.LoadData();
         }
 
+        if (BuildManager.Builds!.Count == 0)
+        {
+            ctx.Reply($"No builds available.");
+            return;
+        }
+
         var buildList = BuildManager.GetBuildList();
         ctx.Reply($"Available builds :\n- {buildList}");
     }
@@ -67,11 +73,14 @@ internal class BuildCommands
         InventoryHelper.ClearInventory(ctx.Event.SenderCharacterEntity);
         AbilityHelper.ClearPassiveSpells(ctx.Event.SenderCharacterEntity);
         AbilityHelper.ClearAbilities(ctx.Event.SenderCharacterEntity);
+
+        ctx.Reply("Build cleared.");
     }
 
     [Command("unlock_all", description: "Unlock All", adminOnly: true)]
     public static void UnlockAllCommand(ChatCommandContext ctx)
     {
         PlayerHelper.UnlockAll(ctx.Event.SenderUserEntity, ctx.Event.SenderCharacterEntity);
+        ctx.Reply("Researches, VBloods and Achievements unlocked.");
     }
 }

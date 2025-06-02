@@ -1,5 +1,7 @@
 ﻿using ProjectM.Network;
+using Stunlock.Core;
 using Unity.Entities;
+using UnityEngine;
 
 namespace ArenaBuilds.Helpers;
 
@@ -8,32 +10,36 @@ internal static class BloodHelper
     public static void SetBlood(
         Entity character,
         string primaryBloodType,
-        string secondaryBloodType = "BloodType_None",
+        string secondaryBloodType = "",
         float primaryQuality = 100,
         float secondaryQuality = 100,
         int amount = 100)
     {
+        if (string.IsNullOrEmpty(primaryBloodType)) return;
         if (UtilsHelper.TryGetPrefabGuid(primaryBloodType, out var primaryBloodTypeGuid))
         {
-            if (UtilsHelper.TryGetPrefabGuid(secondaryBloodType, out var secondaryBloodTypeGuid))
-            {
-                var bloodEvent = new ConsumeBloodAdminEvent
-                {
-                    Amount = amount,
-                    PrimaryQuality = primaryQuality,
-                    SecondaryQuality = secondaryQuality,
-                    PrimaryType = primaryBloodTypeGuid,
-                    SecondaryType = secondaryBloodTypeGuid,
-                    SecondaryBuffIndex = 1,
-                    ApplyTier4SecondaryBuff = true
-                };
+            var secondaryBuffIndex = 1;
 
-                UtilsHelper.CreateEventFromCharacter(character, bloodEvent);
-            }
-            else
+            if (string.IsNullOrEmpty(primaryBloodType) ||
+                !UtilsHelper.TryGetPrefabGuid(secondaryBloodType, out var secondaryBloodTypeGuid))
             {
-                Plugin.Logger.LogWarning($"Secondary Blood type guid not found for {secondaryBloodType}.");
+                secondaryBloodTypeGuid = new PrefabGUID(0);
+                secondaryQuality = 0;
+                secondaryBuffIndex = 0;
             }
+
+            var bloodEvent = new ConsumeBloodAdminEvent
+            {
+                Amount = amount,
+                PrimaryQuality = Mathf.Clamp(primaryQuality, 0, 100),
+                SecondaryQuality = Mathf.Clamp(secondaryQuality, 0, 100),
+                PrimaryType = primaryBloodTypeGuid,
+                SecondaryType = secondaryBloodTypeGuid,
+                SecondaryBuffIndex = (byte)secondaryBuffIndex,
+                ApplyTier4SecondaryBuff = secondaryBloodTypeGuid != new PrefabGUID(0)
+            };
+
+            UtilsHelper.CreateEventFromCharacter(character, bloodEvent);
         }
         else
         {

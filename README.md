@@ -67,8 +67,6 @@ Although this mod is primarily designed for arena use, it can also be leveraged 
 
 ## 🐞 Known Issues
 
-- JSON will fail to load if a trailing comma is present.
-- An error will occur if values are missing in the JSON.
 - The `.clear_build` command does not currently remove jewels. This is not a significant issue, as that functionality has not yet been implemented. 👀
 
 ---
