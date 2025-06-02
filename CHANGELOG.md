@@ -1,6 +1,6 @@
 `0.1.13-dev`
 - Added `ClearInventory` option (clear inventory before giving build if true).
-- Added `SeconDaryBuffIndex` option to chose secondary blood bonus.
+- Added `SecondaryBuffIndex` option to chose secondary blood bonus.
 - Added `FillBloodPool` option.
 - Added `GiveBloodPotion` option.
 
