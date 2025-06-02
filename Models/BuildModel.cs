@@ -4,9 +4,7 @@ namespace ArenaBuilds.Models;
 
 public class BuildModel
 {
-    public BloodData Blood { get; set; }
-
-    public List<BuildItemData> Items { get; set; }
+    public BloodData Blood { get; set; } = new();
 
     public List<BuildItemData> Items { get; set; } = [];
 
