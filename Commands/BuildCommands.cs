@@ -15,7 +15,10 @@ internal class BuildCommands
 
         if (BuildManager.Builds.TryGetValue(buildName, out var build))
         {
-            InventoryHelper.ClearInventory(ctx.Event.SenderCharacterEntity);
+            if (build.Settings.ClearInventory)
+            {
+                InventoryHelper.ClearInventory(ctx.Event.SenderCharacterEntity);
+            }
 
             WeaponHelper.GiveWeapons(ctx.User, ctx.Event.SenderCharacterEntity, build.Weapons);
             InventoryHelper.GiveBloodPotion(
