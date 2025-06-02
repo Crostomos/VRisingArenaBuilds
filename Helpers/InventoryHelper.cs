@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using ArenaBuilds.Models;
-using Data;
 using ProjectM;
 using ProjectM.Network;
 using Stunlock.Core;
@@ -25,47 +24,6 @@ internal static class InventoryHelper
             {
                 Plugin.Logger.LogWarning($"Item guid not found for {item.Name}.");
             }
-        }
-    }
-
-    public static void GiveBloodPotion(
-        Entity character,
-        string primaryBloodType,
-        string secondaryBloodType = "",
-        float primaryQuality = 100,
-        float secondaryQuality = 100)
-    {
-        if (string.IsNullOrEmpty(primaryBloodType)) return;
-        if (UtilsHelper.TryGetPrefabGuid(primaryBloodType, out var primaryBloodTypeGuid))
-        {
-            var secondaryBuffIndex = 1;
-
-            if (string.IsNullOrEmpty(primaryBloodType) ||
-                !UtilsHelper.TryGetPrefabGuid(secondaryBloodType, out var secondaryBloodTypeGuid))
-            {
-                secondaryBloodTypeGuid = new PrefabGUID(0);
-                secondaryQuality = 0;
-                secondaryBuffIndex = 0;
-            }
-
-            var entity = AddItemToInventory(character, Prefabs.Item_Consumable_PrisonPotion_Bloodwine, 1);
-            var blood = new StoredBlood
-            {
-                BloodQuality = primaryQuality,
-                PrimaryBloodType = primaryBloodTypeGuid,
-                SecondaryBlood = new()
-                {
-                    Type = secondaryBloodTypeGuid,
-                    Quality = secondaryQuality,
-                    BuffIndex = (byte)secondaryBuffIndex
-                }
-            };
-
-            Core.EntityManager.SetComponentData(entity, blood);
-        }
-        else
-        {
-            Plugin.Logger.LogWarning($"Primary Blood type guid not found for {primaryBloodType}.");
         }
     }
 

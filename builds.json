@@ -1,13 +1,16 @@
 ﻿{
    "offensive":{
-      "Settings": {
-         "ClearInventory": true
+      "Settings":{
+         "ClearInventory":true
       },
       "Blood":{
+         "FillBloodPool": true,
+         "GiveBloodPotion": false,
          "PrimaryType":"BloodType_Draculin",
          "SecondaryType":"BloodType_Scholar",
          "PrimaryQuality":100,
-         "SecondaryQuality":100
+         "SecondaryQuality":100,
+         "SecondaryBuffIndex":2
       },
       "Armors":{
          "Boots":"Item_Boots_T09_Dracula_Scholar",
@@ -262,14 +265,17 @@
       }
    },
    "defensive":{
-      "Settings": {
-         "ClearInventory": true
+      "Settings":{
+         "ClearInventory":true
       },
       "Blood":{
+         "FillBloodPool": true,
+         "GiveBloodPotion": false,
          "PrimaryType":"BloodType_Scholar",
          "SecondaryType":"BloodType_Creature",
          "PrimaryQuality":100,
-         "SecondaryQuality":100
+         "SecondaryQuality":100,
+         "SecondaryBuffIndex":1
       },
       "Armors":{
          "Boots":"Item_Boots_T09_Dracula_Scholar",
@@ -524,14 +530,17 @@
       }
    },
    "minions":{
-      "Settings": {
-         "ClearInventory": true
+      "Settings":{
+         "ClearInventory":true
       },
       "Blood":{
+         "FillBloodPool": true,
+         "GiveBloodPotion": false,
          "PrimaryType":"BloodType_Scholar",
          "SecondaryType":"BloodType_Warrior",
          "PrimaryQuality":100,
-         "SecondaryQuality":100
+         "SecondaryQuality":100,
+         "SecondaryBuffIndex":1
       },
       "Armors":{
          "Boots":"Item_Boots_T09_Dracula_Rogue",
@@ -786,14 +795,17 @@
       }
    },
    "movement":{
-      "Settings": {
-         "ClearInventory": true
+      "Settings":{
+         "ClearInventory":true
       },
       "Blood":{
+         "FillBloodPool": true,
+         "GiveBloodPotion": false,
          "PrimaryType":"BloodType_Rogue",
          "SecondaryType":"BloodType_Brute",
          "PrimaryQuality":100,
-         "SecondaryQuality":100
+         "SecondaryQuality":100,
+         "SecondaryBuffIndex":0
       },
       "Armors":{
          "Boots":"Item_Boots_T09_Dracula_Rogue",
@@ -1048,14 +1060,17 @@
       }
    },
    "tank":{
-      "Settings": {
-         "ClearInventory": true
+      "Settings":{
+         "ClearInventory":true
       },
       "Blood":{
+         "FillBloodPool": true,
+         "GiveBloodPotion": false,
          "PrimaryType":"BloodType_Brute",
          "SecondaryType":"BloodType_Warrior",
          "PrimaryQuality":100,
-         "SecondaryQuality":100
+         "SecondaryQuality":100,
+         "SecondaryBuffIndex":1
       },
       "Armors":{
          "Boots":"Item_Boots_T09_Dracula_Brute",
@@ -1310,14 +1325,17 @@
       }
    },
    "weapon":{
-      "Settings": {
-         "ClearInventory": true
+      "Settings":{
+         "ClearInventory":true
       },
       "Blood":{
+         "FillBloodPool": true,
+         "GiveBloodPotion": false,
          "PrimaryType":"BloodType_Warrior",
          "SecondaryType":"BloodType_Rogue",
          "PrimaryQuality":100,
-         "SecondaryQuality":100
+         "SecondaryQuality":100,
+         "SecondaryBuffIndex":1
       },
       "Armors":{
          "Boots":"Item_Boots_T09_Dracula_Warrior",
@@ -1571,9 +1589,9 @@
          "PassiveSpell5":"SpellPassive_Chaos_T04_RavenousStrikes"
       }
    },
-   "allweapons": {
-      "Settings": {
-         "ClearInventory": false
+   "allweapons":{
+      "Settings":{
+         "ClearInventory":false
       },
       "Weapons":[
          {

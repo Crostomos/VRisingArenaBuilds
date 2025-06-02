@@ -21,25 +21,35 @@ internal class BuildCommands
             }
 
             WeaponHelper.GiveWeapons(ctx.User, ctx.Event.SenderCharacterEntity, build.Weapons);
-            InventoryHelper.GiveBloodPotion(
-                ctx.Event.SenderCharacterEntity,
-                build.Blood.PrimaryType,
-                secondaryBloodType: build.Blood.SecondaryType,
-                primaryQuality: build.Blood.PrimaryQuality,
-                secondaryQuality: build.Blood.SecondaryQuality
-            );
+
+            if (build.Blood.GiveBloodPotion)
+            {
+                BloodHelper.GiveBloodPotion(
+                    ctx.Event.SenderCharacterEntity,
+                    build.Blood.PrimaryType,
+                    secondaryBloodType: build.Blood.SecondaryType,
+                    primaryQuality: build.Blood.PrimaryQuality,
+                    secondaryQuality: build.Blood.SecondaryQuality,
+                    secondaryBuffIndex: build.Blood.SecondaryBuffIndex
+                );
+            }
+
             InventoryHelper.GiveItems(ctx.Event.SenderCharacterEntity, build.Items);
 
             ArmorHelper.EquipArmors(ctx.Event.SenderCharacterEntity, build.Armors);
 
-            BloodHelper.SetBlood(
-                ctx.Event.SenderCharacterEntity,
-                build.Blood.PrimaryType,
-                secondaryBloodType: build.Blood.SecondaryType,
-                primaryQuality: build.Blood.PrimaryQuality,
-                secondaryQuality: build.Blood.SecondaryQuality,
-                amount: 100
-            );
+            if (build.Blood.FillBloodPool)
+            {
+                BloodHelper.SetBlood(
+                    ctx.Event.SenderCharacterEntity,
+                    build.Blood.PrimaryType,
+                    secondaryBloodType: build.Blood.SecondaryType,
+                    primaryQuality: build.Blood.PrimaryQuality,
+                    secondaryQuality: build.Blood.SecondaryQuality,
+                    secondaryBuffIndex: build.Blood.SecondaryBuffIndex,
+                    amount: 100
+                );
+            }
 
             AbilityHelper.EquipAbilities(ctx.Event.SenderCharacterEntity, ctx.User, build.Abilities);
             AbilityHelper.EquipPassiveSpells(ctx.Event.SenderCharacterEntity, build.PassiveSpells);
