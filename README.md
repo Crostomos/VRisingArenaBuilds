@@ -73,7 +73,6 @@ Although this mod is primarily designed for arena use, it can also be leveraged 
 
 ## 🚧 Planned Features
 
-- Add SecondaryBuffIndex config (for blood)
 - Save and restore your character’s original state before and after using a build.
 - Automatically unlock abilities & passives if necessary
 - Restrict `.build` usage to specific arena zones (can be toggled via config).
