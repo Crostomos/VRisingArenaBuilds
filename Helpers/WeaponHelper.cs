@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using ArenaBuilds.Commands.Converters;
 using ArenaBuilds.Models;
 using ProjectM;
 using ProjectM.Network;
@@ -21,17 +22,7 @@ internal static class WeaponHelper
             }
             else if (IsArtifact(weaponData.Name))
             {
-                CreateAndGiveLegendaryWeapon(user.Index, weaponData);
-                if (HasValidSpellMods(weaponData))
-                {
-                    var weaponEntity = GetCreatedWeapon(character, weaponData);
-                    SetAbilityMod(weaponEntity, weaponData);
-                }
-                else
-                {
-                    Plugin.Logger.LogWarning($"Wrong SpellMod for {weaponData.Name}");
-                }
-                
+                CreateAndGiveArtifactWeapon(user.Index, character, weaponData);
             }
             else
             {
@@ -40,6 +31,58 @@ internal static class WeaponHelper
         }
     }
 
+    public static void CreateAndGiveLegendaryWeapon(int userIndex, WeaponData weaponData)
+    {
+        if (string.IsNullOrEmpty(weaponData.Name)) return;
+        if (!UtilsHelper.TryGetPrefabGuid(weaponData.Name, out var weaponGuid))
+        {
+            Plugin.Logger.LogWarning($"Weapon guid not found for {weaponData.Name}.");
+            return;
+        }
+
+        var legendaryWeaponEvent = new CreateLegendaryWeaponDebugEvent
+        {
+            WeaponPrefabGuid = weaponGuid,
+            Tier = 8,
+            InfuseSpellMod = UtilsHelper.GetPrefabGuid(weaponData.InfuseSpellMod) ?? default,
+            StatMod1 = UtilsHelper.GetPrefabGuid(weaponData.StatMod1) ?? default,
+            StatMod1Power = Mathf.Clamp(weaponData.StatMod1Power, 0, 1),
+            StatMod2 = UtilsHelper.GetPrefabGuid(weaponData.StatMod2) ?? default,
+            StatMod2Power = Mathf.Clamp(weaponData.StatMod2Power, 0, 1),
+            StatMod3 = UtilsHelper.GetPrefabGuid(weaponData.StatMod3) ?? default,
+            StatMod3Power = Mathf.Clamp(weaponData.StatMod3Power, 0, 1),
+            StatMod4 = UtilsHelper.GetPrefabGuid(weaponData.StatMod4) ?? default,
+            StatMod4Power = Mathf.Clamp(weaponData.StatMod4Power, 0, 1),
+        };
+
+        Core.DebugEventsSystem.CreateLegendaryWeaponEvent(userIndex, ref legendaryWeaponEvent);
+    }
+
+    public static void CreateAndGiveArtifactWeapon(int userIndex, Entity character, WeaponData weaponData)
+    {
+        CreateAndGiveLegendaryWeapon(userIndex, weaponData);
+        var weaponEntity = GetCreatedWeapon(character, weaponData);
+
+        if (string.IsNullOrEmpty(weaponData.SpellMod1))
+        {
+            weaponData.SpellMod1 = GetDefaultSpellMod(weaponData.Name, 1);
+        }
+        
+        if (string.IsNullOrEmpty(weaponData.SpellMod2))
+        {
+            weaponData.SpellMod2 = GetDefaultSpellMod(weaponData.Name, 2);
+        }
+        
+        if (HasValidSpellMods(weaponData))
+        {
+            SetAbilityMod(weaponEntity, weaponData);
+        }
+        else
+        {
+            Plugin.Logger.LogWarning($"Wrong SpellMod for {weaponData.Name}");
+        }
+    }
+    
     private static bool IsLegendary(string prefabName)
     {
         return prefabName.Contains("Legendary");
@@ -53,6 +96,22 @@ internal static class WeaponHelper
     private static string GetWeaponNameType(WeaponData weaponData)
     {
         return weaponData.Name.Split('_')[2];
+    }
+    
+    private static string GetDefaultSpellMod(string weaponName, int modIndex)
+    {
+        if (ArtifactWeaponConverter.WeaponPrefabToAbilityMods.TryGetValue(weaponName, out var abilityMods))
+        {
+            switch (modIndex)
+            {
+                case 1:
+                    return abilityMods.Mod1;
+                case 2:
+                    return abilityMods.Mod2;
+            }
+        }
+
+        return string.Empty;
     }
 
     private static bool HasValidSpellMods(WeaponData weaponData)
@@ -105,33 +164,6 @@ internal static class WeaponHelper
         spellModSetComponent.AbilityMods1 = newAbilityMod2;
 
         Core.EntityManager.SetComponentData(weapon, spellModSetComponent);
-    }
-
-    private static void CreateAndGiveLegendaryWeapon(int userIndex, WeaponData weaponData)
-    {
-        if (string.IsNullOrEmpty(weaponData.Name)) return;
-        if (!UtilsHelper.TryGetPrefabGuid(weaponData.Name, out var weaponGuid))
-        {
-            Plugin.Logger.LogWarning($"Weapon guid not found for {weaponData.Name}.");
-            return;
-        }
-
-        var legendaryWeaponEvent = new CreateLegendaryWeaponDebugEvent
-        {
-            WeaponPrefabGuid = weaponGuid,
-            Tier = 8,
-            InfuseSpellMod = UtilsHelper.GetPrefabGuid(weaponData.InfuseSpellMod) ?? default,
-            StatMod1 = UtilsHelper.GetPrefabGuid(weaponData.StatMod1) ?? default,
-            StatMod1Power = Mathf.Clamp(weaponData.StatMod1Power, 0, 1),
-            StatMod2 = UtilsHelper.GetPrefabGuid(weaponData.StatMod2) ?? default,
-            StatMod2Power = Mathf.Clamp(weaponData.StatMod2Power, 0, 1),
-            StatMod3 = UtilsHelper.GetPrefabGuid(weaponData.StatMod3) ?? default,
-            StatMod3Power = Mathf.Clamp(weaponData.StatMod3Power, 0, 1),
-            StatMod4 = UtilsHelper.GetPrefabGuid(weaponData.StatMod4) ?? default,
-            StatMod4Power = Mathf.Clamp(weaponData.StatMod4Power, 0, 1),
-        };
-
-        Core.DebugEventsSystem.CreateLegendaryWeaponEvent(userIndex, ref legendaryWeaponEvent);
     }
 
     private static Entity GetCreatedWeapon(Entity character, WeaponData weaponData)
