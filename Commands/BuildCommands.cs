@@ -77,7 +77,7 @@ internal class BuildCommands
         }
 
         var buildList = BuildManager.GetBuildList();
-        ctx.Reply($"Available builds :\n- {buildList}");
+        ctx.Reply($"Available builds :\n{buildList}");
     }
 
     [Command("clear_build", "clearb", description: "Clear current build", adminOnly: false)]

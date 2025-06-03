@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Text.Json;
+using ArenaBuilds.Extensions;
 using ArenaBuilds.Models;
 
 namespace ArenaBuilds
@@ -55,7 +56,7 @@ namespace ArenaBuilds
                 return string.Empty;
             }
 
-            return string.Join("\n- ", Builds.Keys);
+            return Builds.Keys.ToFormattedList();
         }
     }
 }
