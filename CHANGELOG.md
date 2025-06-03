@@ -1,4 +1,4 @@
-`0.1.13-dev`
+`0.2.10-dev`
 - New commands to give artifact/legendary weapon.
 - `give_build` : SpellMod1 and spellMod2 will be automatically filled for artifact weapons based on weapon variation.
 - Added `ClearInventory` option (clear inventory before giving build if true).
