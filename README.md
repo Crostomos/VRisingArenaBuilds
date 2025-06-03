@@ -34,6 +34,9 @@ Although this mod is primarily designed for arena use, it can also be leveraged 
 | `.give_legendary <weapon> <infuse> <statmod1> <statmod2> <statmod3>` | `.giveleg`    | Give legendary weapon                         |
 | `.give_artifact <weapon> <statmod1> <statmod2> <statmod3>`           | `.giveart`    | Give artifact weapon                          |
 | `.list_build`                                                        | `.listb`      | Displays the list of available builds         |
+| `.list_weapon`                                                       | `.listw`      | Displays the list of available weapons        |
+| `.list_statmod`                                                      | `.listsm`     | Displays the list of available stat mods      |
+| `.list_infuse`                                                       | `.listi`      | Displays the list of available infuses        |
 | `.clear_build`                                                       | `.clearb`     | Clears your inventory, abilities and passives |
 | `.unlock_all`                                                        | `.unlock_all` | Unlock abilities, passives...                 |
 

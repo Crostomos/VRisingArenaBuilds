@@ -58,15 +58,21 @@ internal class WeaponCommands
         ctx.Reply($"Given artifact weapon <color=white>{weapon.PrefabName}</color>.");
     }
 
-    [Command("list_weapons", "listw", description: "List weapons", adminOnly: false)]
+    [Command("list_weapon", "listw", description: "List weapons", adminOnly: false)]
     public static void ListWeaponsCommand(ChatCommandContext ctx)
     {
         ctx.Reply($"Weapons :\n{LegendaryWeaponConverter.BaseWeaponNames.ToFormattedList()}");
     }
 
-    [Command("list_statmods", "listsm", description: "List stats mods", adminOnly: false)]
+    [Command("list_statmod", "listsm", description: "List stats mods", adminOnly: false)]
     public static void ListStatModsCommand(ChatCommandContext ctx)
     {
         ctx.Reply($"Stat Mods :\n{StatModConverter.ShorthandToPrefabName.ToFormattedList(transformValue: value => value[8..])}");
+    }
+    
+    [Command("list_infuse", "listi", description: "List infuses", adminOnly: false)]
+    public static void ListInfuseCommand(ChatCommandContext ctx)
+    {
+        ctx.Reply($"Infuses :\n{InfuseSpellModConverter.ShorthandToPrefabName.Keys.ToFormattedList()}");
     }
 }
