@@ -2,7 +2,7 @@
 
 # ArenaBuilds
 
-**ArenaBuilds** is a lightweight, server-side mod for *V Rising* that allows players to instantly equip ready-to-use PvP builds via simple in-game commands.  
+**ArenaBuilds** is a lightweight, server-side mod for *V Rising* that allows players to instantly equip ready-to-use PvP builds via simple in-game commands.
 It’s designed to streamline arena practice and fast-paced duels without the need to manually gear up.
 
 Although this mod is primarily designed for arena use, it can also be leveraged to create highly specialized builds for PvE or other purposes.
@@ -22,17 +22,20 @@ Although this mod is primarily designed for arena use, it can also be leveraged 
 - Builds are fully customizable via the `builds.json` files
   - A list of valid `prefabName` values is available here: [VRising DB](https://vrising.gaming.tools)
   - For a comprehensive list of prefabName values, particularly those related to StatMod and SpellMod, refer to: [VRising Mods Wiki](https://wiki.vrisingmods.com/prefabs/Spell)
+- Dedicated command to create a weapon with personalized attributes
 
 ---
 
 ## 💬 Commands
 
-| Command               | ShortHand             | Description                                   |
-| --------------------- | --------------------- | --------------------------------------------- |
-| `.give_build <class>` | `.giveb <class>`      | Equips the specified build                    |
-| `.list_build`         | `.listb`              | Displays the list of available builds         |
-| `.clear_build`        | `.clearb`             | Clears your inventory, abilities and passives |
-| `.unlock_all`         | `.unlock_all`         | Unlock abilities, passives...                 |
+| Command                                                              | ShortHand     | Description                                   |
+| -------------------------------------------------------------------- | ------------- | --------------------------------------------- |
+| `.give_build <class>`                                                | `.giveb`      | Equips the specified build                    |
+| `.give_legendary <weapon> <infuse> <statmod1> <statmod2> <statmod3>` | `.giveleg`    | Give legendary weapon                         |
+| `.give_artifact <weapon> <statmod1> <statmod2> <statmod3>`           | `.giveart`    | Give artifact weapon                          |
+| `.list_build`                                                        | `.listb`      | Displays the list of available builds         |
+| `.clear_build`                                                       | `.clearb`     | Clears your inventory, abilities and passives |
+| `.unlock_all`                                                        | `.unlock_all` | Unlock abilities, passives...                 |
 
 ---
 
