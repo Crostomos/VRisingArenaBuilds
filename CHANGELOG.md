@@ -1,4 +1,5 @@
 `0.1.13-dev`
+- New commands to give artifact/legendary weapon.
 - Added `ClearInventory` option (clear inventory before giving build if true).
 - Added `SecondaryBuffIndex` option to chose secondary blood bonus.
 - Added `FillBloodPool` option.
