@@ -1,4 +1,6 @@
 `0.1.13-dev`
+- New commands to give artifact/legendary weapon.
+- `give_build` : SpellMod1 and spellMod2 will be automatically filled for artifact weapons based on weapon variation.
 - Added `ClearInventory` option (clear inventory before giving build if true).
 - Added `SecondaryBuffIndex` option to chose secondary blood bonus.
 - Added `FillBloodPool` option.
