@@ -16,7 +16,7 @@ internal class LegendaryWeaponConverter : CommandArgumentConverter<LegendaryWeap
         "Crossbow",
         "Daggers",
         "GreatSword",
-        "LongBow",
+        "Longbow",
         "Mace",
         "Pistols",
         "Reaper",
