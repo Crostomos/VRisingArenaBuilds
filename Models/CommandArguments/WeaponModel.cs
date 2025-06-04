@@ -15,11 +15,11 @@ public class WeaponModel(string name, string basePrefabName, List<string> argNam
 
     public void SetLegendaryPrefab()
     {
-        PrefabName = $"Item_Weapon_{Name}_Legendary_T08";
+        PrefabName = $"Item_Weapon_{BasePrefabName}_Legendary_T08";
     }
 
     public void SetArtifactPrefab(int variation = 1)
     {
-        PrefabName = $"Item_Weapon_{Name}_Unique_T08_Variation0{variation}";
+        PrefabName = $"Item_Weapon_{BasePrefabName}_Unique_T08_Variation0{variation}";
     }
 }
