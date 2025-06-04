@@ -43,12 +43,12 @@ public static class ListExtensions
 
     public static ICommandArgument ContainsCommandArgument(this IEnumerable<ICommandArgument> list, string input)
     {
-        return list.FirstOrDefault(s => s.ArgNames.Contains(input, StringComparer.OrdinalIgnoreCase));
+        return list.FirstOrDefault(s =>
+            s.ArgNames.Any(arg => arg.Contains(input, StringComparison.OrdinalIgnoreCase)));
     }
 
     public static ICommandArgument EqualsCommandArgument(this IEnumerable<ICommandArgument> list, string input)
     {
-        return list.FirstOrDefault(s =>
-            s.ArgNames.Any(arg => string.Equals(arg, input, StringComparison.OrdinalIgnoreCase)));
+        return list.FirstOrDefault(s => s.ArgNames.Contains(input, StringComparer.OrdinalIgnoreCase));
     }
 }
