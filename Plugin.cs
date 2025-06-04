@@ -1,4 +1,5 @@
 ﻿using System.Reflection;
+using ArenaBuilds.Data;
 using BepInEx;
 using BepInEx.Logging;
 using BepInEx.Unity.IL2CPP;
@@ -27,6 +28,9 @@ public class Plugin : BasePlugin
 
         // Get builds from JSON
         BuildManager.LoadData();
+        
+        // Load Database
+        Database.Initialize();
 
         // Register all commands in the assembly with VCF
         CommandRegistry.RegisterAll();

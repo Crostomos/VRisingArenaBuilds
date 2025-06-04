@@ -1,33 +1,19 @@
-﻿using System.Collections.Generic;
-using System.Linq;
+﻿using ArenaBuilds.Data;
+using ArenaBuilds.Extensions;
+using ArenaBuilds.Models.CommandArguments;
 using VampireCommandFramework;
 
 namespace ArenaBuilds.Commands.Converters;
 
-public record struct InfuseSpellMod(string ShortHand, string Name);
-
-internal class InfuseSpellModConverter : CommandArgumentConverter<InfuseSpellMod>
+internal class InfuseSpellModConverter : CommandArgumentConverter<InfuseSpellModModel>
 {
-    public static readonly Dictionary<string, string> ShorthandToPrefabName = new()
+    public override InfuseSpellModModel Parse(ICommandContext ctx, string input)
     {
-        { "blood", "SpellMod_Weapon_BloodInfused" },
-        { "chaos", "SpellMod_Weapon_ChaosInfused" },
-        { "frost", "SpellMod_Weapon_FrostInfused" },
-        { "illusion", "SpellMod_Weapon_IllusionInfused" },
-        { "storm", "SpellMod_Weapon_StormInfused" },
-        { "undead", "SpellMod_Weapon_UndeadInfused" },
-    };
-
-    public override InfuseSpellMod Parse(ICommandContext ctx, string input)
-    {
-        input = input.ToLower();
-        var match = ShorthandToPrefabName.Where(kvp => kvp.Key.Equals(input)).Select(kvp => kvp.Value).FirstOrDefault();
-
-        if (string.IsNullOrEmpty(match))
+        if (InfuseSpellModDb.Mods.ContainsCommandArgument(input) is not InfuseSpellModModel match)
         {
             throw ctx.Error($"Unknown infuse spell mod <color=white>{input}</color>.");
         }
 
-        return new InfuseSpellMod(input, match);
+        return match;
     }
 }
