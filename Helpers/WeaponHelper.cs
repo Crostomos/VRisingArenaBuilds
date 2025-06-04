@@ -100,7 +100,7 @@ internal static class WeaponHelper
     
     private static string GetDefaultSpellMod(string weaponName, int modIndex)
     {
-        if (ArtifactWeaponConverter.WeaponPrefabToAbilityMods.TryGetValue(weaponName, out var abilityMods))
+        if (WeaponDb.ArtifactWeaponPrefabToAbilityMods.TryGetValue(weaponName, out var abilityMods))
         {
             switch (modIndex)
             {

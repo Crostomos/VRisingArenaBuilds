@@ -1,49 +1,20 @@
-﻿using System.Collections.Generic;
-using System.Linq;
+﻿using ArenaBuilds.Data;
+using ArenaBuilds.Extensions;
+using ArenaBuilds.Models.CommandArguments;
 using VampireCommandFramework;
 
 namespace ArenaBuilds.Commands.Converters;
 
-public record struct LegendaryWeapon(string PrefabName);
-
-internal class LegendaryWeaponConverter : CommandArgumentConverter<LegendaryWeapon>
+internal class LegendaryWeaponConverter : CommandArgumentConverter<WeaponModel>
 {
-    public static readonly List<string> BaseWeaponNames =
-    [
-        "Sword",
-        "Axe",
-        "Claws",
-        "Crossbow",
-        "Daggers",
-        "GreatSword",
-        "Longbow",
-        "Mace",
-        "Pistols",
-        "Reaper",
-        "Slashers",
-        "Spear",
-        "TwinBlades",
-        "Whip"
-    ];
-
-    public override LegendaryWeapon Parse(ICommandContext ctx, string input)
+    public override WeaponModel Parse(ICommandContext ctx, string input)
     {
-        input = input.ToLower();
+        var match =
+            WeaponDb.Weapons.ContainsCommandArgument(input) as WeaponModel ??
+            (WeaponDb.Weapons.EqualsCommandArgument(input) as WeaponModel ??
+             throw ctx.Error($"Unknown weapon <color=white>{input}</color>."));
 
-        var match = BaseWeaponNames.FirstOrDefault(n => n.ToLower().Equals(input));
-
-        if (string.IsNullOrEmpty(match))
-        {
-            match = BaseWeaponNames.FirstOrDefault(n => n.ToLower().Contains(input));
-
-            if (string.IsNullOrEmpty(match))
-            {
-                throw ctx.Error($"Unknown weapon <color=white>{input}</color>.");
-            }
-        }
-
-        var legendaryPrefabName = $"Item_Weapon_{match}_Legendary_T08";
-
-        return new LegendaryWeapon(legendaryPrefabName);
+        match.SetLegendaryPrefab();
+        return match;
     }
 }
