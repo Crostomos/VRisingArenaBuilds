@@ -20,7 +20,7 @@ internal class WeaponCommands
     {
         if (statMod1.Name == statMod2.Name || statMod1.Name == statMod3.Name || statMod2.Name == statMod3.Name)
         {
-            throw ctx.Error("Stat mods must be unique.");
+            throw ctx.Error("Stat mods must be different.");
         }
         
         var weaponData = new WeaponData
@@ -47,6 +47,11 @@ internal class WeaponCommands
         StatModModel statMod2,
         StatModModel statMod3)
     {
+        if (statMod1.Name == statMod2.Name || statMod1.Name == statMod3.Name || statMod2.Name == statMod3.Name)
+        {
+            throw ctx.Error("Stat mods must be different.");
+        }
+        
         var weaponData = new WeaponData
         {
             Name = weapon.PrefabName,
