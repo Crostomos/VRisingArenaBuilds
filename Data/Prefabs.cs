@@ -1,6 +1,7 @@
 ﻿using Stunlock.Core;
 
-namespace Data;
+namespace ArenaBuilds.Data;
+
 public static class Prefabs
 {
 	public static readonly PrefabGUID _VM_VBlood_TEMPLATE = new PrefabGUID(2075390218);
