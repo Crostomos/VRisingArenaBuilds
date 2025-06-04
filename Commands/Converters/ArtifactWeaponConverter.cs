@@ -1,7 +1,6 @@
 ﻿using ArenaBuilds.Data;
 using ArenaBuilds.Extensions;
 using ArenaBuilds.Models.CommandArguments;
-using UnityEngine;
 using VampireCommandFramework;
 
 namespace ArenaBuilds.Commands.Converters;
@@ -10,14 +9,12 @@ internal class ArtifactWeaponConverter : CommandArgumentConverter<ArtifactWeapon
 {
     public override ArtifactWeaponModel Parse(ICommandContext ctx, string input)
     {
-        input = input.ToLower();
-
         var variation = 1;
         var lastChar = input[^1];
         if (char.IsDigit(lastChar))
         {
             input = input.Substring(0, input.Length - 1);
-            variation = Mathf.Clamp(int.Parse(lastChar.ToString()), 1, 2);
+            variation = int.Parse(lastChar.ToString());
         }
 
         var weapon =
@@ -29,11 +26,12 @@ internal class ArtifactWeaponConverter : CommandArgumentConverter<ArtifactWeapon
 
         if (!WeaponDb.ArtifactWeaponPrefabToAbilityMods.TryGetValue(weapon.PrefabName, out var abilityMods))
         {
-            throw ctx.Error($"Weapon variation <color=white>{variation}</color> does not exist for <color=white>{weapon.Name}</color>.");
+            throw ctx.Error(
+                $"Weapon variation <color=white>{variation}</color> does not exist for <color=white>{weapon.Name}</color>.");
         }
 
         var artifactWeapon = ArtifactWeaponModel.FromWeaponModel(weapon);
-        
+
         artifactWeapon.Variation = variation;
         artifactWeapon.SpellMod1 = abilityMods.Mod1;
         artifactWeapon.SpellMod2 = abilityMods.Mod2;
