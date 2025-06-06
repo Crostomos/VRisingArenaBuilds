@@ -1,4 +1,4 @@
-﻿using ArenaBuilds.Data;
+﻿using ArenaBuilds.Data.Db;
 using ArenaBuilds.Extensions;
 using ArenaBuilds.Models.CommandArguments;
 using VampireCommandFramework;

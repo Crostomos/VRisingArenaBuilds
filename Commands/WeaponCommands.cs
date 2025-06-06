@@ -1,4 +1,4 @@
-﻿using ArenaBuilds.Data;
+﻿using ArenaBuilds.Data.Db;
 using ArenaBuilds.Extensions;
 using ArenaBuilds.Helpers;
 using ArenaBuilds.Models;
@@ -22,7 +22,7 @@ internal class WeaponCommands
         {
             throw ctx.Error("Stat mods must be different.");
         }
-        
+
         var weaponData = new WeaponData
         {
             Name = weapon.PrefabName,
@@ -51,7 +51,7 @@ internal class WeaponCommands
         {
             throw ctx.Error("Stat mods must be different.");
         }
-        
+
         var weaponData = new WeaponData
         {
             Name = weapon.PrefabName,
@@ -64,7 +64,7 @@ internal class WeaponCommands
             StatMod3 = statMod3.PrefabName,
             StatMod3Power = 1
         };
-    
+
         WeaponHelper.CreateAndGiveArtifactWeapon(ctx.User.Index, ctx.Event.SenderCharacterEntity, weaponData);
         ctx.Reply($"Artifact weapon <color=white>{weapon.Name}{weapon.Variation}</color> acquired.");
     }
@@ -74,13 +74,13 @@ internal class WeaponCommands
     {
         ctx.Reply($"Weapons :\n{WeaponDb.Weapons.ToFormattedList()}");
     }
-    
+
     [Command("list_statmod", "listsm", description: "List stats mods", adminOnly: false)]
     public static void ListStatModsCommand(ChatCommandContext ctx)
     {
         ctx.Reply($"Stat Mods :\n{StatModDb.Mods.ToFormattedList(showName: true)}");
     }
-    
+
     [Command("list_infuse", "listi", description: "List infuses", adminOnly: false)]
     public static void ListInfuseCommand(ChatCommandContext ctx)
     {

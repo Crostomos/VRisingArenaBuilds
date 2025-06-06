@@ -1,4 +1,4 @@
-﻿using ArenaBuilds.Data;
+﻿using ArenaBuilds.Data.Db;
 using ArenaBuilds.Extensions;
 using ArenaBuilds.Models.CommandArguments;
 using VampireCommandFramework;
@@ -13,7 +13,7 @@ internal class ArtifactWeaponConverter : CommandArgumentConverter<ArtifactWeapon
         var lastChar = input[^1];
         if (char.IsDigit(lastChar))
         {
-            input = input.Substring(0, input.Length - 1);
+            input = input[..^1];
             variation = int.Parse(lastChar.ToString());
         }
 
@@ -31,7 +31,6 @@ internal class ArtifactWeaponConverter : CommandArgumentConverter<ArtifactWeapon
         }
 
         var artifactWeapon = ArtifactWeaponModel.FromWeaponModel(weapon);
-
         artifactWeapon.Variation = variation;
         artifactWeapon.SpellMod1 = abilityMods.Mod1;
         artifactWeapon.SpellMod2 = abilityMods.Mod2;
