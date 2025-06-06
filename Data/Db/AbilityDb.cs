@@ -25,7 +25,7 @@ internal class AbilityDb : IDatabase
             foreach (var prop in matchingProperties)
             {
                 var abilityName = prop.Name.Split("_")[2];
-                Abilities.Add(new AbilityModel(abilityName, prop.Name, []));
+                Abilities.Add(new AbilityModel(abilityName, prop.Name, [abilityName.Replace(" ", "")]));
             }
         }
 
