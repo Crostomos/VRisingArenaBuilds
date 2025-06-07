@@ -7,7 +7,7 @@ using VampireCommandFramework;
 
 namespace ArenaBuilds.Commands.ManualConverters;
 
-public class SpellModManualConverter
+internal class SpellModManualConverter
 {
     public static string GetSpellMod(ChatCommandContext ctx, AbilityModel ability, int spellModIndex)
     {

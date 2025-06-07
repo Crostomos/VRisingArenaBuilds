@@ -10,7 +10,7 @@ namespace ArenaBuilds.Commands;
 
 public class JewelCommands
 {
-    [Command("give_jewel", "givej", description: "Give a custom jewel", adminOnly: false)]
+    [Command("give_jewel", "givej", usage:"rite 124", description: "Give a custom jewel", adminOnly: false)]
     public static void GiveJewelCommand(
         ChatCommandContext ctx,
         AbilityModel ability,
@@ -57,7 +57,7 @@ public class JewelCommands
         if (UtilsHelper.TryGetPrefabGuid(ability.PrefabName, out var guid))
         {
             JewelHelper.CreateAndEquip(ctx.User, guid, jewelData);
-            ctx.Reply($"Jewel for <color=white>{ability.Name}</color> created.");
+            ctx.Reply($"Jewel for <color=white>{ability.Name}</color> equipped.");
         }
         else
         {
@@ -66,7 +66,7 @@ public class JewelCommands
     }
 
 
-    [Command("list_spellmod", "listsp", description: "List spell mod for abiltiy", adminOnly: false)]
+    [Command("list_spellmod", "listsp", usage:"foutain", description: "List spell mod for abiltiy", adminOnly: false)]
     public static void ListSpellModCommand(ChatCommandContext ctx, AbilityModel ability)
     {
         ctx.Reply(

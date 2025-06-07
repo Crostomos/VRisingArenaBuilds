@@ -9,7 +9,7 @@ namespace ArenaBuilds.Commands;
 
 internal class WeaponCommands
 {
-    [Command("give_legendary", "giveleg", description: "Give a legendary weapon", adminOnly: false)]
+    [Command("give_legendary", "giveleg", usage:"reaper storm PP AS PCC", description: "Give a legendary weapon", adminOnly: false)]
     public static void GiveLegendaryWeaponCommand(
         ChatCommandContext ctx,
         WeaponModel weapon,
@@ -39,7 +39,7 @@ internal class WeaponCommands
         ctx.Reply($"Legendary weapon <color=white>{weapon.Name}</color> acquired.");
     }
 
-    [Command("give_artifact", "giveart", description: "Give an artifact weapon", adminOnly: false)]
+    [Command("give_artifact", "giveart", usage:"slashers2 AS PCC MS", description: "Give an artifact weapon", adminOnly: false)]
     public static void GiveArtifactWeaponCommand(
         ChatCommandContext ctx,
         ArtifactWeaponModel weapon,
