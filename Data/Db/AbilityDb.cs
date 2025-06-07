@@ -15,19 +15,36 @@ internal class AbilityDb : IDatabase
     {
         foreach (var spellSchool in SpellSchoolDb.SpellSchools)
         {
-            var regex = new Regex($"^AB_{spellSchool}_[a-zA-Z]+_AbilityGroup$", RegexOptions.IgnoreCase);
+            List<string> regexList =
+            [
+                $"^AB_{spellSchool}_[a-zA-Z]+_AbilityGroup$",
+                $"^AB_{spellSchool}_[a-zA-Z]+_Group$"
+            ];
 
-            var matchingProperties = typeof(Prefabs)
-                .GetFields(BindingFlags.Static | BindingFlags.Public)
-                .Where(prop => regex.IsMatch(prop.Name) && prop.Name.Count(c => c == '_') == 3)
-                .ToList();
-
-            foreach (var prop in matchingProperties)
+            foreach (var item in regexList)
             {
-                var abilityName = prop.Name.Split("_")[2];
-                Abilities.Add(new AbilityModel(abilityName, prop.Name, [abilityName.Replace(" ", "")]));
+                var regex = new Regex(item, RegexOptions.IgnoreCase);
+
+                var matchingProperties = typeof(Prefabs)
+                    .GetFields(BindingFlags.Static | BindingFlags.Public)
+                    .Where(prop => regex.IsMatch(prop.Name) && prop.Name.Count(c => c == '_') == 3)
+                    .ToList();
+
+                foreach (var prop in matchingProperties)
+                {
+                    var abilityName = prop.Name.Split("_")[2];
+                    Abilities.Add(new AbilityModel(
+                        abilityName,
+                        prop.Name,
+                        [abilityName.Replace(" ", "")],
+                        spellSchool));
+                }
             }
         }
+
+        // add special cases
+        Abilities.Add(new AbilityModel("FrostBarrier", "AB_FrostBarrier_AbilityGroup", ["FrostBarrier"], "Frost"));
+        Abilities.Add(new AbilityModel("FrostCone", "AB_FrostCone_AbilityGroup", ["FrostCone"], "Frost"));
 
         Plugin.Logger.LogInfo("AbilityDatabase initialized.");
     }
