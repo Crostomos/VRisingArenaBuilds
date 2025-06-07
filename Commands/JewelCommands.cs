@@ -1,5 +1,4 @@
-﻿using System.Linq;
-using ArenaBuilds.Commands.ManualConverters;
+﻿using ArenaBuilds.Commands.ManualConverters;
 using ArenaBuilds.Extensions;
 using ArenaBuilds.Helpers;
 using ArenaBuilds.Models;
@@ -14,23 +13,13 @@ public class JewelCommands
     public static void GiveJewelCommand(
         ChatCommandContext ctx,
         AbilityModel ability,
-        int spellMod1Index,
-        int spellMod2Index = 0,
-        int spellMod3Index = 0,
-        int spellMod4Index = 0)
+        string spellModsIndexes)
     {
-        var values = new[]
-        {
-            spellMod1Index,
-            spellMod2Index,
-            spellMod3Index,
-            spellMod4Index
-        }.Where(v => v != 0).ToList();
-
-        if (values.Distinct().Count() != values.Count)
-        {
-            throw ctx.Error("Spell mods must be different.");
-        }
+        var indexes = IndexesManualConverter.ToIndexesList(ctx, spellModsIndexes, 4);
+        var spellMod1Index = indexes[0];
+        var spellMod2Index = indexes[1];
+        var spellMod3Index = indexes[2];
+        var spellMod4Index = indexes[3];
 
         var spellMod1 = SpellModManualConverter.GetSpellMod(ctx, ability, spellMod1Index);
         var spellMod2 = spellMod2Index != 0

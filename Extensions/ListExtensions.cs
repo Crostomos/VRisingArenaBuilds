@@ -14,7 +14,7 @@ public static class ListExtensions
         var index = 1;
         foreach (var item in list)
         {
-            result.AppendLine($"{index} : {item}");
+            result.AppendLine($"{index.ToBase36()} : {item}");
             index++;
         }
 

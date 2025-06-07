@@ -2,6 +2,7 @@
 using System.Linq;
 using System.Text.RegularExpressions;
 using ArenaBuilds.Data.Db;
+using ArenaBuilds.Extensions;
 using ArenaBuilds.Models.CommandArguments;
 using VampireCommandFramework;
 
@@ -19,7 +20,7 @@ internal class SpellModManualConverter
                 return mod;
             }
             
-            throw ctx.Error($"Unknown spell mod index <color=white>{spellModIndex}</color>.");
+            throw ctx.Error($"Unknown spell mod index <color=white>{spellModIndex.ToBase36()}</color>.");
         }
 
         throw ctx.Error("Ability have no spell mods.");
