@@ -18,8 +18,8 @@ internal class ArtifactWeaponConverter : CommandArgumentConverter<ArtifactWeapon
         }
 
         var weapon =
-            WeaponDb.Weapons.ContainsCommandArgument(input) as WeaponModel ??
-            (WeaponDb.Weapons.EqualsCommandArgument(input) as WeaponModel ??
+            WeaponDb.Weapons.EqualsCommandArgument(input) as WeaponModel ??
+            (WeaponDb.Weapons.ContainsCommandArgument(input) as WeaponModel ??
              throw ctx.Error($"Unknown weapon <color=white>{input}</color>."));
 
         weapon.SetArtifactPrefab(variation: variation);
