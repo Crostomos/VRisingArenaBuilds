@@ -12,7 +12,8 @@ internal class SpellSchoolDb : IDatabase
         "Frost",
         "Illusion",
         "Storm",
-        "Unholy"
+        "Unholy",
+        "Vampire"
     ];
 
     public void Init()
