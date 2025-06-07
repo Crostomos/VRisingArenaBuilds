@@ -8,6 +8,19 @@ namespace ArenaBuilds.Extensions;
 
 public static class ListExtensions
 {
+    public static string ToIndexedList(this IEnumerable<string> list)
+    {
+        var result = new StringBuilder();
+        var index = 1;
+        foreach (var item in list)
+        {
+            result.AppendLine($"{index} : {item}");
+            index++;
+        }
+
+        return result.ToString();
+    }
+    
     public static string ToFormattedList(this IEnumerable<string> list)
     {
         var result = new StringBuilder();
