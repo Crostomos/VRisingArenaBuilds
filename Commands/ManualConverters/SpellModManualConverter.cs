@@ -23,7 +23,7 @@ internal class SpellModManualConverter
             throw ctx.Error($"Unknown spell mod index <color=white>{spellModIndex.ToBase36()}</color>.");
         }
 
-        throw ctx.Error("Ability have no spell mods.");
+        throw ctx.Error($"Ability <color=white>{ability.Name}</color> have no spell mods.");
     }
     
     public static List<string> GetSpellModNameList(ChatCommandContext ctx, AbilityModel ability)

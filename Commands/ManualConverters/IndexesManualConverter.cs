@@ -28,7 +28,7 @@ internal class IndexesManualConverter
         // fix list size
         if (fixedInput.Length > length)
         {
-            ctx.Reply($"Only {length} indexes are required. Keeping <color=white>{fixedInput[..length]}</color>).");
+            ctx.Reply($"Only {length} indexes are required. Keeping <color=white>{fixedInput[..length]}</color>.");
             fixedInput = fixedInput.Substring(0, length);
         }
 
