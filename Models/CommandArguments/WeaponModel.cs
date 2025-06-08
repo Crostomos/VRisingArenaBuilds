@@ -3,7 +3,7 @@ using ArenaBuilds.Models.Interfaces;
 
 namespace ArenaBuilds.Models.CommandArguments;
 
-public class WeaponModel(string name, string basePrefabName, List<string> argNames) : ICommandArgument
+internal class WeaponModel(string name, string basePrefabName, List<string> argNames) : ICommandArgument
 {
     public string Name { get; set; } = name;
 

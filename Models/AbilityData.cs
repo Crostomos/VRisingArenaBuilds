@@ -2,7 +2,7 @@
 
 namespace ArenaBuilds.Models;
 
-public class AbilityData : IAbilityData
+internal class AbilityData : IAbilityData
 {
     public string Name { get; set; } = string.Empty;
 

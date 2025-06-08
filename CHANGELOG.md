@@ -1,10 +1,13 @@
 `0.2.10-dev`
-- New commands to give artifact/legendary weapon.
-- `give_build` : SpellMod1 and spellMod2 will be automatically filled for artifact weapons based on weapon variation.
-- Added `ClearInventory` option (clear inventory before giving build if true).
-- Added `SecondaryBuffIndex` option to chose secondary blood bonus.
-- Added `FillBloodPool` option.
-- Added `GiveBloodPotion` option.
+- Introduced new commands to grant artifact and legendary weapons.
+- Added support for giving jewels with custom modifiers.
+- Updated `give_build`:
+    - `SpellMod1` and `SpellMod2` are now automatically assigned for artifact weapons based on weapon variation.
+- Added new build options :
+  - `ClearInventory`: Clears inventory before applying the build.
+  - `SecondaryBuffIndex`: Select the secondary blood bonus.
+  - `FillBloodPool`: Fills the blood pool.
+  - `GiveBloodPotion`: Grants a blood potion.
 
 `0.1.12`
 - Fixed nullable errors during JSON deserialization.

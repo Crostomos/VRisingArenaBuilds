@@ -1,6 +1,6 @@
 ﻿namespace ArenaBuilds.Models;
 
-public class BloodData
+internal class BloodData
 {
     public bool GiveBloodPotion { get; set; } = false;
 

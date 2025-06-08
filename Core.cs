@@ -8,7 +8,7 @@ namespace ArenaBuilds;
 
 internal class Core
 {
-    public static World Server => GetWorld("Server") ?? throw new Exception("There is no Server world.");
+    private static World Server => GetWorld("Server") ?? throw new Exception("There is no Server world.");
 
     public static PrefabCollectionSystem PrefabCollectionSystem => Server.GetExistingSystemManaged<PrefabCollectionSystem>();
 

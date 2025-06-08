@@ -1,6 +1,6 @@
 ﻿namespace ArenaBuilds.Models;
 
-public class JewelData
+internal class JewelData
 {
     public string SpellMod1 { get; set; } = string.Empty;
 

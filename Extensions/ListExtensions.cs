@@ -6,8 +6,21 @@ using ArenaBuilds.Models.Interfaces;
 
 namespace ArenaBuilds.Extensions;
 
-public static class ListExtensions
+internal static class ListExtensions
 {
+    public static string ToIndexedList(this IEnumerable<string> list)
+    {
+        var result = new StringBuilder();
+        var index = 1;
+        foreach (var item in list)
+        {
+            result.AppendLine($"{index.ToBase36()} : {item}");
+            index++;
+        }
+
+        return result.ToString();
+    }
+
     public static string ToFormattedList(this IEnumerable<string> list)
     {
         var result = new StringBuilder();

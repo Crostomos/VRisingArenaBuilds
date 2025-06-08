@@ -1,6 +1,6 @@
 ﻿namespace ArenaBuilds.Models;
 
-public class BuildSettings
+internal class BuildSettings
 {
     public bool ClearInventory { get; set; }
 }

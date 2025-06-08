@@ -3,7 +3,7 @@ using ArenaBuilds.Models.Interfaces;
 
 namespace ArenaBuilds.Models.CommandArguments;
 
-public class StatModModel(string name, string prefabName, List<string> argNames) : ICommandArgument
+internal class StatModModel(string name, string prefabName, List<string> argNames) : ICommandArgument
 {
     public string Name { get; set; } = name;
 

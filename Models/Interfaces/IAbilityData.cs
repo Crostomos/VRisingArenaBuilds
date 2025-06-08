@@ -1,6 +1,6 @@
 ﻿namespace ArenaBuilds.Models.Interfaces;
 
-public interface IAbilityData
+internal interface IAbilityData
 {
     public string Name { get; set; }
 }

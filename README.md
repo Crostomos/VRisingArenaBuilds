@@ -3,10 +3,10 @@
 # ArenaBuilds
 
 **ArenaBuilds** is a lightweight, server-side mod for *V Rising* that allows players to instantly equip ready-to-use PvP builds via simple in-game commands.
-It’s designed to streamline arena practice and fast-paced duels without the need to manually gear up.
+It also provides commands to give yourself weapons or jewels to complete your build.
 
-Although this mod is primarily designed for arena use, it can also be leveraged to create highly specialized builds for PvE or other purposes.
-
+This mod is designed to streamline arena practice and fast-paced duels without the need to manually gear up.
+Although it's primarily designed for arena use, it can also be leveraged to create highly specialized builds for PvE or other purposes.
 ---
 
 ## 🔧 Features
@@ -22,7 +22,8 @@ Although this mod is primarily designed for arena use, it can also be leveraged 
 - Builds are fully customizable via the `builds.json` files
   - A list of valid `prefabName` values is available here: [VRising DB](https://vrising.gaming.tools)
   - For a comprehensive list of prefabName values, particularly those related to StatMod and SpellMod, refer to: [VRising Mods Wiki](https://wiki.vrisingmods.com/prefabs/Spell)
-- Dedicated command to create a weapon with personalized attributes
+  > Fun Fact : You can equip ability not present in the spell book, for example `AB_Blood_VampiricCurse_AbilityGroup`
+- Dedicated command to create a weapon or jewel with personalized attributes
 
 ---
 

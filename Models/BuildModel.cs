@@ -2,10 +2,10 @@
 
 namespace ArenaBuilds.Models;
 
-public class BuildModel
+internal class BuildModel
 {
     public BuildSettings Settings { get; set; } = new();
-    
+
     public BloodData Blood { get; set; } = new();
 
     public List<BuildItemData> Items { get; set; } = [];

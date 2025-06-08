@@ -2,7 +2,7 @@
 using ArenaBuilds.Models.CommandArguments;
 using ArenaBuilds.Models.Interfaces;
 
-namespace ArenaBuilds.Data;
+namespace ArenaBuilds.Data.Db;
 
 internal class WeaponDb : IDatabase
 {

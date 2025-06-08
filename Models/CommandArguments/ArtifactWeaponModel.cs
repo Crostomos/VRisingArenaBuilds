@@ -2,7 +2,7 @@
 
 namespace ArenaBuilds.Models.CommandArguments;
 
-public class ArtifactWeaponModel(string name, string basePrefabName, List<string> argNames)
+internal class ArtifactWeaponModel(string name, string basePrefabName, List<string> argNames)
     : WeaponModel(name, basePrefabName, argNames)
 {
     public string SpellMod1 { get; set; } = string.Empty;

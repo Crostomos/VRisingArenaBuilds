@@ -2,7 +2,7 @@
 
 namespace ArenaBuilds.Models.Interfaces;
 
-public interface ICommandArgument
+internal interface ICommandArgument
 {
     public string Name { get; set; }
 
