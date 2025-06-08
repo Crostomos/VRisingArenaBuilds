@@ -29,17 +29,19 @@ Although it's primarily designed for arena use, it can also be leveraged to crea
 
 ## 💬 Commands
 
-| Command                                                              | ShortHand     | Description                                   |
-| -------------------------------------------------------------------- | ------------- | --------------------------------------------- |
-| `.give_build <class>`                                                | `.giveb`      | Equips the specified build                    |
-| `.give_legendary <weapon> <infuse> <statmod1> <statmod2> <statmod3>` | `.giveleg`    | Give legendary weapon                         |
-| `.give_artifact <weapon> <statmod1> <statmod2> <statmod3>`           | `.giveart`    | Give artifact weapon                          |
-| `.list_build`                                                        | `.listb`      | Displays the list of available builds         |
-| `.list_weapon`                                                       | `.listw`      | Displays the list of available weapons        |
-| `.list_statmod`                                                      | `.listsm`     | Displays the list of available stat mods      |
-| `.list_infuse`                                                       | `.listi`      | Displays the list of available infuses        |
-| `.clear_build`                                                       | `.clearb`     | Clears your inventory, abilities and passives |
-| `.unlock_all`                                                        | `.unlock_all` | Unlock abilities, passives...                 |
+| Command                                                              | ShortHand     | Description                                                 |
+| -------------------------------------------------------------------- | ------------- | ----------------------------------------------------------- |
+| `.give_build <class>`                                                | `.giveb`      | Equips the specified build                                  |
+| `.give_legendary <weapon> <infuse> <statmod1> <statmod2> <statmod3>` | `.giveleg`    | Give legendary weapon                                       |
+| `.give_artifact <weapon> <statmod1> <statmod2> <statmod3>`           | `.giveart`    | Give artifact weapon                                        |
+| `.give_jewel <ability> <spellModIndexes>`                            | `.givej`      | Give jewel with target modifiers                            |
+| `.list_build`                                                        | `.listb`      | Displays the list of available builds                       |
+| `.list_weapon`                                                       | `.listw`      | Displays the list of available weapons                      |
+| `.list_statmod`                                                      | `.listsm`     | Displays the list of available stat mods                    |
+| `.list_infuse`                                                       | `.listi`      | Displays the list of available infuses                      |
+| `.list_spellmod` <ability>                                           | `.listsp`     | Displays the list of available spell mod for target ability |
+| `.clear_build`                                                       | `.clearb`     | Clears your inventory, abilities and passives               |
+| `.unlock_all`                                                        | `.unlock_all` | Unlock abilities, passives...                               |
 
 ---
 
@@ -90,6 +92,7 @@ Although it's primarily designed for arena use, it can also be leveraged to crea
 ## 🙌 Credits
 
 - Big thanks to the [V Rising Modding Community](https://vrisingmods.com/) for documentation and open-source mods.
+    - Especially **nova** on Discord, for his amazing feedback and bug reports on weapon commands!
 - Special thanks to [Odjit](https://github.com/Odjit) for the **KindredExtract** mod, which was a helpful reference.
 
 ---
