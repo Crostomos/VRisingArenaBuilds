@@ -2,7 +2,7 @@
 
 namespace ArenaBuilds.Data;
 
-public static class Prefabs
+internal static class Prefabs
 {
 	public static readonly PrefabGUID _VM_VBlood_TEMPLATE = new PrefabGUID(2075390218);
 	public static readonly PrefabGUID _10x6RectangularTablesModularBuildMenuGroup = new PrefabGUID(-375280343);

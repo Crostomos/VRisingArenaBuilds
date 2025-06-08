@@ -5,7 +5,7 @@ using VampireCommandFramework;
 
 namespace ArenaBuilds.Commands.Converters;
 
-public class AbilityConverter : CommandArgumentConverter<AbilityModel>
+internal class AbilityConverter : CommandArgumentConverter<AbilityModel>
 {
     public override AbilityModel Parse(ICommandContext ctx, string input)
     {

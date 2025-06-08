@@ -6,7 +6,7 @@ using ArenaBuilds.Models.Interfaces;
 
 namespace ArenaBuilds.Data.Db;
 
-public class SpellModDb : IDatabase
+internal class SpellModDb : IDatabase
 {
     public static List<string> Mods = [];
 

@@ -3,7 +3,7 @@ using ArenaBuilds.Models.Interfaces;
 
 namespace ArenaBuilds.Models.CommandArguments;
 
-public class AbilityModel(string name, string prefabName, List<string> argNames, string spellSchool) : ICommandArgument
+internal class AbilityModel(string name, string prefabName, List<string> argNames, string spellSchool) : ICommandArgument
 {
     public string Name { get; set; } = name;
     

@@ -3,7 +3,7 @@ using ArenaBuilds.Models.Interfaces;
 
 namespace ArenaBuilds.Data.Db;
 
-public class AbilityToSpellModDb : IDatabase
+internal class AbilityToSpellModDb : IDatabase
 {
     public static Dictionary<string, List<string>> AbilityToSpellMod = new()
     {

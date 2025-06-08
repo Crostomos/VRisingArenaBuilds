@@ -7,7 +7,7 @@ using VampireCommandFramework;
 
 namespace ArenaBuilds.Commands;
 
-public class JewelCommands
+internal class JewelCommands
 {
     [Command("give_jewel", "givej", usage:"rite 124", description: "Give a custom jewel", adminOnly: false)]
     public static void GiveJewelCommand(

@@ -6,7 +6,7 @@ using ArenaBuilds.Models.Interfaces;
 
 namespace ArenaBuilds.Extensions;
 
-public static class ListExtensions
+internal static class ListExtensions
 {
     public static string ToIndexedList(this IEnumerable<string> list)
     {
@@ -20,7 +20,7 @@ public static class ListExtensions
 
         return result.ToString();
     }
-    
+
     public static string ToFormattedList(this IEnumerable<string> list)
     {
         var result = new StringBuilder();

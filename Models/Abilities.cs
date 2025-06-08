@@ -1,6 +1,6 @@
 ﻿namespace ArenaBuilds.Models;
 
-public class Abilities
+internal class Abilities
 {
     public AbilityData Travel { get; set; } = new();
 

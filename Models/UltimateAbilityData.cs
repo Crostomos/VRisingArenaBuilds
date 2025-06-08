@@ -2,7 +2,7 @@
 
 namespace ArenaBuilds.Models;
 
-public class UltimateAbilityData : IAbilityData
+internal class UltimateAbilityData : IAbilityData
 {
     public string Name { get; set; } = string.Empty;
 }
