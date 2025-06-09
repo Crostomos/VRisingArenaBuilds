@@ -92,7 +92,7 @@ Although it's primarily designed for arena use, it can also be leveraged to crea
 ## 🙌 Credits
 
 - Big thanks to the [V Rising Modding Community](https://vrisingmods.com/) for documentation and open-source mods.
-    - Especially **nova** on Discord, for his amazing feedback and bug reports on weapon commands!
+    - Especially **nova** on Discord, for his amazing feedback and bug reports on weapon & jewel commands!
 - Special thanks to [Odjit](https://github.com/Odjit) for the **KindredExtract** mod, which was a helpful reference.
 
 ---
