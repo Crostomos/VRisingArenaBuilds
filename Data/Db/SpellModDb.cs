@@ -10,6 +10,40 @@ internal class SpellModDb : IDatabase
 {
     public static List<string> Mods = [];
 
+    private static readonly List<string> OutdatedMods =
+    [
+        "SpellMod_BloodRage_IncreaseArea",
+        "SpellMod_BloodRite_BonusDaggers",
+        "SpellMod_BloodRite_DaggerBonusDamage",
+        "SpellMod_BloodRite_ConsumeLeechHealXTimes",
+        "SpellMod_BloodRite_ConsumeLeechReduceCooldownXTimes",
+        "SpellMod_Shadowbolt_ForkOnHit",
+        "SpellMod_VeilOfBlood_BloodNova",
+        "SpellMod_VeilOfBlood_BloodNovaArea",
+        "SpellMod_BloodFountain_ConsumeLeechBonusDamage",
+        "SpellMod_BloodFountain_IncreaseArea",
+        "SpellMod_CorruptedSkull_DetonateSkeleton",
+        "SpellMod_VeilOfBones_SpawnSkeleton",
+        "SpellMod_DeathKnight_BonusDamageBelowTreshhold",
+        "SpellMod_DeathKnight_SkeletonMageOnDeath",
+        "SpellMod_Soulburn_ConsumeSkeletonEmpower",
+        "SpellMod_Soulburn_ConsumeSkeletonHeal",
+        "SpellMod_Soulburn_IncreasedSilenceDuration",
+        "SpellMod_Soulburn_SpellMod_Soulburn_ReduceCooldownOnSilence",
+        "SpellMod_ChainsOfDeath_Explosion",
+        "SpellMod_PhantomAegis_ConsumeWeakenIntoFear",
+        "SpellMod_VeilOfIllusion_IllusionProjectileDamage",
+        "SpellMod_IceNova_IncreaseRadius",
+        "SpellMod_ColdSnap_Immaterial",
+        "SpellMod_VeilOfFrost_BonusDamage",
+        "SpellMod_FrostCone_FrostWave",
+        "SpellMod_Discharge_Immaterial",
+        "SpellMod_Discharge_IncreaseStormShieldDuration",
+        "SpellMod_Cyclone_IncreaseLifetime",
+        "SpellMod_Cyclone_ReducedDamageReduction",
+        "SpellMod_VeilOfStorm_RecastIllusionDash",
+    ];
+
     // Shared
     public const string ApplyFadingSnareLong = "SpellMod_Shared_ApplyFadingSnare_Long";
     public const string ApplyFadingSnareMedium = "SpellMod_Shared_ApplyFadingSnare_Medium";
@@ -86,7 +120,7 @@ internal class SpellModDb : IDatabase
                 .Where(prop => regex.IsMatch(prop.Name))
                 .ToList();
 
-            foreach (var prop in matchingProperties)
+            foreach (var prop in matchingProperties.Where(prop => !OutdatedMods.Contains(prop.Name)))
             {
                 Mods.Add(prop.Name);
             }
