@@ -47,9 +47,6 @@ internal class AbilityToSpellModDb : IDatabase
                 SpellModDb.ChaosConsumeIgniteAgonizingFlames,
                 SpellModDb.CooldownMedium,
                 SpellModDb.ProjectileIncreaseRangeMedium,
-                // "SpellMod_Chaos_Aftershock_BonusDamage",
-                // "SpellMod_Chaos_Aftershock_InflictSlowOnProjectile",
-                // "SpellMod_Chaos_Aftershock_KnockbackArea"
             ]
         },
         {
@@ -122,7 +119,8 @@ internal class AbilityToSpellModDb : IDatabase
             "MistTrance",
             [
                 SpellModDb.IncreaseMoveSpeedDuringChannelHigh, SpellModDb.KnockBackOnHitMedium,
-                SpellModDb.TravelBuffIncreaseRangeMedium
+                SpellModDb.TravelBuffIncreaseRangeMedium,
+                "SpellMod_MIstTrance_DamageOnAttack"
             ]
         },
         {
