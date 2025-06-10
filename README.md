@@ -2,11 +2,12 @@
 
 # ArenaBuilds
 
-**ArenaBuilds** is a lightweight, server-side mod for *V Rising* that allows players to instantly equip ready-to-use PvP builds via simple in-game commands.
+**ArenaBuilds** is a lightweight, server-side mod for *V Rising* that allows players to instantly equip ready-to-use PvP builds via simple in-game commands.  
 It also provides commands to give yourself weapons or jewels to complete your build.
 
-This mod is designed to streamline arena practice and fast-paced duels without the need to manually gear up.
+This mod is designed to streamline arena practice and fast-paced duels without the need to manually gear up.  
 Although it's primarily designed for arena use, it can also be leveraged to create highly specialized builds for PvE or other purposes.
+
 ---
 
 ## 🔧 Features
