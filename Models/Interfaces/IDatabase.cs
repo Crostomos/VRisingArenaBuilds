@@ -1,6 +1,6 @@
 ﻿namespace ArenaBuilds.Models.Interfaces;
 
-public interface IDatabase
+internal interface IDatabase
 {
     void Init();
 }

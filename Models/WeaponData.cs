@@ -1,6 +1,6 @@
 ﻿namespace ArenaBuilds.Models;
 
-public class WeaponData
+internal class WeaponData
 {
     public string Name { get; set; } = string.Empty;
 

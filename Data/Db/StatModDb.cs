@@ -1,9 +1,8 @@
 ﻿using System.Collections.Generic;
-using ArenaBuilds.Models;
 using ArenaBuilds.Models.CommandArguments;
 using ArenaBuilds.Models.Interfaces;
 
-namespace ArenaBuilds.Data;
+namespace ArenaBuilds.Data.Db;
 
 internal class StatModDb : IDatabase
 {

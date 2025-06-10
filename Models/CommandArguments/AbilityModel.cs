@@ -3,9 +3,11 @@ using ArenaBuilds.Models.Interfaces;
 
 namespace ArenaBuilds.Models.CommandArguments;
 
-internal class InfuseSpellModModel(string name, string prefabName, List<string> argNames) : ICommandArgument
+internal class AbilityModel(string name, string prefabName, List<string> argNames, string spellSchool) : ICommandArgument
 {
     public string Name { get; set; } = name;
+    
+    public string SpellSchool { get; set; } = spellSchool;
 
     public string PrefabName { get; set; } = prefabName;
 

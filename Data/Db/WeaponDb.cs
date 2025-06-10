@@ -2,26 +2,26 @@
 using ArenaBuilds.Models.CommandArguments;
 using ArenaBuilds.Models.Interfaces;
 
-namespace ArenaBuilds.Data;
+namespace ArenaBuilds.Data.Db;
 
 internal class WeaponDb : IDatabase
 {
     public static List<WeaponModel> Weapons =
     [
-        new("Sword", "Sword", []),
-        new("Axe", "Axe", []),
-        new("Claws", "Claws", []),
-        new("Crossbow", "Crossbow", []),
-        new("Daggers", "Daggers", []),
-        new("Great Sword", "GreatSword", []),
-        new("Long Bow", "Longbow", []),
-        new("Mace", "Mace", []),
-        new("Pistols", "Pistols", []),
-        new("Reaper", "Reaper", []),
-        new("Slashers", "Slashers", []),
-        new("Spear", "Spear", []),
-        new("Twin Blades", "TwinBlades", []),
-        new("Whip", "Whip", [])
+        new("Sword", "Sword", ["Sword"]),
+        new("Axe", "Axe", ["Axe"]),
+        new("Claws", "Claws", ["Claws"]),
+        new("Crossbow", "Crossbow", ["Crossbow"]),
+        new("Daggers", "Daggers", ["Daggers"]),
+        new("Great Sword", "GreatSword", ["GreatSword"]),
+        new("Long Bow", "Longbow", ["LongBow"]),
+        new("Mace", "Mace", ["Mace"]),
+        new("Pistols", "Pistols", ["Pistols"]),
+        new("Reaper", "Reaper", ["Reaper"]),
+        new("Slashers", "Slashers", ["Slashers"]),
+        new("Spear", "Spear", ["Spear"]),
+        new("Twin Blades", "TwinBlades", ["TwinBlades"]),
+        new("Whip", "Whip", ["Whip"]),
     ];
 
     public static readonly Dictionary<string, (string Mod1, string Mod2)> ArtifactWeaponPrefabToAbilityMods = new()
@@ -90,11 +90,6 @@ internal class WeaponDb : IDatabase
 
     public void Init()
     {
-        foreach (var weapon in Weapons)
-        {
-            weapon.ArgNames.Add(weapon.Name.Replace(" ", ""));
-        }
-
         Plugin.Logger.LogInfo("WeaponsDatabase initialized.");
     }
 }

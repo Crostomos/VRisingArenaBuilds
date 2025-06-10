@@ -1,6 +1,6 @@
 ﻿namespace ArenaBuilds.Models;
 
-public class PassiveSpells
+internal class PassiveSpells
 {
     public string PassiveSpell1 { get; set; } = string.Empty;
 
