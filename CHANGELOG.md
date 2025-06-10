@@ -1,4 +1,4 @@
-`0.2.10-dev`
+`0.2.10`
 - Introduced new commands to grant artifact and legendary weapons.
 - Added support for giving jewels with custom modifiers.
 - Updated `give_build`:
