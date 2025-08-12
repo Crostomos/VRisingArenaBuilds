@@ -30,19 +30,19 @@ Although it's primarily designed for arena use, it can also be leveraged to crea
 
 ## 💬 Commands
 
-| Command                                                              | ShortHand     | Description                                                 |
-| -------------------------------------------------------------------- | ------------- | ----------------------------------------------------------- |
-| `.give_build <class>`                                                | `.giveb`      | Equips the specified build                                  |
-| `.give_legendary <weapon> <infuse> <statmod1> <statmod2> <statmod3>` | `.giveleg`    | Give legendary weapon                                       |
-| `.give_artifact <weapon> <statmod1> <statmod2> <statmod3>`           | `.giveart`    | Give artifact weapon                                        |
-| `.give_jewel <ability> <spellModIndexes>`                            | `.givej`      | Give jewel with target modifiers                            |
-| `.list_build`                                                        | `.listb`      | Displays the list of available builds                       |
-| `.list_weapon`                                                       | `.listw`      | Displays the list of available weapons                      |
-| `.list_statmod`                                                      | `.listsm`     | Displays the list of available stat mods                    |
-| `.list_infuse`                                                       | `.listi`      | Displays the list of available infuses                      |
-| `.list_spellmod` <ability>                                           | `.listsp`     | Displays the list of available spell mod for target ability |
-| `.clear_build`                                                       | `.clearb`     | Clears your inventory, abilities and passives               |
-| `.unlock_all`                                                        | `.unlock_all` | Unlock abilities, passives...                               |
+| Command                                                                       | ShortHand     | Description                                                 |
+| ----------------------------------------------------------------------------- | ------------- | ----------------------------------------------------------- |
+| `.give_build <class> <player>`                                                | `.giveb`      | Equips the specified build                                  |
+| `.give_legendary <weapon> <infuse> <statmod1> <statmod2> <statmod3> <player>` | `.giveleg`    | Give legendary weapon                                       |
+| `.give_artifact <weapon> <statmod1> <statmod2> <statmod3> <player>`           | `.giveart`    | Give artifact weapon                                        |
+| `.give_jewel <ability> <spellModIndexes> <player>`                            | `.givej`      | Give jewel with target modifiers                            |
+| `.list_build`                                                                 | `.listb`      | Displays the list of available builds                       |
+| `.list_weapon`                                                                | `.listw`      | Displays the list of available weapons                      |
+| `.list_statmod`                                                               | `.listsm`     | Displays the list of available stat mods                    |
+| `.list_infuse`                                                                | `.listi`      | Displays the list of available infuses                      |
+| `.list_spellmod` <ability>                                                    | `.listsp`     | Displays the list of available spell mod for target ability |
+| `.clear_build <player>`                                                       | `.clearb`     | Clears your inventory, abilities and passives               |
+| `.unlock_all <player>`                                                        | `.unlock_all` | Unlock abilities, passives...                               |
 
 ---
 
@@ -77,6 +77,7 @@ Although it's primarily designed for arena use, it can also be leveraged to crea
 
 ## 🐞 Known Issues
 
+- `give_jewel` : Knockback spell mod doesn't work.
 - The `.clear_build` command does not currently remove jewels. This is not a significant issue, as that functionality has not yet been implemented. 👀
 
 ---
@@ -87,6 +88,12 @@ Although it's primarily designed for arena use, it can also be leveraged to crea
 - Automatically unlock abilities & passives if necessary
 - Restrict `.build` usage to specific arena zones (can be toggled via config).
 - Load several builds.json.
+
+---
+
+## 📝 Notes
+
+- To control or limit commands access, I recommend using [VRoles Mod] [VRoles Mod](https://github.com/Odjit/VRoles).
 
 ---
 
