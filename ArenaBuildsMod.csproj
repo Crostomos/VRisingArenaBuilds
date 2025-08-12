@@ -3,7 +3,7 @@
     <TargetFramework>net6.0</TargetFramework>
     <AssemblyName>ArenaBuilds</AssemblyName>
     <Description>Server mod that lets you instantly equip custom builds via in-game commands</Description>
-    <Version>0.2.10</Version>
+    <Version>0.2.11</Version>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <LangVersion>latest</LangVersion>
     <RootNamespace>ArenaBuilds</RootNamespace>

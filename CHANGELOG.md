@@ -1,3 +1,6 @@
+`0.2.11`
+- Added the ability to specify a target player for all commands.
+
 `0.2.10`
 - Introduced new commands to grant artifact and legendary weapons.
 - Added support for giving jewels with custom modifiers.
