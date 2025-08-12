@@ -9,11 +9,12 @@ namespace ArenaBuilds.Commands;
 
 internal class JewelCommands
 {
-    [Command("give_jewel", "givej", usage:"rite 124", description: "Give a custom jewel", adminOnly: false)]
+    [Command("give_jewel", "givej", usage:"rite 124 VampireName", description: "Give a custom jewel", adminOnly: false)]
     public static void GiveJewelCommand(
         ChatCommandContext ctx,
         AbilityModel ability,
-        string spellModsIndexes)
+        string spellModsIndexes,
+        PlayerData player = null)
     {
         var indexes = IndexesManualConverter.ToIndexesList(ctx, spellModsIndexes, 4);
         var spellMod1Index = indexes[0];
@@ -43,10 +44,16 @@ internal class JewelCommands
             SpellMod4 = spellMod4,
             SpellMod4Power = 1
         };
+        
+        if (player == null)
+        {
+            player = new PlayerData(ctx.User, ctx.Event.SenderUserEntity);
+        }
+        
         if (UtilsHelper.TryGetPrefabGuid(ability.PrefabName, out var guid))
         {
-            JewelHelper.CreateAndEquip(ctx.User, guid, jewelData);
-            ctx.Reply($"Jewel for <color=white>{ability.Name}</color> equipped.");
+            JewelHelper.CreateAndEquip(player.User, guid, jewelData);
+            ctx.Reply($"Jewel for <color=white>{ability.Name}</color> equipped to <color=white>{player.CharacterName}</color>.");
         }
         else
         {

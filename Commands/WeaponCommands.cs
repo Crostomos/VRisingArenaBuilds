@@ -9,14 +9,15 @@ namespace ArenaBuilds.Commands;
 
 internal class WeaponCommands
 {
-    [Command("give_legendary", "giveleg", usage:"reaper storm PP AS PCC", description: "Give a legendary weapon", adminOnly: false)]
+    [Command("give_legendary", "giveleg", usage:"reaper storm PP AS PCC VampireName", description: "Give a legendary weapon", adminOnly: false)]
     public static void GiveLegendaryWeaponCommand(
         ChatCommandContext ctx,
         WeaponModel weapon,
         InfuseSpellModModel infuseSpellModModel,
         StatModModel statMod1,
         StatModModel statMod2,
-        StatModModel statMod3)
+        StatModModel statMod3,
+        PlayerData player = null)
     {
         if (statMod1.Name == statMod2.Name || statMod1.Name == statMod3.Name || statMod2.Name == statMod3.Name)
         {
@@ -34,18 +35,24 @@ internal class WeaponCommands
             StatMod3 = statMod3.PrefabName,
             StatMod3Power = 1
         };
+        
+        if (player == null)
+        {
+            player = new PlayerData(ctx.User, ctx.Event.SenderUserEntity);
+        }
 
-        WeaponHelper.CreateAndGiveLegendaryWeapon(ctx.User.Index, weaponData);
-        ctx.Reply($"Legendary weapon <color=white>{weapon.Name}</color> acquired.");
+        WeaponHelper.CreateAndGiveLegendaryWeapon(player.User.Index, weaponData);
+        ctx.Reply($"Legendary weapon <color=white>{weapon.Name}</color> acquired by <color=white>{player.CharacterName}</color>.");
     }
 
-    [Command("give_artifact", "giveart", usage:"slashers2 AS PCC MS", description: "Give an artifact weapon", adminOnly: false)]
+    [Command("give_artifact", "giveart", usage:"slashers2 AS PCC MS VampireName", description: "Give an artifact weapon", adminOnly: false)]
     public static void GiveArtifactWeaponCommand(
         ChatCommandContext ctx,
         ArtifactWeaponModel weapon,
         StatModModel statMod1,
         StatModModel statMod2,
-        StatModModel statMod3)
+        StatModModel statMod3,
+        PlayerData player = null)
     {
         if (statMod1.Name == statMod2.Name || statMod1.Name == statMod3.Name || statMod2.Name == statMod3.Name)
         {
@@ -64,9 +71,14 @@ internal class WeaponCommands
             StatMod3 = statMod3.PrefabName,
             StatMod3Power = 1
         };
+        
+        if (player == null)
+        {
+            player = new PlayerData(ctx.User, ctx.Event.SenderUserEntity);
+        }
 
-        WeaponHelper.CreateAndGiveArtifactWeapon(ctx.User.Index, ctx.Event.SenderCharacterEntity, weaponData);
-        ctx.Reply($"Artifact weapon <color=white>{weapon.Name}{weapon.Variation}</color> acquired.");
+        WeaponHelper.CreateAndGiveArtifactWeapon(player.User.Index, player.CharacterEntity, weaponData);
+        ctx.Reply($"Artifact weapon <color=white>{weapon.Name}{weapon.Variation}</color> acquired by <color=white>{player.CharacterName}</color>.");
     }
 
     [Command("list_weapon", "listw", description: "List weapons", adminOnly: false)]

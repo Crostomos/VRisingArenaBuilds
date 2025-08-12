@@ -1,8 +1,10 @@
 ﻿using System.Reflection;
 using ArenaBuilds.Data;
+using Il2CppInterop.Runtime;
 using ProjectM;
 using ProjectM.Network;
 using Stunlock.Core;
+using Unity.Collections;
 using Unity.Entities;
 
 namespace ArenaBuilds.Helpers;
@@ -42,7 +44,31 @@ internal static class UtilsHelper
         Core.EntityManager.SetComponentData(entity, eventData);
     }
 
-    private static Entity GetUserEntity(Entity character)
+    public static NativeArray<Entity> GetEntitiesByComponentType<T1>(
+        bool includeAll = false,
+        bool includeDisabled = false,
+        bool includeSpawn = false,
+        bool includePrefab = false,
+        bool includeDestroyed = false)
+    {
+        var options = EntityQueryOptions.Default;
+        if (includeAll) options |= EntityQueryOptions.IncludeAll;
+        if (includeDisabled) options |= EntityQueryOptions.IncludeDisabled;
+        if (includeSpawn) options |= EntityQueryOptions.IncludeSpawnTag;
+        if (includePrefab) options |= EntityQueryOptions.IncludePrefab;
+        if (includeDestroyed) options |= EntityQueryOptions.IncludeDestroyTag;
+
+        var entityQueryBuilder = new EntityQueryBuilder(Allocator.Temp)
+            .AddAll(new ComponentType(Il2CppType.Of<T1>()))
+            .WithOptions(options);
+
+        var query = Core.EntityManager.CreateEntityQuery(ref entityQueryBuilder);
+
+        var entities = query.ToEntityArray(Allocator.Temp);
+        return entities;
+    }
+
+    public static Entity GetUserEntity(Entity character)
     {
         var playerCharacter = Core.EntityManager.GetComponentData<PlayerCharacter>(character);
         return playerCharacter.UserEntity;
