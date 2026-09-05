@@ -1,3 +1,11 @@
+`0.3.0`
+
+- Added new command to fill blood.
+- Improve ability/weapon detection.
+- Fix Phantom Aegis spell mod.
+- Fix "Chaos Barrier" ability not found.
+- Update prefabs db.
+
 `0.2.11`
 - Added the ability to specify a target player for all commands.
 
@@ -7,10 +15,10 @@
 - Updated `give_build`:
     - `SpellMod1` and `SpellMod2` are now automatically assigned for artifact weapons based on weapon variation.
 - Added new build options :
-  - `ClearInventory`: Clears inventory before applying the build.
-  - `SecondaryBuffIndex`: Select the secondary blood bonus.
-  - `FillBloodPool`: Fills the blood pool.
-  - `GiveBloodPotion`: Grants a blood potion.
+    - `ClearInventory`: Clears inventory before applying the build.
+    - `SecondaryBuffIndex`: Select the secondary blood bonus.
+    - `FillBloodPool`: Fills the blood pool.
+    - `GiveBloodPotion`: Grants a blood potion.
 
 `0.1.12`
 - Fixed nullable errors during JSON deserialization.

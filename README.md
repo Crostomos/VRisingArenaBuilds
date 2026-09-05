@@ -36,15 +36,18 @@ Although it's primarily designed for arena use, it can also be leveraged to crea
 | `.give_legendary <weapon> <infuse> <statmod1> <statmod2> <statmod3> <player>` | `.giveleg`    | Give legendary weapon                                       |
 | `.give_artifact <weapon> <statmod1> <statmod2> <statmod3> <player>`           | `.giveart`    | Give artifact weapon                                        |
 | `.give_jewel <ability> <spellModIndexes> <player>`                            | `.givej`      | Give jewel with target modifiers                            |
+| `.fill_blood <bloodType1> <bloodType2> <secondaryBuffIndex> <player>`         | `.fillb`      | Fill blood pool                                             |
 | `.list_build`                                                                 | `.listb`      | Displays the list of available builds                       |
 | `.list_weapon`                                                                | `.listw`      | Displays the list of available weapons                      |
 | `.list_statmod`                                                               | `.listsm`     | Displays the list of available stat mods                    |
 | `.list_infuse`                                                                | `.listi`      | Displays the list of available infuses                      |
-| `.list_spellmod` <ability>                                                    | `.listsp`     | Displays the list of available spell mod for target ability |
+| `.list_spellmod` <ability>`                                                   | `.listsp`     | Displays the list of available spell mod for target ability |
+| `.list_blood`                                                                 | `.listbl`     | Displays the list of available blood type                   |
 | `.clear_build <player>`                                                       | `.clearb`     | Clears your inventory, abilities and passives               |
 | `.unlock_all <player>`                                                        | `.unlock_all` | Unlock abilities, passives...                               |
-
 ---
+
+NB : <player> target yourself if not filled.
 
 ## 📦 Requirements
 
