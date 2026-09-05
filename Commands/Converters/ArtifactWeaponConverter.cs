@@ -19,16 +19,14 @@ internal class ArtifactWeaponConverter : CommandArgumentConverter<ArtifactWeapon
 
         var weapon =
             WeaponDb.Weapons.EqualsCommandArgument(input) as WeaponModel ??
-            (WeaponDb.Weapons.ContainsCommandArgument(input) as WeaponModel ??
-             throw ctx.Error($"Unknown weapon <color=white>{input}</color>."));
+            WeaponDb.Weapons.ContainsCommandArgument(input) as WeaponModel ??
+            throw ctx.Error($"Unknown weapon <color=white>{input}</color>.");
 
-        weapon.SetArtifactPrefab(variation: variation);
+        weapon.SetArtifactPrefab(variation);
 
         if (!WeaponDb.ArtifactWeaponPrefabToAbilityMods.TryGetValue(weapon.PrefabName, out var abilityMods))
-        {
             throw ctx.Error(
                 $"Weapon variation <color=white>{variation}</color> does not exist for <color=white>{weapon.Name}</color>.");
-        }
 
         var artifactWeapon = ArtifactWeaponModel.FromWeaponModel(weapon);
         artifactWeapon.Variation = variation;

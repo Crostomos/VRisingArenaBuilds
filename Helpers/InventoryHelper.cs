@@ -13,9 +13,8 @@ internal static class InventoryHelper
 {
     public static void GiveItems(Entity character, List<BuildItemData> items)
     {
-        foreach (var item in items)
+        foreach (var item in items.Where(item => !string.IsNullOrEmpty(item.Name)))
         {
-            if (string.IsNullOrEmpty(item.Name)) continue;
             if (UtilsHelper.TryGetPrefabGuid(item.Name, out var itemGuid))
             {
                 AddItemToInventory(character, itemGuid, item.Amount);

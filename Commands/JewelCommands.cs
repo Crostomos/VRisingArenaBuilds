@@ -45,10 +45,7 @@ internal class JewelCommands
             SpellMod4Power = 1
         };
         
-        if (player == null)
-        {
-            player = new PlayerData(ctx.User, ctx.Event.SenderUserEntity);
-        }
+        player ??= new PlayerData(ctx.User, ctx.Event.SenderUserEntity);
         
         if (UtilsHelper.TryGetPrefabGuid(ability.PrefabName, out var guid))
         {

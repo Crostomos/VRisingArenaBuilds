@@ -52,7 +52,7 @@ internal static class WeaponHelper
             StatMod3 = UtilsHelper.GetPrefabGuid(weaponData.StatMod3) ?? default,
             StatMod3Power = Mathf.Clamp(weaponData.StatMod3Power, 0, 1),
             StatMod4 = UtilsHelper.GetPrefabGuid(weaponData.StatMod4) ?? default,
-            StatMod4Power = Mathf.Clamp(weaponData.StatMod4Power, 0, 1),
+            StatMod4Power = Mathf.Clamp(weaponData.StatMod4Power, 0, 1)
         };
 
         Core.DebugEventsSystem.CreateLegendaryWeaponEvent(userIndex, ref legendaryWeaponEvent);
@@ -100,18 +100,16 @@ internal static class WeaponHelper
     
     private static string GetDefaultSpellMod(string weaponName, int modIndex)
     {
-        if (WeaponDb.ArtifactWeaponPrefabToAbilityMods.TryGetValue(weaponName, out var abilityMods))
-        {
-            switch (modIndex)
-            {
-                case 1:
-                    return abilityMods.Mod1;
-                case 2:
-                    return abilityMods.Mod2;
-            }
+        if (!WeaponDb.ArtifactWeaponPrefabToAbilityMods.TryGetValue(weaponName, out var abilityMods)) {
+            return string.Empty;
         }
 
-        return string.Empty;
+        return modIndex switch
+        {
+            1 => abilityMods.Mod1,
+            2 => abilityMods.Mod2,
+            _ => string.Empty
+        };
     }
 
     private static bool HasValidSpellMods(WeaponData weaponData)

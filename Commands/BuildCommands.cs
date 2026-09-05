@@ -19,10 +19,7 @@ internal class BuildCommands
             throw ctx.Error($"Unknown build <color=white>{buildName}</color>.");
         }
 
-        if (player == null)
-        {
-            player = new PlayerData(ctx.User, ctx.Event.SenderUserEntity);
-        }
+        player ??= new PlayerData(ctx.User, ctx.Event.SenderUserEntity);
 
         if (build.Settings.ClearInventory)
         {
@@ -76,7 +73,7 @@ internal class BuildCommands
 
         if (BuildManager.Builds!.Count == 0)
         {
-            ctx.Reply($"No builds available.");
+            ctx.Reply("No builds available.");
             return;
         }
 
@@ -87,10 +84,7 @@ internal class BuildCommands
     [Command("clear_build", "clearb", description: "Clear current build", adminOnly: false)]
     public static void ClearBuildCommand(ChatCommandContext ctx, PlayerData player = null)
     {
-        if (player == null)
-        {
-            player = new PlayerData(ctx.User, ctx.Event.SenderUserEntity);
-        }
+        player ??= new PlayerData(ctx.User, ctx.Event.SenderUserEntity);
 
         InventoryHelper.ClearInventory(player.CharacterEntity);
         AbilityHelper.ClearPassiveSpells(player.CharacterEntity);
@@ -102,10 +96,7 @@ internal class BuildCommands
     [Command("unlock_all", description: "Unlock All", adminOnly: true)]
     public static void UnlockAllCommand(ChatCommandContext ctx, PlayerData player = null)
     {
-        if (player == null)
-        {
-            player = new PlayerData(ctx.User, ctx.Event.SenderUserEntity);
-        }
+        player ??= new PlayerData(ctx.User, ctx.Event.SenderUserEntity);
 
         var userEntity = UtilsHelper.GetUserEntity(player.CharacterEntity);
 

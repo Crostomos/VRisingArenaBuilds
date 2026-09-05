@@ -6,7 +6,7 @@ namespace ArenaBuilds.Data.Db;
 
 internal class StatModDb : IDatabase
 {
-    public static List<StatModModel> Mods =
+    public static readonly List<StatModModel> Mods =
     [
         new("Attack Speed", "StatMod_AttackSpeed", ["AS"]),
         new("Physical Critical Chance", "StatMod_CriticalStrikePhysical", ["PCC"]),
@@ -21,7 +21,7 @@ internal class StatModDb : IDatabase
         new("Spell Power", "StatMod_SpellPower", ["SP"]),
         new("Travel Cooldown Reduction", "StatMod_TravelCooldownReduction", ["TCR"]),
         new("Weapon Cooldown Reduction", "StatMod_WeaponCooldownReduction", ["WCR"]),
-        new("Weapon Power", "StatMod_WeaponSkillPower", ["WP"]),
+        new("Weapon Power", "StatMod_WeaponSkillPower", ["WP"])
     ];
 
     public void Init()

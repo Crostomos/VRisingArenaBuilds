@@ -11,8 +11,8 @@ internal class AbilityConverter : CommandArgumentConverter<AbilityModel>
     {
         var match =
             AbilityDb.Abilities.EqualsCommandArgument(input) as AbilityModel ??
-            (AbilityDb.Abilities.ContainsCommandArgument(input) as AbilityModel ??
-             throw ctx.Error($"Unknown ability <color=white>{input}</color>."));
+            AbilityDb.Abilities.ContainsCommandArgument(input) as AbilityModel ??
+            throw ctx.Error($"Unknown ability <color=white>{input}</color>.");
 
         return match;
     }

@@ -36,10 +36,7 @@ internal class WeaponCommands
             StatMod3Power = 1
         };
         
-        if (player == null)
-        {
-            player = new PlayerData(ctx.User, ctx.Event.SenderUserEntity);
-        }
+        player ??= new PlayerData(ctx.User, ctx.Event.SenderUserEntity);
 
         WeaponHelper.CreateAndGiveLegendaryWeapon(player.User.Index, weaponData);
         ctx.Reply($"Legendary weapon <color=white>{weapon.Name}</color> acquired by <color=white>{player.CharacterName}</color>.");
@@ -72,10 +69,7 @@ internal class WeaponCommands
             StatMod3Power = 1
         };
         
-        if (player == null)
-        {
-            player = new PlayerData(ctx.User, ctx.Event.SenderUserEntity);
-        }
+        player ??= new PlayerData(ctx.User, ctx.Event.SenderUserEntity);
 
         WeaponHelper.CreateAndGiveArtifactWeapon(player.User.Index, player.CharacterEntity, weaponData);
         ctx.Reply($"Artifact weapon <color=white>{weapon.Name}{weapon.Variation}</color> acquired by <color=white>{player.CharacterName}</color>.");

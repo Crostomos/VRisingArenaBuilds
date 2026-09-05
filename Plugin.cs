@@ -12,8 +12,8 @@ namespace ArenaBuilds;
 [BepInDependency("gg.deca.VampireCommandFramework")]
 public class Plugin : BasePlugin
 {
-    Harmony _harmony;
-    public static ManualLogSource Logger;
+    private Harmony _harmony;
+    public static ManualLogSource Logger { get; private set; }
 
     public override void Load()
     {
@@ -28,7 +28,7 @@ public class Plugin : BasePlugin
 
         // Get builds from JSON
         BuildManager.LoadData();
-        
+
         // Load Database
         Database.Initialize();
 
