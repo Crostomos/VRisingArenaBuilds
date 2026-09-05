@@ -47,7 +47,7 @@ Although it's primarily designed for arena use, it can also be leveraged to crea
 | `.unlock_all <player>`                                                        | `.unlock_all` | Unlock abilities, passives...                               |
 ---
 
-NB : <player> target yourself if not filled.
+NB : `<player>` target yourself if not filled.
 
 ## 📦 Requirements
 
