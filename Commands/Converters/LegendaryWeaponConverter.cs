@@ -11,7 +11,7 @@ internal class LegendaryWeaponConverter : CommandArgumentConverter<WeaponModel>
     {
         var match =
             WeaponDb.Weapons.EqualsCommandArgument(input) as WeaponModel ??
-            WeaponDb.Weapons.ContainsCommandArgument(input) as WeaponModel ??
+            WeaponDb.Weapons.SearchCommandArgument(input) as WeaponModel ??
             throw ctx.Error($"Unknown weapon <color=white>{input}</color>.");
 
         match.SetLegendaryPrefab();

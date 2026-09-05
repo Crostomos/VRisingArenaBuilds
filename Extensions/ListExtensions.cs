@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using ArenaBuilds.Models.Interfaces;
+using ArenaBuilds.Utils;
 
 namespace ArenaBuilds.Extensions;
 
@@ -58,6 +59,15 @@ internal static class ListExtensions
     {
         return list.FirstOrDefault(s =>
             s.ArgNames.Any(arg => arg.Contains(input, StringComparison.OrdinalIgnoreCase)));
+    }
+
+    public static ICommandArgument SearchCommandArgument(this IEnumerable<ICommandArgument> list, string input)
+    {
+        var commandArguments = list.ToList();
+        var possibilities = commandArguments.SelectMany(s => s.ArgNames);
+        var closest = StringSimilarity.FindClosestWithTokens(input, possibilities);
+
+        return commandArguments.FirstOrDefault(s => s.ArgNames.Any(arg => arg == closest));
     }
 
     public static ICommandArgument EqualsCommandArgument(this IEnumerable<ICommandArgument> list, string input)
