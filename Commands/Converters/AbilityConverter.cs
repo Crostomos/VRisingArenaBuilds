@@ -9,9 +9,11 @@ internal class AbilityConverter : CommandArgumentConverter<AbilityModel>
 {
     public override AbilityModel Parse(ICommandContext ctx, string input)
     {
+        if (input.ToLower() == "chaosbarrier")
+            input = "barrier"; // awful exception to make "chaosbarrier" works (and not only "barrier")
         var match =
             AbilityDb.Abilities.EqualsCommandArgument(input) as AbilityModel ??
-            AbilityDb.Abilities.ContainsCommandArgument(input) as AbilityModel ??
+            AbilityDb.Abilities.SearchCommandArgument(input) as AbilityModel ??
             throw ctx.Error($"Unknown ability <color=white>{input}</color>.");
 
         return match;
