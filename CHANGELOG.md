@@ -1,5 +1,4 @@
 `0.3.0`
-
 - Added new command to fill blood.
 - Improve ability/weapon detection.
 - Fix Phantom Aegis spell mod.
