@@ -124,7 +124,7 @@ internal class AbilityToSpellModDb : IDatabase
             ]
         },
         {
-            "PhantomAegis", [SpellModDb.DispellDebuffs, SpellModDb.KnockBackOnHitMedium, SpellModDb.MovementSpeedNormal]
+            "PhantomAegis", [SpellModDb.DispellDebuffs, SpellModDb.MovementSpeedNormal]
         },
         {
             "SpectralWolf",
@@ -205,16 +205,11 @@ internal class AbilityToSpellModDb : IDatabase
         {
             var abilityName = mod.Split("_")[1];
             if (SpellSchoolDb.SpellSchools.Contains(abilityName)) // handle format with spell school
-            {
                 abilityName = mod.Split("_")[2];
-            }
 
             if (AbilityToSpellMod.ContainsKey(abilityName))
             {
-                if (!AbilityToSpellMod[abilityName].Contains(mod))
-                {
-                    AbilityToSpellMod[abilityName].Add(mod);
-                }
+                if (!AbilityToSpellMod[abilityName].Contains(mod)) AbilityToSpellMod[abilityName].Add(mod);
             }
             else
             {
