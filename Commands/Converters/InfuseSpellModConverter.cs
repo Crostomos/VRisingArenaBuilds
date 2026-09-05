@@ -9,11 +9,7 @@ internal class InfuseSpellModConverter : CommandArgumentConverter<InfuseSpellMod
 {
     public override InfuseSpellModModel Parse(ICommandContext ctx, string input)
     {
-        if (InfuseSpellModDb.Mods.ContainsCommandArgument(input) is not InfuseSpellModModel match)
-        {
-            throw ctx.Error($"Unknown infuse spell mod <color=white>{input}</color>.");
-        }
-
-        return match;
+        return InfuseSpellModDb.Mods.ContainsCommandArgument(input) as InfuseSpellModModel ??
+               throw ctx.Error($"Unknown infuse spell mod <color=white>{input}</color>.");
     }
 }

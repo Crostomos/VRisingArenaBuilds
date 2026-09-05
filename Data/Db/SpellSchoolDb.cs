@@ -5,7 +5,7 @@ namespace ArenaBuilds.Data.Db;
 
 internal class SpellSchoolDb : IDatabase
 {
-    public static List<string> SpellSchools =
+    public static readonly List<string> SpellSchools =
     [
         "Blood",
         "Chaos",

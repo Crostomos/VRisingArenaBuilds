@@ -6,7 +6,7 @@ namespace ArenaBuilds.Data.Db;
 
 internal class WeaponDb : IDatabase
 {
-    public static List<WeaponModel> Weapons =
+    public static readonly List<WeaponModel> Weapons =
     [
         new("Sword", "Sword", ["Sword"]),
         new("Axe", "Axe", ["Axe"]),
@@ -21,7 +21,7 @@ internal class WeaponDb : IDatabase
         new("Slashers", "Slashers", ["Slashers"]),
         new("Spear", "Spear", ["Spear"]),
         new("Twin Blades", "TwinBlades", ["TwinBlades"]),
-        new("Whip", "Whip", ["Whip"]),
+        new("Whip", "Whip", ["Whip"])
     ];
 
     public static readonly Dictionary<string, (string Mod1, string Mod2)> ArtifactWeaponPrefabToAbilityMods = new()
@@ -85,7 +85,7 @@ internal class WeaponDb : IDatabase
         {
             "Item_Weapon_Whip_Unique_T08_Variation01",
             ("SpellMod_Whip_Dash_FlameWhip", "SpellMod_Whip_Entangle_FlameWhip")
-        },
+        }
     };
 
     public void Init()

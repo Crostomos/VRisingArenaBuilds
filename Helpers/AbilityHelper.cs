@@ -64,26 +64,22 @@ internal static class AbilityHelper
 
     public static void ClearAbilities(Entity character)
     {
-        if (Core.EntityManager.TryGetBuffer<VBloodAbilityBuffEntry>(character, out var buffer))
+        if (!Core.EntityManager.TryGetBuffer<VBloodAbilityBuffEntry>(character, out var buffer)) return;
+        foreach (var abilityEntry in buffer)
         {
-            foreach (var abilityEntry in buffer)
-            {
-                VBloodAbilityUtilities.TryRemoveVBloodAbility(
-                    Core.EntityManager,
-                    character,
-                    abilityEntry.ActiveAbility);
-            }
+            VBloodAbilityUtilities.TryRemoveVBloodAbility(
+                Core.EntityManager,
+                character,
+                abilityEntry.ActiveAbility);
         }
     }
 
     public static void ClearPassiveSpells(Entity character)
     {
-        if (Core.EntityManager.TryGetBuffer<ActivePassivesBuffer>(character, out var buffer))
+        if (!Core.EntityManager.TryGetBuffer<ActivePassivesBuffer>(character, out var buffer)) return;
+        for (var i = 0; i < buffer.Length; ++i)
         {
-            for (var i = 0; i < buffer.Length; ++i)
-            {
-                buffer[i] = new ActivePassivesBuffer();
-            }
+            buffer[i] = new ActivePassivesBuffer();
         }
     }
 

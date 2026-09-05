@@ -83,13 +83,11 @@ internal static class BloodHelper
             return false;
         }
 
-        if (string.IsNullOrEmpty(secondaryBloodType) ||
-            !UtilsHelper.TryGetPrefabGuid(secondaryBloodType, out secondaryGuid))
-        {
-            secondaryGuid = new PrefabGUID(0);
-            secondaryQuality = 0;
-            secondaryBuffIndex = 0;
-        }
+        if (!string.IsNullOrEmpty(secondaryBloodType) &&
+            UtilsHelper.TryGetPrefabGuid(secondaryBloodType, out secondaryGuid)) return true;
+        secondaryGuid = new PrefabGUID(0);
+        secondaryQuality = 0;
+        secondaryBuffIndex = 0;
 
         return true;
     }

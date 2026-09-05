@@ -9,7 +9,7 @@ namespace ArenaBuilds.Data.Db;
 
 internal class AbilityDb : IDatabase
 {
-    public static List<AbilityModel> Abilities = [];
+    public static readonly List<AbilityModel> Abilities = [];
 
     public void Init()
     {

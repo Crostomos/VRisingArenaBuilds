@@ -5,7 +5,7 @@ namespace ArenaBuilds.Data.Db;
 
 internal class AbilityToSpellModDb : IDatabase
 {
-    public static Dictionary<string, List<string>> AbilityToSpellMod = new()
+    public static readonly Dictionary<string, List<string>> AbilityToSpellMod = new()
     {
         // Blood
         {
@@ -46,7 +46,7 @@ internal class AbilityToSpellModDb : IDatabase
             [
                 SpellModDb.ChaosConsumeIgniteAgonizingFlames,
                 SpellModDb.CooldownMedium,
-                SpellModDb.ProjectileIncreaseRangeMedium,
+                SpellModDb.ProjectileIncreaseRangeMedium
             ]
         },
         {

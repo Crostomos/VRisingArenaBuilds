@@ -9,11 +9,7 @@ internal class StatModConverter : CommandArgumentConverter<StatModModel>
 {
     public override StatModModel Parse(ICommandContext ctx, string input)
     {
-        if (StatModDb.Mods.ContainsCommandArgument(input) is not StatModModel match)
-        {
-            throw ctx.Error($"Unknown stat mod <color=white>{input}</color>.");
-        }
-
-        return match;
+        return StatModDb.Mods.ContainsCommandArgument(input) as StatModModel ??
+               throw ctx.Error($"Unknown stat mod <color=white>{input}</color>.");
     }
 }

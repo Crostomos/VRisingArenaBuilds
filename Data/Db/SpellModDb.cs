@@ -8,7 +8,7 @@ namespace ArenaBuilds.Data.Db;
 
 internal class SpellModDb : IDatabase
 {
-    public static List<string> Mods = [];
+    public static readonly List<string> Mods = [];
 
     private static readonly List<string> OutdatedMods =
     [
@@ -41,7 +41,7 @@ internal class SpellModDb : IDatabase
         "SpellMod_Discharge_IncreaseStormShieldDuration",
         "SpellMod_Cyclone_IncreaseLifetime",
         "SpellMod_Cyclone_ReducedDamageReduction",
-        "SpellMod_VeilOfStorm_RecastIllusionDash",
+        "SpellMod_VeilOfStorm_RecastIllusionDash"
     ];
 
     // Shared
@@ -111,19 +111,12 @@ internal class SpellModDb : IDatabase
             $"^SpellMod_{spellSchool}_{name}_[a-zA-Z]+$"
         ];
 
-        foreach (var item in regexList)
+        foreach (var prop in regexList.Select(item => new Regex(item, RegexOptions.IgnoreCase)).Select(regex => typeof(Prefabs)
+                     .GetFields(BindingFlags.Static | BindingFlags.Public)
+                     .Where(prop => regex.IsMatch(prop.Name))
+                     .ToList()).SelectMany(matchingProperties => matchingProperties.Where(prop => !OutdatedMods.Contains(prop.Name))))
         {
-            var regex = new Regex(item, RegexOptions.IgnoreCase);
-
-            var matchingProperties = typeof(Prefabs)
-                .GetFields(BindingFlags.Static | BindingFlags.Public)
-                .Where(prop => regex.IsMatch(prop.Name))
-                .ToList();
-
-            foreach (var prop in matchingProperties.Where(prop => !OutdatedMods.Contains(prop.Name)))
-            {
-                Mods.Add(prop.Name);
-            }
+            Mods.Add(prop.Name);
         }
     }
 }

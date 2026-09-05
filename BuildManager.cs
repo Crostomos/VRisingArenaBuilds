@@ -43,7 +43,7 @@ internal static class BuildManager
         var emptyBuilds = new Dictionary<string, BuildModel> { { "EmptyDefault", new BuildModel() } };
         var json = JsonSerializer.Serialize(emptyBuilds, new JsonSerializerOptions
         {
-            WriteIndented = true,
+            WriteIndented = true
         });
         File.WriteAllText(BuildPath, json);
         Plugin.Logger.LogInfo($"Created empty Builds.json at {BuildPath}");
