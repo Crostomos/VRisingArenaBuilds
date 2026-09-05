@@ -41,7 +41,7 @@ Although it's primarily designed for arena use, it can also be leveraged to crea
 | `.list_weapon`                                                                | `.listw`      | Displays the list of available weapons                      |
 | `.list_statmod`                                                               | `.listsm`     | Displays the list of available stat mods                    |
 | `.list_infuse`                                                                | `.listi`      | Displays the list of available infuses                      |
-| `.list_spellmod` <ability>`                                                   | `.listsp`     | Displays the list of available spell mod for target ability |
+| `.list_spellmod` <ability>                                                    | `.listsp`     | Displays the list of available spell mod for target ability |
 | `.list_blood`                                                                 | `.listbl`     | Displays the list of available blood type                   |
 | `.clear_build <player>`                                                       | `.clearb`     | Clears your inventory, abilities and passives               |
 | `.unlock_all <player>`                                                        | `.unlock_all` | Unlock abilities, passives...                               |
