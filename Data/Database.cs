@@ -16,7 +16,8 @@ internal static class Database
             new StatModDb(),
             new InfuseSpellModDb(),
             new WeaponDb(),
-            new AbilityToSpellModDb()
+            new AbilityToSpellModDb(),
+            new BloodDb()
         };
 
         foreach (var db in databases)

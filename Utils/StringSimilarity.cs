@@ -9,7 +9,8 @@ public static class StringSimilarity
     private static readonly HashSet<string> IgnoredTokens =
         new(StringComparer.OrdinalIgnoreCase)
         {
-            "Of"
+            "Of",
+            "The"
         };
 
     public static string FindClosestWithTokens(
